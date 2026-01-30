@@ -464,6 +464,13 @@ main {
   opacity: 0.8;
 }
 
+.version {
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  color: #bdc3c7;
+  opacity: 0.6;
+}
+
 /* Responsive */
 @media (max-width: 700px) {
   .site-header-inner {
