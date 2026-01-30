@@ -1,0 +1,501 @@
+/* Nijssen Computers – particulier & zakelijk, duidelijk en overzichtelijk */
+
+:root {
+  --color-text: #2d3436;
+  --color-text-soft: #636e72;
+  --color-bg: #faf9f7;
+  --color-bg-card: #fff;
+  --color-accent: #2d5a3d;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #20bd5a;
+  --font-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --space: 1.5rem;
+  --space-lg: 2.5rem;
+  --max-width: 50rem;
+  --radius: 8px;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header met logo duidelijk zichtbaar */
+.site-header {
+  padding: var(--space) var(--space-lg);
+  background: var(--color-bg-card);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow);
+}
+
+.site-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space);
+}
+
+.logo-link {
+  display: block;
+  line-height: 0;
+}
+
+.logo-img {
+  display: block;
+  height: 52px;
+  width: auto;
+  max-width: 240px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.logo-link:hover .logo-img {
+  opacity: 0.9;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--color-text-soft);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--color-text);
+}
+
+/* Main – iets ruimer voor meer inhoud */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-lg) 3rem;
+}
+
+/* Hero zonder duplicate logo */
+.hero {
+  text-align: center;
+  padding: 2rem 0 2.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.5rem, 3.5vw, 1.875rem);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.75rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.hero .tagline {
+  font-size: 1.0625rem;
+  color: var(--color-text-soft);
+  margin: 0 0 1.75rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA WhatsApp */
+.cta-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--color-whatsapp);
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 10px rgba(37, 211, 102, 0.35);
+  transition: background 0.2s, transform 0.15s;
+}
+
+.cta-whatsapp:hover {
+  background: var(--color-whatsapp-hover);
+  transform: translateY(-1px);
+}
+
+.cta-whatsapp img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Secties met meer structuur */
+.section-block {
+  margin-bottom: 2.75rem;
+}
+
+.section-block h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.section-block>p {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-soft);
+}
+
+/* About Me section */
+.about-content {
+  background: var(--color-bg-card);
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--color-accent);
+}
+
+.about-content p {
+  margin: 0 0 1rem;
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-signature {
+  margin-top: 1.5rem !important;
+  font-weight: 600;
+  color: var(--color-text) !important;
+  font-size: 1.0625rem;
+}
+
+.about-location {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: var(--color-text-soft);
+}
+
+.about-img {
+  float: right;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  border-radius: var(--radius);
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 600px) {
+  .about-img {
+    float: none;
+    display: block;
+    margin: 0 auto 1.5rem;
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+  }
+}
+
+/* Twee kolommen Voor wie */
+.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--color-bg-card);
+  padding: 1.35rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.card h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0 0 0.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-soft);
+  line-height: 1.55;
+}
+
+/* Diensten – groepen met lijsten */
+.dienst-groep {
+  margin-bottom: 1.75rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.dienst-groep h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dienst-lijst {
+  margin: 0;
+  padding-left: 1.35rem;
+  color: var(--color-text-soft);
+  font-size: 0.9375rem;
+}
+
+.dienst-lijst li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.dienst-lijst strong {
+  color: var(--color-text);
+}
+
+/* Tarieven – twee vakken (particulier + zakelijk) */
+.tarief-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.tarief-box {
+  background: var(--color-bg-card);
+  padding: 1.35rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.tarief-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0 0 0.5rem;
+}
+
+.tarief-box .price {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.25rem;
+}
+
+.tarief-box .btw-note {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-text-soft);
+}
+
+.tarief-box .tarief-detail {
+  font-size: 0.875rem;
+  color: var(--color-text-soft);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+}
+
+/* Reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.review-card {
+  background: var(--color-bg-card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.stars {
+  color: #f1c40f;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.review-text {
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  margin-bottom: 0.75rem !important;
+  line-height: 1.5;
+}
+
+.review-author {
+  font-weight: 600;
+  color: var(--color-text-soft);
+  font-size: 0.875rem;
+  text-align: right;
+  margin: 0 !important;
+}
+
+@media (max-width: 800px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tarief-box p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-soft);
+  line-height: 1.5;
+}
+
+.tarief-noot {
+  margin-top: 1rem !important;
+  font-size: 0.875rem !important;
+  color: var(--color-text-soft) !important;
+}
+
+/* Contact */
+.contact-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  align-items: center;
+}
+
+.contact-options a {
+  text-decoration: none;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff !important;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+}
+
+.cta-whatsapp {
+  background: var(--color-whatsapp);
+}
+
+.cta-whatsapp:hover {
+  background: var(--color-whatsapp-hover);
+}
+
+.cta-phone {
+  background: #9b59b6;
+  /* Purple */
+}
+
+.cta-phone:hover {
+  background: #8e44ad;
+}
+
+.cta-email {
+  background: #3498db;
+  /* Blue */
+}
+
+.cta-email:hover {
+  background: #2980b9;
+}
+
+.contact-regio {
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-soft);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: var(--space-lg) var(--space);
+  color: var(--color-text-soft);
+  font-size: 0.875rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  margin-top: 2rem;
+  background: var(--color-bg-card);
+}
+
+.site-footer p {
+  margin: 0 0 0.25rem;
+}
+
+.footer-year {
+  font-size: 0.8125rem;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .site-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-img {
+    max-width: 200px;
+    height: 46px;
+  }
+
+  .hero {
+    padding: 1.5rem 0 1.75rem;
+  }
+
+  .two-cols,
+  .tarief-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding-left: var(--space);
+    padding-right: var(--space);
+  }
+
+  .dienst-groep {
+    padding: 1rem 1.25rem;
+  }
+
+  .about-content {
+    padding: 1.25rem 1.35rem;
+  }
+}
