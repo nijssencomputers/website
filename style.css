@@ -215,6 +215,7 @@ main {
     max-width: 100%;
     max-height: 250px;
     object-fit: cover;
+    object-position: top;
   }
 }
 
