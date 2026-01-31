@@ -26,7 +26,3 @@ Upload de volgende bestanden naar de root van je webhost via FTP:
 ✅ Meta description geüpdatet met nieuwe tarieven
 ✅ Verbeterde navigatie met "Over mij" link
 
-## Contact
-
-WhatsApp: https://wa.me/31624382361
-Telefoon: 06 24382361
