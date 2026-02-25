@@ -247,38 +247,6 @@ main {
   line-height: 1.55;
 }
 
-/* Lokale SEO links als nette cards */
-.local-links-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.local-link-card {
-  display: block;
-  text-decoration: none;
-  color: var(--color-text);
-  background: var(--color-bg-card);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: var(--radius);
-  padding: 0.9rem 1rem;
-  box-shadow: var(--shadow);
-  font-weight: 500;
-  transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.local-link-card:hover {
-  transform: translateY(-1px);
-  border-color: rgba(45, 90, 61, 0.35);
-  box-shadow: var(--shadow-md);
-}
-
-@media (max-width: 700px) {
-  .local-links-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Diensten – groepen met lijsten */
 .dienst-groep {
   margin-bottom: 1.75rem;
@@ -474,6 +442,27 @@ main {
   margin-top: 1rem;
   font-size: 0.9375rem;
   color: var(--color-text-soft);
+}
+
+/* Kleine gerelateerde links onderaan (SEO + subtiel) */
+.seo-footer-links {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  opacity: 0.72;
+}
+
+.seo-footer-links a {
+  color: var(--color-text-soft);
+  text-decoration: none;
+}
+
+.seo-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.seo-footer-links span {
+  margin: 0 0.2rem;
 }
 
 /* Footer */
