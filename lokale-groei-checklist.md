@@ -5,7 +5,7 @@ Gebruik deze checklist naast de website-aanpassingen. De website kan clicks mete
 ## Google Business Profile
 
 - Controleer categorie: computerreparatie, computerondersteuning of vergelijkbaar.
-- Controleer servicegebied: Leidschendam, Voorburg, Den Haag en directe omgeving.
+- Controleer servicegebied: Leidschendam, Voorburg, Voorschoten, Den Haag en directe omgeving.
 - Controleer diensten: computerhulp aan huis, laptop reparatie, printer hulp, wifi hulp, virus/malware verwijderen, nieuwe laptop installeren, data overzetten.
 - Controleer telefoonnummer en website-link.
 - Voeg 3-5 actuele foto's toe: werkplek, logo, vriendelijke profielfoto, eventueel voorbeeld van thuisservice.
@@ -14,7 +14,7 @@ Gebruik deze checklist naast de website-aanpassingen. De website kan clicks mete
 ## Reviews
 
 - Vraag 10 recente tevreden particuliere klanten om een Google-review.
-- Vraag specifiek om woorden die natuurlijk zijn: laptop, printer, wifi, computerhulp aan huis, Leidschendam of Voorburg.
+- Vraag specifiek om woorden die natuurlijk zijn: laptop, printer, wifi, computerhulp aan huis, Leidschendam, Voorburg of Voorschoten als de klant daar woont.
 - Reageer kort en persoonlijk op elke review.
 
 ## Leadtelling voor 4 weken
@@ -25,7 +25,7 @@ Leg per nieuw contact vast:
 - Nieuw particulier, bestaande klant, bedrijf of spam
 - Kanaal: telefoon, WhatsApp, e-mail, Google Maps, website, verwijzing
 - Probleem: laptop traag, printer, wifi, virus/malware, nieuwe laptop, data overzetten, anders
-- Plaats: Leidschendam, Voorburg, Den Haag, anders
+- Plaats: Leidschendam, Voorburg, Voorschoten, Den Haag, anders
 
 ## Beslismoment na 4 weken
 
