@@ -1,42 +1,20 @@
+/* A contact click is an intention, not evidence of a received enquiry or a sale. */
 (function () {
-  function getContactMethod(href) {
-    if (href.indexOf("tel:") === 0) return "phone";
-    if (href.indexOf("mailto:") === 0) return "email";
-    if (href.indexOf("https://wa.me/") === 0 || href.indexOf("https://api.whatsapp.com/") === 0) return "whatsapp";
-    return "contact";
-  }
-
-  function trackContactClick(link) {
-    if (typeof window.gtag !== "function") return;
-
-    var href = link.getAttribute("href") || "";
-    var method = getContactMethod(href);
-    var linkText = (link.textContent || "").trim();
-
-    window.gtag("event", "generate_lead", {
-      event_category: "contact",
+  'use strict';
+  document.addEventListener('click', function (event) {
+    const link = event.target.closest && event.target.closest('a[href]');
+    if (!link || typeof window.gtag !== 'function') return;
+    const href = link.getAttribute('href') || '';
+    let method;
+    if (href.startsWith('tel:')) method = 'phone';
+    else if (href.startsWith('mailto:')) method = 'email';
+    else if (href.startsWith('https://wa.me/')) method = 'whatsapp';
+    else return;
+    window.gtag('event', 'contact_click', {
+      event_category: 'contact',
       method: method,
-      link_url: href,
-      link_text: linkText,
-      transport_type: "beacon"
-    });
-
-    window.gtag("event", "contact_click", {
-      event_category: "contact",
-      method: method,
-      link_url: href,
-      link_text: linkText,
-      transport_type: "beacon"
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    var links = document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"], a[href^="https://wa.me/"], a[href^="https://api.whatsapp.com/"]');
-
-    links.forEach(function (link) {
-      link.addEventListener("click", function () {
-        trackContactClick(link);
-      });
+      page_path: window.location.pathname,
+      transport_type: 'beacon'
     });
   });
 })();

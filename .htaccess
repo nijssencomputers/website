@@ -1,60 +1,47 @@
-# Nijssen Computers - Apache Configuration
-
-# Enable rewrite engine
+# Static website in the domain's document root. HTTPS/www stay with the existing host/Cloudflare configuration.
 RewriteEngine On
 
-# Redirect leftover Wix duplicate paths (seen in Analytics)
+# Source and test files do not belong to the public website.
+RewriteRule ^(?:src|tools|tests|docs|\.git)(?:/|$) - [F,L]
+
+# Existing Wix URL migrations; preserve their established destinations.
 RewriteRule ^copy-of-contact/?$ /contact [R=301,L]
 RewriteRule ^copy-of-diensten/?$ /\#diensten [R=301,NE,L]
 RewriteRule ^copy-of-tarieven/?$ /\#tarief [R=301,NE,L]
 RewriteRule ^copy-of-zakelijk/?$ /mkb-it-beheer-leidschendam-voorburg [R=301,L]
 RewriteRule ^kopie-van-home/?$ / [R=301,L]
 
-# Serve extensionless URLs from matching .html files (e.g. /contact -> contact.html)
+# One public URL per page. THE_REQUEST prevents loops after the internal rewrite.
+RewriteCond %{THE_REQUEST} \s/+index(?:\.html)?(?:[\s?]) [NC]
+RewriteRule ^index(?:\.html)?$ / [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+[^\s?]+\.html(?:[\s?]) [NC]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# Serve the existing extensionless URLs.
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L]
 
-# Force HTTPS (if SSL is available)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Remove www (if you don't want www)
-# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-# RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
-
-# Set default charset
 AddDefaultCharset UTF-8
+DirectoryIndex index.html
+Options -Indexes
 
-# Compression for better performance
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
 </IfModule>
-
-# Browser caching
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType text/html "access plus 1 hour"
 </IfModule>
-
-# Security headers
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
-  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
-
-# Prevent directory browsing
-Options -Indexes
-
-# Custom error pages (create these if needed)
-# ErrorDocument 404 /404.html
-# ErrorDocument 500 /500.html
