@@ -8,7 +8,7 @@
   <meta name="description"
     content="Computerhulp aan huis in Voorschoten. Hulp bij trage laptop, printerproblemen, wifi, virus/malware en data overzetten. Particulier €60 per uur.">
   <link rel="stylesheet" href="style.css">
-  <link rel="canonical" href="https://www.nijssencomputers.nl/computerhulp-aan-huis-voorschoten.html">
+  <link rel="canonical" href="https://www.nijssencomputers.nl/computerhulp-aan-huis-voorschoten">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1JB4KX9HH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,6 +17,7 @@
     gtag('config', 'G-Y1JB4KX9HH');
   </script>
   <script src="analytics-events.js" defer></script>
+  <script src="nav.js" defer></script>
 </head>
 
 <body>
@@ -25,9 +26,15 @@
       <a href="/" class="logo-link">Nijssen Computers</a>
       <nav class="nav">
         <a href="/">Home</a>
-        <a href="/computerhulp-aan-huis-leidschendam.html">Leidschendam</a>
-        <a href="/computerhulp-aan-huis-voorburg.html">Voorburg</a>
-        <a href="/contact.html">Contact</a>
+        <div class="nav-item has-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Regio</button>
+          <div class="nav-dropdown" hidden>
+            <a href="/computerhulp-aan-huis-leidschendam">Leidschendam</a>
+            <a href="/computerhulp-aan-huis-voorburg">Voorburg</a>
+            <a href="/computerhulp-aan-huis-voorschoten">Voorschoten</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -50,17 +57,17 @@
         <div id="computer-traag" class="service-detail">
           <h3>Computer of laptop traag</h3>
           <p>Ik kijk naar updates, opslagruimte, overbodige software, malware en mogelijke hardware-upgrades zoals SSD
-            of extra geheugen. Meer over <a href="/laptop-traag-voorschoten.html">laptop traag in Voorschoten</a>.</p>
+            of extra geheugen. Meer over <a href="/laptop-traag-voorschoten">laptop traag in Voorschoten</a>.</p>
         </div>
         <div id="printer-hulp" class="service-detail">
           <h3>Printer hulp aan huis</h3>
           <p>Hulp bij draadloos printen, scannen, drivers, foutmeldingen en printers die ineens offline blijven.
-            Meer over <a href="/printer-hulp-voorschoten.html">printer hulp in Voorschoten</a>.</p>
+            Meer over <a href="/printer-hulp-voorschoten">printer hulp in Voorschoten</a>.</p>
         </div>
         <div id="wifi-hulp" class="service-detail">
           <h3>Wifi valt weg of is traag</h3>
           <p>Ik controleer router, bereik, storing, netwerknaam, beveiliging en apparaten die elkaar niet meer vinden.
-            Meer over <a href="/wifi-netwerk-hulp-voorschoten.html">wifi hulp in Voorschoten</a>.</p>
+            Meer over <a href="/wifi-netwerk-hulp-voorschoten">wifi hulp in Voorschoten</a>.</p>
         </div>
         <div id="virus-malware" class="service-detail">
           <h3>Virus, malware of verdachte meldingen</h3>
