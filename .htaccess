@@ -4,11 +4,17 @@
 RewriteEngine On
 
 # Redirect leftover Wix duplicate paths (seen in Analytics)
-RewriteRule ^copy-of-contact/?$ /contact.html [R=301,L]
+RewriteRule ^copy-of-contact/?$ /contact [R=301,L]
 RewriteRule ^copy-of-diensten/?$ /\#diensten [R=301,NE,L]
 RewriteRule ^copy-of-tarieven/?$ /\#tarief [R=301,NE,L]
-RewriteRule ^copy-of-zakelijk/?$ /mkb-it-beheer-leidschendam-voorburg.html [R=301,L]
+RewriteRule ^copy-of-zakelijk/?$ /mkb-it-beheer-leidschendam-voorburg [R=301,L]
 RewriteRule ^kopie-van-home/?$ / [R=301,L]
+
+# Serve extensionless URLs from matching .html files (e.g. /contact -> contact.html)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
 
 # Force HTTPS (if SSL is available)
 # RewriteCond %{HTTPS} off
