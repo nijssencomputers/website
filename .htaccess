@@ -3,6 +3,13 @@
 # Enable rewrite engine
 RewriteEngine On
 
+# Redirect leftover Wix duplicate paths (seen in Analytics)
+RewriteRule ^copy-of-contact/?$ /contact.html [R=301,L]
+RewriteRule ^copy-of-diensten/?$ /\#diensten [R=301,NE,L]
+RewriteRule ^copy-of-tarieven/?$ /\#tarief [R=301,NE,L]
+RewriteRule ^copy-of-zakelijk/?$ /mkb-it-beheer-leidschendam-voorburg.html [R=301,L]
+RewriteRule ^kopie-van-home/?$ / [R=301,L]
+
 # Force HTTPS (if SSL is available)
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
