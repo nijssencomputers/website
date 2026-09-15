@@ -290,22 +290,6 @@ main {
   line-height: 1.45;
 }
 
-.regio-extra {
-  margin: 1rem 0 0;
-  font-size: 0.9375rem;
-  color: var(--color-text-soft);
-}
-
-.regio-extra a {
-  color: var(--color-accent);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.regio-extra a:hover {
-  text-decoration: underline;
-}
-
 /* About Me section */
 .about-content {
   background: var(--color-bg-card);
