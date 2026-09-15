@@ -218,6 +218,29 @@ main {
   color: var(--color-text-soft);
 }
 
+.faq-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.faq-list details {
+  padding: 0.9rem 1rem;
+  background: var(--color-bg-card);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius);
+}
+
+.faq-list summary {
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-list details p {
+  margin: 0.65rem 0 0;
+  color: var(--color-text-soft);
+}
+
 .quick-help-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
