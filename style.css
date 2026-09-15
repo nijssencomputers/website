@@ -198,25 +198,56 @@ main {
   line-height: 1.45;
 }
 
-.local-entry-links {
+.regio-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
-.local-entry-links a {
+.regio-card {
   display: block;
-  padding: 0.85rem 1rem;
+  background: var(--color-bg-card);
+  padding: 1.1rem 1.2rem;
   border-radius: var(--radius);
-  background: #edf4ef;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.regio-card:hover {
+  border-color: rgba(45, 90, 61, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.regio-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-accent);
+  font-size: 0.98rem;
+}
+
+.regio-card span {
+  display: block;
+  color: var(--color-text-soft);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.regio-extra {
+  margin: 1rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-soft);
+}
+
+.regio-extra a {
   color: var(--color-accent);
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid rgba(45, 90, 61, 0.14);
 }
 
-.local-entry-links a:hover {
-  background: #e2eee5;
+.regio-extra a:hover {
+  text-decoration: underline;
 }
 
 /* About Me section */
@@ -608,7 +639,7 @@ main {
   .two-cols,
   .tarief-grid,
   .quick-help-grid,
-  .local-entry-links,
+  .regio-cards,
   .service-detail-grid {
     grid-template-columns: 1fr;
   }
