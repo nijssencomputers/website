@@ -23,6 +23,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -74,6 +76,56 @@ body {
   opacity: 0.9;
 }
 
+.nav-toggle {
+  display: none;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.55rem 0.75rem;
+  color: var(--color-accent);
+  background: rgba(45, 90, 61, 0.07);
+  border: 1px solid rgba(45, 90, 61, 0.2);
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+.nav-toggle-icon {
+  position: relative;
+  font-size: 0;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-icon::before {
+  top: -6px;
+}
+
+.nav-toggle-icon::after {
+  top: 6px;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -93,6 +145,25 @@ body {
 .nav-dropdown-toggle:hover,
 .nav-dropdown-toggle[aria-expanded="true"] {
   color: var(--color-text);
+}
+
+@media (pointer: coarse) {
+  .nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+.nav-toggle:focus-visible,
+.nav a:focus-visible,
+.cta-button:focus-visible,
+.quick-help-card:focus-visible,
+.regio-card:focus-visible {
+  outline: 3px solid rgba(45, 90, 61, 0.35);
+  outline-offset: 3px;
 }
 
 .nav-item.has-dropdown {
@@ -551,6 +622,8 @@ main {
 .cta-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-height: 44px;
   gap: 0.5rem;
   color: #fff !important;
   padding: 0.6rem 1rem;
@@ -662,16 +735,48 @@ main {
 
 /* Responsive */
 @media (max-width: 700px) {
+  .site-header {
+    padding-top: max(1rem, env(safe-area-inset-top));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: 1rem;
+    padding-left: max(1rem, env(safe-area-inset-left));
+  }
+
   .site-header-inner {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .js-nav .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
   }
 
   .nav {
+    flex-basis: 100%;
     width: 100%;
     align-items: flex-start;
     flex-direction: column;
-    gap: 0.85rem;
+    gap: 0;
+    padding-top: 0.35rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .js-nav .nav {
+    display: none;
+  }
+
+  .js-nav .nav.is-open {
+    display: flex;
+  }
+
+  .nav a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
+    padding: 0.35rem 0;
   }
 
   .nav-item.has-dropdown {
@@ -693,8 +798,8 @@ main {
   }
 
   .logo-img {
-    max-width: 200px;
-    height: 46px;
+    max-width: min(200px, 53vw);
+    height: auto;
   }
 
   .hero {
@@ -710,8 +815,8 @@ main {
   }
 
   main {
-    padding-left: var(--space);
-    padding-right: var(--space);
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
   }
 
   .dienst-groep {
@@ -720,5 +825,24 @@ main {
 
   .about-content {
     padding: 1.25rem 1.35rem;
+  }
+
+  .site-footer {
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(var(--space-lg), env(safe-area-inset-bottom));
+    padding-left: max(1rem, env(safe-area-inset-left));
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-actions,
+  .contact-options {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .cta-button,
+  .contact-options .cta-button {
+    width: 100%;
   }
 }
