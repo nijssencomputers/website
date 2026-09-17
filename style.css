@@ -68,11 +68,12 @@ main:focus { outline: none; }
 .about-content { display: flow-root; background: #fff; border-left: 4px solid var(--color-accent); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem; }
 .about-content p { color: var(--color-text-soft); }
 .about-content p:last-child { margin-bottom: 0; }
-.about-img { float: right; width: 220px; height: auto; object-fit: contain; margin: 0 0 1rem 1.5rem; border-radius: var(--radius); }
+.about-img { float: right; width: 300px; height: auto; object-fit: contain; margin: 0 0 1rem 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); }
 .reviews-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.review-card { margin: 0; padding: 1.15rem; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); font-size: 1rem; }
-.review-card p { margin: 0 0 .75rem; }
-.review-card footer { color: var(--color-text-soft); font-weight: 600; }
+.review-card { display: flex; flex-direction: column; margin: 0; padding: 1.15rem; background: #fff; border: 1px solid #e1e6e2; border-radius: var(--radius); box-shadow: var(--shadow); font-size: 1rem; }
+.review-stars { color: #f4b400; font-size: 1.1rem; line-height: 1; letter-spacing: .12em; margin-bottom: .8rem; }
+.review-card p { flex: 1; margin: 0 0 .9rem; font-style: italic; line-height: 1.55; }
+.review-card footer { color: var(--color-text-soft); font-weight: 600; text-align: right; }
 .contact-section { border-top: 1px solid #d6dcd7; padding-top: 1.5rem; }
 .contact-email { margin-top: 1rem; }
 .contact-email a { overflow-wrap: anywhere; }
@@ -109,7 +110,7 @@ main:focus { outline: none; }
   .hero-actions, .contact-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cta-button { padding: .65rem .5rem; font-size: .9375rem; }
   .about-content { padding: 1.15rem; }
-  .about-img { float: none; width: 180px; height: auto; margin: 0 0 1rem; }
+  .about-img { float: none; width: 240px; height: auto; margin: 0 0 1rem; }
   .section-block { margin-bottom: 2rem; }
 }
 @media (max-width: 359px) {
