@@ -63,7 +63,26 @@ def main():
         check(len(p.json)==1,f.name+': expected one JSON-LD graph')
         if p.json:
             types=[x.get('@type') for x in p.json[0].get('@graph',[])]
-            check('LocalBusiness' in types and 'FAQPage' not in types,f.name+': schema types')
+            check('LocalBusiness' in types,f.name+': missing LocalBusiness')
+            if f.stem=='printer-hulp-leidschendam':
+                check('FAQPage' in types,f.name+': expected FAQPage schema')
+                faq=next((x for x in p.json[0].get('@graph',[]) if x.get('@type')=='FAQPage'),None)
+                questions=faq.get('mainEntity') if faq else []
+                check(isinstance(questions,list) and 5<=len(questions)<=6,f.name+': FAQPage needs 5–6 questions')
+                for item in questions or []:
+                    answer=(item.get('acceptedAnswer') or {})
+                    check(item.get('@type')=='Question' and item.get('name') and answer.get('@type')=='Answer' and answer.get('text'),f.name+': invalid FAQ question')
+                    check(item.get('name','') in p.text,f.name+': FAQ question not visible: '+item.get('name',''))
+                    snippet=(answer.get('text') or '')[:50]
+                    check(snippet and snippet in p.text,f.name+': FAQ answer not visible')
+                for name in ('Metselbedrijf Zwaan','Robin Swenne','Mireille van den Dop'):
+                    check(name in p.text,f.name+': missing existing quote '+name)
+                check('Veelgestelde vragen' in p.text,f.name+': missing FAQ heading')
+                hrefs=[a.get('href') for t,a in p.nodes if t=='a']
+                for path in ('/computerhulp-aan-huis-leidschendam','/wifi-netwerk-hulp-leidschendam','/laptop-traag-leidschendam','/printer-hulp-voorburg','/printer-hulp-voorschoten'):
+                    check(path in hrefs,f.name+': missing related '+path)
+            else:
+                check('FAQPage' not in types,f.name+': unexpected FAQPage')
             schema=json.dumps(p.json)
             check('openingHours' not in schema and 'sameAs' not in schema and 'AggregateRating' not in schema,f.name+': unverified metadata')
         canon=[a['href'] for t,a in p.nodes if t=='link' and a.get('rel')=='canonical']

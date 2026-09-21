@@ -82,6 +82,7 @@ main:focus { outline: none; }
 .article-section { color: var(--color-text-soft); }
 .article-section h2, .article-section h3 { color: var(--color-text); }
 .article-section > div + div { margin-top: 1.5rem; }
+.article-section .reviews-grid { margin-top: 1rem; }
 .dienst-lijst { padding-left: 1.3rem; margin: .5rem 0 1rem; }
 .dienst-lijst li { margin-bottom: .5rem; }
 .site-footer { border-top: 1px solid #d6dcd7; color: var(--color-text-soft); background: #f3f3ef; padding: 1.5rem 2rem; font-size: .9375rem; }
