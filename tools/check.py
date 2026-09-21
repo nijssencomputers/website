@@ -89,6 +89,34 @@ def main():
         wanted=BASE+('/' if f.name=='index.html' else '/'+f.stem)
         check(canon==[wanted],f.name+': incorrect canonical')
         check(any(t=='meta' and a.get('name')=='description' and len(a.get('content',''))>60 for t,a in p.nodes),f.name+': description missing')
+        hrefs=[a.get('href','') for t,a in p.nodes if t=='a']
+        for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
+            check(path in hrefs,f.name+': footer must link '+path)
+        for tag,a in p.nodes:
+            if tag in ('a','link'):
+                path=urlsplit(a.get('href','')).path
+                check(not path.endswith('.html'),f.name+': public URL still uses .html: '+a.get('href',''))
+            if tag=='meta' and a.get('property')=='og:url':
+                check(not urlsplit(a.get('content','')).path.endswith('.html'),f.name+': og:url uses .html')
+        def no_html_urls(obj):
+            if isinstance(obj, dict):
+                for key,val in obj.items():
+                    if key in ('url','@id') and isinstance(val,str):
+                        check(not urlsplit(val).path.endswith('.html'),f.name+': JSON-LD .html URL '+val)
+                    no_html_urls(val)
+            elif isinstance(obj, list):
+                for item in obj: no_html_urls(item)
+        if p.json: no_html_urls(p.json[0])
+        titles={
+            'computerhulp-aan-huis-leidschendam':'Computer reparatie & hulp aan huis Leidschendam | Nijssen',
+            'laptop-traag-leidschendam':'Laptop traag of reparatie Leidschendam | Aan huis | Nijssen',
+            'computerhulp-aan-huis-voorburg':'Computerhulp aan huis Voorburg | Snel & lokaal | Nijssen',
+        }
+        if f.stem in titles:
+            check(f'<title>{titles[f.stem].replace("&","&amp;")}</title>' in text,f.name+': unexpected title')
+        if f.stem=='computerhulp-aan-huis-leidschendam':
+            for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
+                check(path in hrefs,f.name+': missing related '+path)
     home=parses.get('/')
     if home:
         check(home.h1==['Computerhulp aan huis'],'Homepage h1 changed')
@@ -120,6 +148,7 @@ def main():
     root=ET.parse(ROOT/'sitemap.xml').getroot();urls=[e.text for e in root.findall('{*}url/{*}loc')]
     check(set(urls)=={BASE+p for p in parses},'Sitemap and canonical pages differ')
     check(len(urls)==len(set(urls))==16,'Sitemap count/duplicates')
+    check(all(not urlsplit(u).path.endswith('.html') for u in urls),'Sitemap still lists .html URLs')
     for filename in ('index.html','style.css'):
         check('overflow-x: hidden' not in (ROOT/filename).read_text(),'Do not mask overflow: '+filename)
     if failures:
