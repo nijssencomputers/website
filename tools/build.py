@@ -11,7 +11,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.nijssencomputers.nl'
 VERSION = '20260915-audit1'
-UPDATED = '2026-09-15'  # Actual content revision; do not replace with today's date on every build.
+UPDATED = '2026-09-21'  # Actual content revision; do not replace with today's date on every build.
 CONTACT = '''    <section class="section-block contact-section" id="contact">
       <h2>Contact met Jeroen</h2>
       <p>Stuur een WhatsApp-bericht of bel. Vertel kort wat er speelt en in welke plaats u hulp zoekt.</p>

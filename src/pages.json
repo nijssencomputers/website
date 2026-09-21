@@ -1,10 +1,10 @@
 [
   {
     "slug": "computerhulp-aan-huis-leidschendam",
-    "title": "Computerreparatie Leidschendam – hulp aan huis | Nijssen",
-    "description": "Computerhulp en reparatie aan huis in Leidschendam. Jeroen helpt met Apple, Windows, Linux, printers en wifi. Particulier €60 per uur. Sinds 2008.",
+    "title": "Computer reparatie & hulp aan huis Leidschendam | Nijssen",
+    "description": "Computer reparatie en hulp aan huis in Leidschendam. Jeroen onderzoekt het probleem bij u thuis in Leidschendam-Voorburg. Apple, Windows, Linux. €60 per uur.",
     "heading": "Computerhulp aan huis in Leidschendam",
-    "intro": "Werkt uw computer niet goed, doet de printer het niet of valt de wifi weg? Ik kom op afspraak bij u thuis of op uw bedrijf in Leidschendam.",
+    "intro": "Computerhulp en reparatie aan huis in Leidschendam. Werkt uw computer niet goed, doet de printer het niet of valt de wifi weg? Ik kom op afspraak bij u thuis of op uw bedrijf.",
     "sections": [
       [
         "Hulp bij problemen met uw apparaten",
@@ -37,16 +37,28 @@
       [
         "spoed-computerhulp-leidschendam",
         "Dringende computerhulp"
+      ],
+      [
+        "computerhulp-aan-huis-voorschoten",
+        "Computerhulp in Voorschoten"
+      ],
+      [
+        "laptop-traag-voorschoten",
+        "Trage laptop in Voorschoten"
+      ],
+      [
+        "wifi-netwerk-hulp-voorschoten",
+        "Wifi in Voorschoten"
       ]
     ],
     "note": "Particulier: €60 per uur, afgerekend per half uur."
   },
   {
     "slug": "computerhulp-aan-huis-voorburg",
-    "title": "Computerreparatie Voorburg – hulp aan huis | Nijssen",
-    "description": "Computerhulp en reparatie aan huis in Voorburg. Voor Apple, Windows, Linux, printers, wifi en gegevens overzetten. Jeroen helpt sinds 2008. €60 per uur.",
+    "title": "Computerhulp aan huis Voorburg | Snel & lokaal | Nijssen",
+    "description": "Computerhulp aan huis in Voorburg. Jeroen komt langs voor diagnose, printer, wifi of een nieuwe computer. Duidelijke uitleg. €60 per uur. Bel of app.",
     "heading": "Computerhulp aan huis in Voorburg",
-    "intro": "Een nieuwe computer, een printer die niet werkt of bestanden die overgezet moeten worden? Ik help u op afspraak aan huis in Voorburg.",
+    "intro": "Computerhulp aan huis in Voorburg. Een nieuwe computer, een printer die niet werkt of bestanden die overgezet moeten worden? Ik help u op afspraak bij u thuis.",
     "sections": [
       [
         "Een nieuw apparaat in gebruik nemen",
@@ -119,10 +131,10 @@
   },
   {
     "slug": "laptop-traag-leidschendam",
-    "title": "Laptop traag in Leidschendam | Nijssen Computers",
-    "description": "Trage laptop of MacBook in Leidschendam? Jeroen onderzoekt de oorzaak en helpt met onderhoud, updates en herstel aan huis. Particulier €60 per uur.",
-    "heading": "Hulp bij een trage laptop in Leidschendam",
-    "intro": "Start uw laptop langzaam op, lopen programma’s vast of wordt hij erg warm? Ik onderzoek het probleem bij u thuis in Leidschendam.",
+    "title": "Laptop traag of reparatie Leidschendam | Aan huis | Nijssen",
+    "description": "Laptop traag of laptop reparatie in Leidschendam? Jeroen onderzoekt eerst de oorzaak aan huis. Onderhoud, herstel of upgrade. €60 per uur.",
+    "heading": "Laptop traag of reparatie in Leidschendam",
+    "intro": "Start uw laptop langzaam op, lopen programma’s vast of is er een reparatie nodig? Ik onderzoek de oorzaak bij u thuis in Leidschendam.",
     "sections": [
       [
         "Eerst de oorzaak onderzoeken",
@@ -268,10 +280,10 @@
   },
   {
     "slug": "laptop-traag-voorburg",
-    "title": "Laptop traag in Voorburg | Nijssen Computers",
-    "description": "Trage laptop of MacBook in Voorburg? Jeroen onderzoekt de oorzaak en helpt met onderhoud, updates en herstel aan huis. Particulier €60 per uur.",
-    "heading": "Hulp bij een trage laptop in Voorburg",
-    "intro": "Start uw laptop langzaam op, lopen programma’s vast of wordt hij erg warm? Ik onderzoek het probleem bij u thuis in Voorburg.",
+    "title": "Laptop traag of reparatie Voorburg | Aan huis | Nijssen",
+    "description": "Trage laptop of laptop reparatie in Voorburg? Jeroen onderzoekt eerst de oorzaak aan huis. Onderhoud, herstel of upgrade. €60 per uur.",
+    "heading": "Laptop traag of reparatie in Voorburg",
+    "intro": "Start uw laptop langzaam op, lopen programma’s vast of is er een reparatie nodig? Ik onderzoek de oorzaak bij u thuis in Voorburg.",
     "sections": [
       [
         "Eerst de oorzaak onderzoeken",

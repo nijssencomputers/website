@@ -12,10 +12,12 @@ RewriteRule ^copy-of-zakelijk/?$ /mkb-it-beheer-leidschendam-voorburg [R=301,L]
 RewriteRule ^kopie-van-home/?$ / [R=301,L]
 
 # One public URL per page. THE_REQUEST prevents loops after the internal rewrite.
+# Permanent .html → extensionless for every public page (computerhulp-*, laptop-traag-*,
+# printer-hulp-*, wifi-*, spoed-*, mkb-*, contact), including unknown *.html so duplicates
+# cannot linger. Query strings are kept; fragments stay in the browser.
 RewriteCond %{THE_REQUEST} \s/+index(?:\.html)?(?:[\s?]) [NC]
 RewriteRule ^index(?:\.html)?$ / [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+[^\s?]+\.html(?:[\s?]) [NC]
-RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^(.+)\.html$ /$1 [R=301,L]
 
 # Serve the existing extensionless URLs.

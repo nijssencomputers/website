@@ -32,8 +32,10 @@ def main():
     for f in sorted(root.glob('*.html')):
         canonical='/' if f.name=='index.html' else '/'+f.stem
         verify(canonical,200)
+        verify('/'+f.name,301,canonical)
         verify('/'+f.name+'?utm_source=test',301,canonical+'?utm_source=test')
     for path,location in {'/index':'/','/copy-of-contact':'/contact','/copy-of-diensten':'/#diensten','/copy-of-tarieven':'/#tarief','/copy-of-zakelijk':'/mkb-it-beheer-leidschendam-voorburg','/kopie-van-home':'/'}.items():verify(path,301,location)
+    verify('/niet-bestaande-pagina.html',301,'/niet-bestaande-pagina')
     for path in ['/style.css?v=20260915-audit1','/nav.js?v=20260915-audit1','/analytics-events.js?v=20260915-audit1','/robots.txt','/sitemap.xml']:verify(path,200)
     for path in ['/src/pages.json','/tools/build.py','/tests/browser_checks.py','/.git/config']:verify(path,403)
     verify('/niet-bestaande-pagina',404)
