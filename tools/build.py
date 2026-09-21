@@ -42,7 +42,50 @@ def data_for(page):
         service = {'@type': 'Service', '@id': url+'#dienst', 'name': page['kind'], 'provider': {'@id': BASE+'/#bedrijf'}, 'url': url}
         if page.get('city'): service['areaServed'] = page['city']
         graph.append(service)
+    if page.get('faq'):
+        graph.append({
+            '@type': 'FAQPage',
+            '@id': url + '#faq',
+            'url': url,
+            'inLanguage': 'nl-NL',
+            'mainEntity': [{
+                '@type': 'Question',
+                'name': question,
+                'acceptedAnswer': {'@type': 'Answer', 'text': answer}
+            } for question, answer in page['faq']]
+        })
     return json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False).replace('<', '\\u003c')
+
+
+# The three existing homepage quotes. Do not invent extra reviews.
+CUSTOMER_QUOTES = (
+    ('“Jeroen biedt een ontzettend goede en snelle service. Altijd een vriendelijke lach en denkt goed mee. Al meer dan 15 jaar leunen wij op zijn expertise! Wij willen geen ander meer!”', 'Metselbedrijf Zwaan'),
+    ('“Mijn laptop gaf een raar ratelend geluid. Jeroen heeft hem compleet nagekeken, bleek enorm stoffig. Een complete schoonmaak gehad en kon hem de volgende dag alweer ophalen.”', 'Robin Swenne'),
+    ('“Fijne en razend snelle service! Mijn laptop was gecrashed (thee), binnen 24 uur was ik weer up en running. Jeroen heeft een nieuwe laptop geregeld en al mijn gegevens teruggevonden.”', 'Mireille van den Dop'),
+)
+
+
+def render_faq(page):
+    items = '\n'.join(
+        f'      <h3>{escape(question)}</h3>\n      <p>{escape(answer)}</p>'
+        for question, answer in page['faq']
+    )
+    return f'''    <section class="section-block article-section" id="veelgestelde-vragen">
+      <h2>Veelgestelde vragen</h2>
+{items}
+    </section>'''
+
+
+def render_quotes():
+    cards = ''.join(
+        f'<blockquote class="review-card"><p>{escape(quote)}</p><footer>{escape(name)}</footer></blockquote>'
+        for quote, name in CUSTOMER_QUOTES
+    )
+    return f'''    <section class="section-block article-section" id="klantreacties">
+      <h2>Algemene klantreacties</h2>
+      <p>Deze reacties komen van de bestaande website. Het zijn algemene klantervaringen, geen aparte printerbeoordelingen.</p>
+      <div class="reviews-grid">{cards}</div>
+    </section>'''
 
 
 def render_body(page):
@@ -58,6 +101,10 @@ def render_body(page):
     </section>''']
     for heading, content in page['sections']:
         parts.append(f'    <section class="section-block article-section">\n      <h2>{escape(heading)}</h2>\n      {content}\n    </section>')
+    if page.get('faq'):
+        parts.append(render_faq(page))
+    if page.get('quotes'):
+        parts.append(render_quotes())
     parts.append(CONTACT)
     return '\n\n'.join(parts)
 

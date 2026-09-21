@@ -153,18 +153,22 @@
   },
   {
     "slug": "printer-hulp-leidschendam",
-    "title": "Printerhulp in Leidschendam | Nijssen Computers",
-    "description": "Printer offline of scannen lukt niet in Leidschendam? Hulp aan huis bij installatie en printen vanaf Mac, Windows, telefoon of tablet. €60 per uur.",
+    "title": "Printer werkt niet Leidschendam | Hulp aan huis | Nijssen Computers",
+    "description": "Printer offline, draadloos printen of scannen lukt niet? Hulp aan huis in Leidschendam. Jeroen helpt bij u thuis. €60 per uur.",
     "heading": "Printerhulp in Leidschendam",
     "intro": "Uw printer blijft offline, draadloos printen lukt niet of de scanner wordt niet gevonden. Ik kom op afspraak bij u thuis in Leidschendam om het uit te zoeken.",
     "sections": [
       [
         "Printer aansluiten en storingen onderzoeken",
-        "<p>Ik controleer de verbinding, printerinstellingen, wachtrij en benodigde software. Ook na een nieuwe router, computer of update kan de printer opnieuw ingesteld moeten worden.</p><p>Ik help met printen vanaf uw Mac, Windows-computer, telefoon of tablet en kijk wat uw printer ondersteunt.</p>"
+        "<p>Ik controleer de verbinding, printerinstellingen, wachtrij en benodigde software. Ook na een Windows-update, een nieuwe router of een nieuwe computer kan de printer offline blijven staan en opnieuw ingesteld moeten worden.</p><p>Ik help met printen vanaf uw Mac, Windows-computer, telefoon of tablet en kijk wat uw printer ondersteunt. Werkt draadloos printen niet, dan zoek ik uit of het aan de printer, de wifi of de instellingen ligt.</p>"
       ],
       [
         "Scannen en een nieuwe printer installeren",
         "<p>Hulp bij scannen naar uw computer, e-mail of een map, voor zover uw printer dit ondersteunt. Bij een nieuwe printer stel ik de verbinding en software in en testen we samen of printen en scannen werken.</p>"
+      ],
+      [
+        "Wanneer ik langs kan komen",
+        "<ul class=\"dienst-lijst\"><li>De printer blijft offline of print niets meer.</li><li>Draadloos printen vanaf telefoon of tablet lukt niet.</li><li>Scannen naar de computer of een map werkt niet.</li><li>U heeft een nieuwe printer die nog geïnstalleerd moet worden.</li></ul>"
       ],
       [
         "Wat handig is om door te geven",
@@ -172,15 +176,58 @@
       ],
       [
         "Tarief en afspraak",
-        "<p>U spreekt rechtstreeks met Jeroen Nijssen. Printerhulp aan huis in Leidschendam is op afspraak. Particulier: €60 per uur, afgerekend per half uur.</p>"
+        "<p>U spreekt rechtstreeks met Jeroen Nijssen. Printerhulp aan huis in Leidschendam en omgeving is op afspraak. Particulier: €60 per uur, afgerekend per half uur.</p>"
       ]
     ],
+    "faq": [
+      [
+        "Mijn printer blijft offline na een Windows-update. Kunt u helpen?",
+        "Dat komt regelmatig voor. Na een update herkent Windows de printer soms niet meer, of raakt de wachtrij in de war. Ik kijk bij u thuis in Leidschendam naar de verbinding, de printersoftware en de instellingen, en test daarna of printen weer werkt."
+      ],
+      [
+        "Kan ik vanaf mijn telefoon of tablet draadloos printen?",
+        "Vaak wel, als uw printer dat ondersteunt en op hetzelfde wifinetwerk staat. Ik stel draadloos printen in vanaf iPhone, iPad of Android, en vanaf uw computer. Werkt het niet, dan zoek ik uit of het aan de printer, de wifi of de instellingen ligt."
+      ],
+      [
+        "Scannen naar mijn computer of een map lukt niet. Wat kunt u doen?",
+        "Ik controleer of de scanner wordt herkend en stel scannen in naar uw computer, e-mail of een map, voor zover uw printer dat ondersteunt. We testen samen een scan, zodat u ziet waar het bestand terechtkomt."
+      ],
+      [
+        "Kunt u een nieuwe printer bij mij thuis installeren?",
+        "Ja. Ik sluit de printer aan, installeer de benodigde software en zet printen en scannen klaar op de apparaten die u gebruikt. Dat kan een nieuwe printer zijn of een bestaande die opnieuw ingesteld moet worden."
+      ],
+      [
+        "Wat kost printerhulp aan huis?",
+        "Voor particulieren is het tarief €60 per uur, afgerekend per half uur. U hoort vooraf wat ik ga doen. Na afloop rekenen we af op basis van de bestede tijd."
+      ],
+      [
+        "Komt u ook in mijn buurt in Leidschendam?",
+        "Ik kom op afspraak aan huis in Leidschendam en omgeving, waaronder Voorburg en Voorschoten. Zeg bij contact in welke plaats u woont, dan kijken we of een afspraak mogelijk is. Ik beloof geen aparte service per wijk."
+      ]
+    ],
+    "quotes": true,
     "city": "Leidschendam",
     "kind": "Printerhulp aan huis",
     "related": [
       [
         "computerhulp-aan-huis-leidschendam",
-        "Andere computerhulp in Leidschendam"
+        "Computerhulp in Leidschendam"
+      ],
+      [
+        "wifi-netwerk-hulp-leidschendam",
+        "Wifi-hulp in Leidschendam"
+      ],
+      [
+        "laptop-traag-leidschendam",
+        "Hulp bij een trage laptop"
+      ],
+      [
+        "printer-hulp-voorburg",
+        "Printerhulp in Voorburg"
+      ],
+      [
+        "printer-hulp-voorschoten",
+        "Printerhulp in Voorschoten"
       ]
     ],
     "note": "Particulier: €60 per uur, afgerekend per half uur."
