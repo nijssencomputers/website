@@ -37,7 +37,7 @@ def main():
                 # Not a reproduction of the logo: explicit fixture for offline layout checks.
                 svg='<svg xmlns="http://www.w3.org/2000/svg" width="280" height="66"><rect width="280" height="66" fill="#eeeeea"/><text x="12" y="39" fill="#2d5a3d" font-size="20" font-family="sans-serif">Bestaand logo (test)</text></svg>'
                 route.fulfill(status=200,content_type='image/svg+xml',body=svg)
-            elif url.endswith('/jeroen.png'):
+            elif url.endswith('/jeroen.png') or '/jeroen-720.' in url:
                 svg='<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><rect width="160" height="160" fill="#eeeeea"/><text x="12" y="82" fill="#566168" font-size="15" font-family="sans-serif">Bestaande foto</text><text x="12" y="106" fill="#566168" font-size="15" font-family="sans-serif">(test)</text></svg>'
                 route.fulfill(status=200,content_type='image/svg+xml',body=svg)
             elif '/favicon.ico' in url:route.fulfill(status=204,body='')
@@ -57,7 +57,7 @@ def main():
                 html=html.replace('<script>'+(ROOT/n).read_text()+'</script>','')
             html=html.replace('</body>',local_scripts+'</body>')
             def fixture(m):
-                portrait='jeroen.png' in m[0]
+                portrait='jeroen.png' in m[0] or 'jeroen-720' in m[0]
                 w,h=(160,160) if portrait else (280,66)
                 label='Bestaande foto (test)' if portrait else 'Bestaand logo (test)'
                 svg=f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}"><rect width="100%" height="100%" fill="#eee"/><text x="8" y="{h//2}" font-family="sans-serif" font-size="14">{label}</text></svg>'

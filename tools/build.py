@@ -10,8 +10,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.nijssencomputers.nl'
-VERSION = '20260924-regio4'
-UPDATED = '2026-09-21'  # Actual content revision; do not replace with today's date on every build.
+VERSION = '20260924-home1'
+UPDATED = '2026-09-24'  # Homepage redesign; do not replace with today's date on every build.
 TOWN_ORDER = ('Leidschendam', 'Voorburg', 'Voorschoten')
 SERVICE_ORDER = (
     ('computerhulp-aan-huis', 'Computerhulp aan huis'),
@@ -122,8 +122,10 @@ def data_for(page):
         'name': 'Nijssen Computers', 'url': BASE + '/',
         'description': 'Computerhulp en IT-ondersteuning voor particulieren en bedrijven. Apple, Windows en Linux.',
         'telephone': '+31624382361', 'email': 'info@nijssencomputers.nl',
-        'founder': {'@type': 'Person', 'name': 'Jeroen Nijssen'}, 'foundingDate': '2008',
+        'founder': {'@type': 'Person', 'name': 'Jeroen Nijssen', 'image': BASE + '/jeroen.png'},
+        'foundingDate': '2008',
         'image': BASE + '/jeroen.png',
+        'priceRange': '€60-€90',
         'address': {'@type': 'PostalAddress', 'addressLocality': 'Leidschendam', 'addressCountry': 'NL'},
         'areaServed': ['Leidschendam', 'Voorburg', 'Voorschoten']
     }
@@ -206,7 +208,7 @@ def outputs():
     pages = json.loads((ROOT/'src/pages.json').read_text(encoding='utf-8'))
     content_pages = list(pages)
     pages.insert(0, {'slug': '', 'title': 'Computerhulp aan huis | Nijssen Computers',
-        'description': 'Computerhulp aan huis in Leidschendam, Voorburg en Voorschoten. Jeroen helpt met Apple, Windows, Linux, wifi en printers. Particulier €60 per uur.'})
+        'description': 'Computerhulp aan huis in Leidschendam, Voorburg en Voorschoten. Jeroen Nijssen komt zelf bij u langs. Apple, Windows, Linux. Particulier €60 per uur.'})
     regio_nav = render_regio_nav(content_pages)
     result = {}
     for page in pages:
@@ -242,7 +244,7 @@ def main():
         target = args.deploy.resolve()
         if target.exists():
             parser.error('Deployment directory must not already exist; this prevents accidental overwrites.')
-        assets = ['style.css', 'nav.js', 'analytics-events.js', 'robots.txt', '.htaccess', 'jeroen.png', '_files/ugd/a467e1_485c7f11207647e3a05afcf4b5a87758.pdf']
+        assets = ['style.css', 'nav.js', 'analytics-events.js', 'robots.txt', '.htaccess', 'jeroen.png', 'jeroen-720.jpg', 'jeroen-720.webp', '_files/ugd/a467e1_485c7f11207647e3a05afcf4b5a87758.pdf']
         missing = [p for p in assets if not (ROOT/p).is_file()]
         if missing:
             parser.error('Unchanged assets must be present in the original checkout: '+', '.join(missing))
