@@ -7,7 +7,7 @@ import json
 import sys
 import xml.etree.ElementTree as ET
 from collections import Counter
-from build import outputs, BASE
+from build import outputs, BASE, regio_nav_links
 ROOT = Path(__file__).resolve().parents[1]
 VOID = set('area base br col embed hr img input link meta param source track wbr'.split())
 class Parse(HTMLParser):
@@ -58,8 +58,10 @@ def main():
         check('contact' in p.ids and 'main-content' in p.ids,f.name+': missing direct contact/skip target')
         check(any(t=='html' and a.get('lang')=='nl' for t,a in p.nodes),f.name+': Dutch language')
         check(any(t=='img' and a.get('class')=='logo-img' and a.get('alt')=='Nijssen Computers' and 'static.wixstatic.com' in a.get('src','') for t,a in p.nodes),f.name+': existing logo must remain')
-        check(p.nav==[('/#direct-hulp','Hulp'),('/#tarief','Tarieven'),('/#werkgebied','Werkgebied'),('/#over-mij','Over mij'),('#contact','Contact')],f.name+': inconsistent navigation')
-        check('Home' not in p.text and 'Regio' not in p.text,f.name+': English Home/old dropdown')
+        check(p.nav==[('/#direct-hulp','Hulp'),('/#tarief','Tarieven'),('/#werkgebied','Werkgebied'),('/#over-mij','Over mij'),('/#werkgebied','Regio')]+regio_nav_links()+[('#contact','Contact')],f.name+': inconsistent navigation')
+        check('Home' not in p.text,f.name+': English Home label')
+        check(any(t=='button' and a.get('class')=='nav-regio-toggle' and a.get('aria-expanded')=='false' and a.get('aria-controls')=='regio-menu' for t,a in p.nodes),f.name+': missing Regio toggle')
+        check(sum(1 for t,a in p.nodes if t=='div' and a.get('class')=='nav-regio-group')==3,f.name+': Regio menu needs three town groups')
         check(len(p.json)==1,f.name+': expected one JSON-LD graph')
         if p.json:
             types=[x.get('@type') for x in p.json[0].get('@graph',[])]
