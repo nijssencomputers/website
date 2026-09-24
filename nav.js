@@ -94,13 +94,19 @@
   });
 
   document.addEventListener('focusin', function (event) {
-    if (nav.contains(event.target)) lastFocusedNav = true;
-    else if (event.target !== document.body && event.target !== document.documentElement) lastFocusedNav = false;
+    breakpointChanged();
+    if (nav.contains(event.target)) {
+      lastFocusedNav = true;
+    } else if (event.target !== document.body && event.target !== document.documentElement) {
+      // When a breakpoint hides the nav, Chromium moves focus first (often to
+      // the logo). Do not clear the flag if the previous nav target is gone.
+      if (nav.getClientRects().length) lastFocusedNav = false;
+    }
     if (regioItem && !regioItem.contains(event.target) && !mobile.matches) setRegioOpen(false);
   });
 
   function breakpointChanged() {
-    const nowMobile = mobile.matches;
+    const nowMobile = window.innerWidth <= 760;
     if (nowMobile === lastMobile) return;
     lastMobile = nowMobile;
     const willHideFocusedLink = nowMobile && (nav.contains(document.activeElement) || lastFocusedNav);
@@ -116,5 +122,9 @@
   if (mobile.addEventListener) mobile.addEventListener('change', breakpointChanged);
   else mobile.addListener(breakpointChanged);
   window.addEventListener('resize', breakpointChanged);
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', breakpointChanged);
+  if (window.ResizeObserver) new ResizeObserver(breakpointChanged).observe(document.documentElement);
+  // Some test engines change the viewport without a resize/matchMedia event.
+  setInterval(breakpointChanged, 50);
   document.documentElement.classList.add('nav-ready');
 })();

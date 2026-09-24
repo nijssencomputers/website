@@ -33,6 +33,7 @@ section[id], main[id] { scroll-margin-top: 1rem; }
 .logo-img { width: 220px; height: auto; aspect-ratio: 280 / 66; object-fit: contain; }
 .nav { display: flex; flex-wrap: wrap; align-items: center; column-gap: 1.1rem; }
 .nav a, .nav-regio-toggle { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-text-soft); font-size: 1rem; text-decoration: none; }
+.nav a[hidden], .nav-regio-toggle[hidden], .nav-town-toggle[hidden] { display: none; }
 .nav a:hover, .nav-regio-toggle:hover, .nav-regio-toggle[aria-expanded="true"] { color: var(--color-accent); text-decoration: underline; }
 .nav-toggle { display: none; min-width: 82px; min-height: 44px; padding: .45rem .6rem; border: 1px solid #aab8ae; border-radius: var(--radius); background: #fff; color: var(--color-accent); cursor: pointer; align-items: center; justify-content: center; gap: .45rem; }
 .nav-regio { position: static; flex: 1 1 100%; min-width: 0; }
@@ -119,6 +120,7 @@ main:focus { outline: none; }
   .nav-regio, .nav-regio-menu, .nav-regio-group, .nav-regio-services { width: 100%; min-width: 0; }
   .nav-regio-menu { grid-template-columns: 1fr; gap: .35rem; }
   .nav-ready .nav-regio-menu { display: grid; position: static; min-width: 0; max-width: none; padding: 0; border: 0; box-shadow: none; background: transparent; }
+  .nav-ready .nav-regio-toggle { display: none; }
   .nav-ready .nav-town-toggle { display: inline-flex; }
   .nav-ready .nav-regio-services { display: none; padding-left: .85rem; }
   .nav-ready .nav-regio-group.is-open .nav-regio-services { display: block; }
