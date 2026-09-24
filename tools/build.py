@@ -10,7 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.nijssencomputers.nl'
-VERSION = '20260924-regio2'
+VERSION = '20260924-regio3'
 UPDATED = '2026-09-21'  # Actual content revision; do not replace with today's date on every build.
 TOWN_ORDER = ('Leidschendam', 'Voorburg', 'Voorschoten')
 SERVICE_ORDER = (
@@ -64,7 +64,7 @@ def regio_groups(pages=None):
 
 
 def regio_nav_links(pages=None):
-    links = []
+    links = [('/#werkgebied', 'Bekijk het hele werkgebied')]
     for group in regio_groups(pages):
         links.append(('/' + group['hub'], group['city']))
         links.extend(('/' + slug, label) for slug, label in group['services'])
@@ -97,6 +97,7 @@ def render_regio_nav(pages=None):
         '          <a class="nav-regio-fallback" href="/#werkgebied">Regio</a>\n'
         '          <button type="button" class="nav-regio-toggle" aria-expanded="false" aria-controls="regio-menu" hidden>Regio</button>\n'
         '          <div class="nav-regio-menu" id="regio-menu">\n'
+        '            <a class="nav-regio-overview" href="/#werkgebied">Bekijk het hele werkgebied</a>\n'
         + '\n'.join(groups_html) + '\n'
         '          </div>\n'
         '        </div>'
