@@ -127,7 +127,7 @@ def main():
         for bad in ('quick-help-card','regio-card','Kies wat','Ook Apple kan ik aan','Meer over zakelijke IT-ondersteuning'):
             check(bad not in (ROOT/'index.html').read_text(), 'Forbidden homepage pattern: '+bad)
         for term in ('Apple','Windows','Linux','iPhone','iPad','Android'):check(term in home.text,'Platform missing: '+term)
-    known_assets={'/jeroen.png','/jeroen-720.jpg','/jeroen-720.webp','/_files/ugd/a467e1_485c7f11207647e3a05afcf4b5a87758.pdf'}
+    known_assets={'/jeroen.png','/jeroen-720.png','/jeroen-720.webp','/_files/ugd/a467e1_485c7f11207647e3a05afcf4b5a87758.pdf'}
     graph={k:set() for k in parses}
     for url,p in parses.items():
         for tag,a in p.nodes:

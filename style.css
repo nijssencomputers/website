@@ -153,22 +153,18 @@ main { padding-left: max(1.25rem, env(safe-area-inset-left)); padding-right: max
 /* Homepage: personal, local, calm. Other pages keep the shared article layout. */
 .homepage { font-size: 1.125rem; }
 .homepage main { max-width: 52rem; padding-top: 1.75rem; }
-.homepage .hero { padding: 0.5rem 0 2.85rem; margin-bottom: 0.35rem; text-align: left; border-bottom: 1px solid #e6e8e4; }
-.homepage .hero h1 { font-size: clamp(1.4rem, 6.5vw, 2rem); margin: 0 0 0.85rem; }
-.homepage .home-hero-inner { display: grid; gap: 1.5rem 2.75rem; align-items: center; }
-.homepage .home-portrait { margin: 0; max-width: 15rem; }
-.homepage .home-portrait-img { width: 100%; height: auto; aspect-ratio: 720 / 816; object-fit: contain; }
-.homepage .home-lead { margin: 0 0 0.85rem; max-width: 34rem; color: var(--color-text); font-size: 1.2rem; line-height: 1.5; }
-.homepage .hero-area { margin-bottom: 1.35rem; font-size: 1.0625rem; }
-.homepage .hero-actions { justify-content: flex-start; margin-bottom: 0.95rem; }
+.homepage .hero { padding: 0.5rem 0 2.5rem; text-align: left; }
+.homepage .hero h1 { font-size: clamp(1.4rem, 6.5vw, 2rem); margin: 0 0 0.7rem; }
+.homepage .home-hero-inner { display: grid; gap: 1.25rem 2.5rem; align-items: center; }
+.homepage .home-portrait { margin: 0; max-width: 15rem; background: none; }
+.homepage .home-portrait-img { width: 100%; height: auto; aspect-ratio: 720 / 816; object-fit: contain; background: none; border: 0; border-radius: 0; box-shadow: none; }
+.homepage .hero .tagline { margin: 0 0 1.15rem; max-width: 32rem; color: var(--color-text); }
+.homepage .hero-actions { justify-content: flex-start; margin-bottom: 0.85rem; }
 .homepage .hero-note { font-size: 1rem; }
+.homepage .home-intro { margin: 1.5rem 0 0; max-width: 40rem; color: var(--color-text-soft); }
 .homepage .section-block { margin-bottom: 3.25rem; }
 .homepage .section-block > p,
 .homepage .home-audience p { max-width: 40rem; }
-.homepage .home-points { list-style: none; margin: 1.4rem 0 0; padding: 0; display: grid; gap: 1.15rem; }
-.homepage .home-points li { margin: 0; padding: 0; }
-.homepage .home-points strong { display: block; margin-bottom: 0.2rem; color: var(--color-accent); font-size: 1.125rem; }
-.homepage .home-points span { display: block; color: var(--color-text-soft); }
 .homepage .home-prices { margin: 1.15rem 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 2.5rem; }
 .homepage .home-prices dt { margin: 0; color: var(--color-accent); font-weight: 600; }
 .homepage .home-prices dd { margin: 0; color: var(--color-text-soft); }
@@ -190,13 +186,12 @@ main { padding-left: max(1.25rem, env(safe-area-inset-left)); padding-right: max
 }
 @media (max-width: 760px) {
   .homepage main { padding-top: 1.15rem; }
-  .homepage .hero { padding-bottom: 2.25rem; }
+  .homepage .hero { padding-bottom: 2rem; }
   .homepage .home-portrait { max-width: 13.5rem; }
   .homepage .section-block { margin-bottom: 2.5rem; }
 }
 @media (max-width: 520px) {
   .homepage .home-prices { grid-template-columns: 1fr; gap: 1.1rem; }
-  .homepage .home-lead { font-size: 1.125rem; }
 }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 @media print {

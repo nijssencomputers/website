@@ -36,7 +36,7 @@ def main():
         verify('/'+f.name+'?utm_source=test',301,canonical+'?utm_source=test')
     for path,location in {'/index':'/','/copy-of-contact':'/contact','/copy-of-diensten':'/#diensten','/copy-of-tarieven':'/#tarief','/copy-of-zakelijk':'/mkb-it-beheer-leidschendam-voorburg','/kopie-van-home':'/'}.items():verify(path,301,location)
     verify('/niet-bestaande-pagina.html',301,'/niet-bestaande-pagina')
-    for path in ['/style.css?v=20260924-home1','/nav.js?v=20260924-home1','/analytics-events.js?v=20260924-home1','/robots.txt','/sitemap.xml']:verify(path,200)
+    for path in ['/style.css?v=20260924-home2','/nav.js?v=20260924-home2','/analytics-events.js?v=20260924-home2','/robots.txt','/sitemap.xml']:verify(path,200)
     for path in ['/src/pages.json','/tools/build.py','/tests/browser_checks.py','/.git/config']:verify(path,403)
     verify('/niet-bestaande-pagina',404)
     report={'server':'Local Apache with the delivered .htaccess','cases':len(results),'passed':all(r['passed'] for r in results),'results':results,'not_tested':'Live hosting/Cloudflare/TLS, remote logo, unchanged original photo and terms PDF.'}
