@@ -11,7 +11,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.nijssencomputers.nl'
 VERSION = '20260924-regio4'
-UPDATED = '2026-09-21'  # Actual content revision; do not replace with today's date on every build.
+UPDATED = '2026-09-24'  # Actual content revision; do not replace with today's date on every build.
 TOWN_ORDER = ('Leidschendam', 'Voorburg', 'Voorschoten')
 SERVICE_ORDER = (
     ('computerhulp-aan-huis', 'Computerhulp aan huis'),

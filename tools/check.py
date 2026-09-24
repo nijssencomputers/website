@@ -67,11 +67,32 @@ def main():
         if p.json:
             types=[x.get('@type') for x in p.json[0].get('@graph',[])]
             check('LocalBusiness' in types,f.name+': missing LocalBusiness')
-            if f.stem=='printer-hulp-leidschendam':
+            faq_limits = {
+                'printer-hulp-leidschendam': (5, 6),
+                'wifi-netwerk-hulp-voorburg': (6, 8),
+            }
+            related_by_page = {
+                'printer-hulp-leidschendam': (
+                    '/computerhulp-aan-huis-leidschendam',
+                    '/wifi-netwerk-hulp-leidschendam',
+                    '/laptop-traag-leidschendam',
+                    '/printer-hulp-voorburg',
+                    '/printer-hulp-voorschoten',
+                ),
+                'wifi-netwerk-hulp-voorburg': (
+                    '/wifi-netwerk-hulp-leidschendam',
+                    '/wifi-netwerk-hulp-voorschoten',
+                    '/computerhulp-aan-huis-voorburg',
+                    '/laptop-traag-voorburg',
+                    '/contact',
+                ),
+            }
+            if f.stem in faq_limits:
                 check('FAQPage' in types,f.name+': expected FAQPage schema')
                 faq=next((x for x in p.json[0].get('@graph',[]) if x.get('@type')=='FAQPage'),None)
                 questions=faq.get('mainEntity') if faq else []
-                check(isinstance(questions,list) and 5<=len(questions)<=6,f.name+': FAQPage needs 5–6 questions')
+                lo, hi = faq_limits[f.stem]
+                check(isinstance(questions,list) and lo<=len(questions)<=hi,f.name+f': FAQPage needs {lo}–{hi} questions')
                 for item in questions or []:
                     answer=(item.get('acceptedAnswer') or {})
                     check(item.get('@type')=='Question' and item.get('name') and answer.get('@type')=='Answer' and answer.get('text'),f.name+': invalid FAQ question')
@@ -82,7 +103,7 @@ def main():
                     check(name in p.text,f.name+': missing existing quote '+name)
                 check('Veelgestelde vragen' in p.text,f.name+': missing FAQ heading')
                 hrefs=[a.get('href') for t,a in p.nodes if t=='a']
-                for path in ('/computerhulp-aan-huis-leidschendam','/wifi-netwerk-hulp-leidschendam','/laptop-traag-leidschendam','/printer-hulp-voorburg','/printer-hulp-voorschoten'):
+                for path in related_by_page[f.stem]:
                     check(path in hrefs,f.name+': missing related '+path)
             else:
                 check('FAQPage' not in types,f.name+': unexpected FAQPage')
