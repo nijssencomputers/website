@@ -58,7 +58,7 @@ def main():
         check('contact' in p.ids and 'main-content' in p.ids,f.name+': missing direct contact/skip target')
         check(any(t=='html' and a.get('lang')=='nl' for t,a in p.nodes),f.name+': Dutch language')
         check(any(t=='img' and a.get('class')=='logo-img' and a.get('alt')=='Nijssen Computers' and 'static.wixstatic.com' in a.get('src','') for t,a in p.nodes),f.name+': existing logo must remain')
-        check(p.nav==[('/#direct-hulp','Hulp'),('/#tarief','Tarieven'),('/#werkgebied','Regio')]+regio_nav_links()+[('/#over-mij','Over mij'),('#contact','Contact')],f.name+': inconsistent navigation')
+        check(p.nav==[('/#direct-hulp','Hulp'),('/#tarief','Tarieven'),('/#over-mij','Over mij'),('#contact','Contact'),('/#werkgebied','Regio')]+regio_nav_links(),f.name+': inconsistent navigation')
         check('Home' not in p.text,f.name+': English Home label')
         check(all(label!='Werkgebied' for _,label in p.nav),f.name+': Werkgebied must not be a separate nav item')
         check(any(t=='button' and a.get('class')=='nav-regio-toggle' and a.get('aria-expanded')=='false' and a.get('aria-controls')=='regio-menu' for t,a in p.nodes),f.name+': missing Regio toggle')
