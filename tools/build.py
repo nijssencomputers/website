@@ -10,8 +10,100 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.nijssencomputers.nl'
-VERSION = '20260915-audit1'
+VERSION = '20260924-regio4'
 UPDATED = '2026-09-24'  # Actual content revision; do not replace with today's date on every build.
+TOWN_ORDER = ('Leidschendam', 'Voorburg', 'Voorschoten')
+SERVICE_ORDER = (
+    ('computerhulp-aan-huis', 'Computerhulp aan huis'),
+    ('laptop-traag', 'Laptop traag'),
+    ('wifi-netwerk-hulp', 'Wifi/netwerk hulp'),
+    ('printer-hulp', 'Printer hulp'),
+    ('spoed-computerhulp', 'Dringende computerhulp'),
+)
+
+
+def _service_label(slug, page):
+    for prefix, label in SERVICE_ORDER:
+        if slug == prefix or slug.startswith(prefix + '-'):
+            return prefix, label
+    return None, page.get('kind') or page.get('heading') or slug
+
+
+def regio_groups(pages=None):
+    """Town hubs plus existing city service pages, for the Regio menu."""
+    if pages is None:
+        pages = json.loads((ROOT / 'src/pages.json').read_text(encoding='utf-8'))
+    by_city = {}
+    for page in pages:
+        city = page.get('city')
+        if not city:
+            continue
+        by_city.setdefault(city, []).append(page)
+    cities = [city for city in TOWN_ORDER if city in by_city]
+    cities.extend(city for city in by_city if city not in cities)
+    groups = []
+    for city in cities:
+        city_pages = by_city[city]
+        hub = next((page for page in city_pages if page['slug'] == 'computerhulp-aan-huis-' + city.lower()), city_pages[0])
+        ranked = []
+        seen = set()
+        for prefix, label in SERVICE_ORDER:
+            for page in city_pages:
+                if page['slug'] in seen:
+                    continue
+                matched, service_label = _service_label(page['slug'], page)
+                if matched == prefix:
+                    ranked.append((page['slug'], service_label))
+                    seen.add(page['slug'])
+        for page in city_pages:
+            if page['slug'] not in seen:
+                ranked.append((page['slug'], _service_label(page['slug'], page)[1]))
+                seen.add(page['slug'])
+        groups.append({'city': city, 'hub': hub['slug'], 'services': ranked})
+    return groups
+
+
+def regio_nav_links(pages=None):
+    links = [('/#werkgebied', 'Bekijk het hele werkgebied')]
+    for group in regio_groups(pages):
+        links.append(('/' + group['hub'], group['city']))
+        links.extend(('/' + slug, label) for slug, label in group['services'])
+    return links
+
+
+def render_regio_nav(pages=None):
+    groups_html = []
+    for group in regio_groups(pages):
+        key = group['city'].lower()
+        services = '\n'.join(
+            f'            <li><a href="/{escape(slug, quote=True)}">{escape(label)}</a></li>'
+            for slug, label in group['services']
+        )
+        groups_html.append(
+            f'''        <div class="nav-regio-group">
+          <div class="nav-regio-heading">
+            <a class="nav-regio-hub" href="/{escape(group['hub'], quote=True)}">{escape(group['city'])}</a>
+            <button type="button" class="nav-town-toggle" aria-expanded="false" aria-controls="regio-town-{escape(key, quote=True)}" hidden>
+              <span class="visually-hidden">Hulppagina's in {escape(group['city'])}</span>
+            </button>
+          </div>
+          <ul class="nav-regio-services" id="regio-town-{escape(key, quote=True)}">
+{services}
+          </ul>
+        </div>'''
+        )
+    return (
+        '        <div class="nav-item nav-regio">\n'
+        '          <a class="nav-regio-fallback" href="/#werkgebied">Regio</a>\n'
+        '          <button type="button" class="nav-regio-toggle" aria-expanded="false" aria-controls="regio-menu" hidden>Regio</button>\n'
+        '          <div class="nav-regio-menu" id="regio-menu">\n'
+        '            <a class="nav-regio-overview" href="/#werkgebied">Bekijk het hele werkgebied</a>\n'
+        + '\n'.join(groups_html) + '\n'
+        '          </div>\n'
+        '        </div>'
+    )
+
+
 CONTACT = '''    <section class="section-block contact-section" id="contact">
       <h2>Contact met Jeroen</h2>
       <p>Stuur een WhatsApp-bericht of bel. Vertel kort wat er speelt en in welke plaats u hulp zoekt.</p>
@@ -112,8 +204,10 @@ def render_body(page):
 def outputs():
     template = Template((ROOT/'src/layout.html').read_text(encoding='utf-8'))
     pages = json.loads((ROOT/'src/pages.json').read_text(encoding='utf-8'))
+    content_pages = list(pages)
     pages.insert(0, {'slug': '', 'title': 'Computerhulp aan huis | Nijssen Computers',
         'description': 'Computerhulp aan huis in Leidschendam, Voorburg en Voorschoten. Jeroen helpt met Apple, Windows, Linux, wifi en printers. Particulier €60 per uur.'})
+    regio_nav = render_regio_nav(content_pages)
     result = {}
     for page in pages:
         home = not page['slug']
@@ -125,7 +219,7 @@ def outputs():
         name = 'index.html' if home else page['slug']+'.html'
         result[name] = template.substitute(title=escape(page['title'], quote=True), description=escape(page['description'], quote=True),
             canonical=BASE+('/' if home else '/'+page['slug']), version=VERSION, body_class='homepage' if home else 'detailpage',
-            structured_data=data_for(page), body=body, related=related)
+            structured_data=data_for(page), body=body, related=related, regio_nav=regio_nav)
     urls = [BASE+('/' if not p['slug'] else '/'+p['slug']) for p in pages]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{escape(url)}</loc><lastmod>{UPDATED}</lastmod></url>\n' for url in urls)+'</urlset>\n'
     return result
