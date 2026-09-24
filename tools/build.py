@@ -10,7 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.nijssencomputers.nl'
-VERSION = '20260924-home3'
+VERSION = '20260924-home4'
 UPDATED = '2026-09-24'  # Homepage redesign; do not replace with today's date on every build.
 TOWN_ORDER = ('Leidschendam', 'Voorburg', 'Voorschoten')
 SERVICE_ORDER = (
