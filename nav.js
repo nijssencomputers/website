@@ -1,30 +1,89 @@
-/* Only the mobile menu needs enhancement; every page remains usable without JS. */
+/* Progressive enhancement for the mobile menu and the Regio groups. Usable without JS. */
 (function () {
   'use strict';
-  const button = document.querySelector('.nav-toggle');
+  const menuButton = document.querySelector('.nav-toggle');
   const nav = document.getElementById('site-nav');
-  if (!button || !nav) return;
+  if (!menuButton || !nav) return;
   const mobile = window.matchMedia('(max-width: 760px)');
+  const regioItem = nav.querySelector('.nav-regio');
+  const regioToggle = nav.querySelector('.nav-regio-toggle');
+  const regioFallback = nav.querySelector('.nav-regio-fallback');
+  const townToggles = Array.from(nav.querySelectorAll('.nav-town-toggle'));
   let lastFocusedNav = false;
+  let lastMobile = mobile.matches;
 
-  function setOpen(open) {
-    button.setAttribute('aria-expanded', String(open));
+  if (regioToggle) regioToggle.hidden = false;
+  if (regioFallback) regioFallback.hidden = true;
+  townToggles.forEach(function (toggle) { toggle.hidden = false; });
+
+  function setMenuOpen(open) {
+    menuButton.setAttribute('aria-expanded', String(open));
     nav.classList.toggle('is-open', open);
+    if (!open) {
+      setRegioOpen(false);
+      setAllTownsOpen(false);
+    }
   }
-  button.addEventListener('click', function () {
-    setOpen(button.getAttribute('aria-expanded') !== 'true');
+
+  function setRegioOpen(open) {
+    if (!regioToggle || !regioItem) return;
+    regioToggle.setAttribute('aria-expanded', String(open));
+    regioItem.classList.toggle('is-open', open);
+  }
+
+  function setTownOpen(toggle, open) {
+    const group = toggle.closest('.nav-regio-group');
+    toggle.setAttribute('aria-expanded', String(open));
+    if (group) group.classList.toggle('is-open', open);
+  }
+
+  function setAllTownsOpen(open) {
+    townToggles.forEach(function (toggle) { setTownOpen(toggle, open); });
+  }
+
+  menuButton.addEventListener('click', function () {
+    setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
   });
+
+  if (regioToggle) {
+    regioToggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      setRegioOpen(regioToggle.getAttribute('aria-expanded') !== 'true');
+    });
+  }
+
+  townToggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
+      townToggles.forEach(function (other) {
+        setTownOpen(other, willOpen && other === toggle);
+      });
+    });
+  });
+
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
-      setOpen(false);
-      button.focus();
+    if (event.key !== 'Escape') return;
+    if (regioToggle && regioToggle.getAttribute('aria-expanded') === 'true') {
+      setRegioOpen(false);
+      regioToggle.focus();
+      return;
+    }
+    if (menuButton.getAttribute('aria-expanded') === 'true') {
+      setMenuOpen(false);
+      menuButton.focus();
     }
   });
+
+  document.addEventListener('click', function (event) {
+    if (regioItem && !regioItem.contains(event.target)) setRegioOpen(false);
+  });
+
   nav.addEventListener('click', function (event) {
     const link = event.target.closest('a');
     if (!link || !mobile.matches) return;
     const destination = new URL(link.href, window.location.href);
-    setOpen(false);
+    setMenuOpen(false);
     if (destination.origin === location.origin && destination.pathname === location.pathname && destination.hash) {
       const target = document.getElementById(decodeURIComponent(destination.hash.slice(1)));
       if (target) {
@@ -33,23 +92,39 @@
       }
     }
   });
+
   document.addEventListener('focusin', function (event) {
-    lastFocusedNav = nav.contains(event.target);
+    breakpointChanged();
+    if (nav.contains(event.target)) {
+      lastFocusedNav = true;
+    } else if (event.target !== document.body && event.target !== document.documentElement) {
+      // When a breakpoint hides the nav, Chromium moves focus first (often to
+      // the logo). Do not clear the flag if the previous nav target is gone.
+      if (nav.getClientRects().length) lastFocusedNav = false;
+    }
+    if (regioItem && !regioItem.contains(event.target) && !mobile.matches) setRegioOpen(false);
   });
+
   function breakpointChanged() {
-    const nowMobile = mobile.matches;
+    const nowMobile = window.innerWidth <= 760;
     if (nowMobile === lastMobile) return;
     lastMobile = nowMobile;
     const willHideFocusedLink = nowMobile && (nav.contains(document.activeElement) || lastFocusedNav);
-    const wasButtonFocused = document.activeElement === button;
-    setOpen(false);
-    if (willHideFocusedLink) button.focus();
-    if (!mobile.matches && wasButtonFocused) nav.querySelector('a').focus();
+    const wasButtonFocused = document.activeElement === menuButton;
+    setMenuOpen(false);
+    if (willHideFocusedLink) menuButton.focus();
+    if (!nowMobile && wasButtonFocused) {
+      const first = nav.querySelector('a:not([hidden])');
+      if (first) first.focus();
+    }
   }
-  let lastMobile = mobile.matches;
+
   if (mobile.addEventListener) mobile.addEventListener('change', breakpointChanged);
   else mobile.addListener(breakpointChanged);
   window.addEventListener('resize', breakpointChanged);
-  // Hide the menu only after its controls are installed successfully.
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', breakpointChanged);
+  if (window.ResizeObserver) new ResizeObserver(breakpointChanged).observe(document.documentElement);
+  // Some test engines change the viewport without a resize/matchMedia event.
+  setInterval(breakpointChanged, 50);
   document.documentElement.classList.add('nav-ready');
 })();
