@@ -159,6 +159,28 @@ main { padding-left: max(1.25rem, env(safe-area-inset-left)); padding-right: max
 }
 
 /* Homepage sections: February 2026 look, scoped so other pages stay unchanged. */
+body.homepage main {
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+  padding-left: max(2.5rem, env(safe-area-inset-left));
+  padding-right: max(2.5rem, env(safe-area-inset-right));
+}
+.seo-footer-links {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-text-soft);
+}
+.seo-footer-links a {
+  color: var(--color-text-soft);
+  text-decoration: none;
+}
+.seo-footer-links a:hover {
+  text-decoration: underline;
+}
+.seo-footer-links span {
+  margin: 0 0.2rem;
+}
 .homepage .hero {
   padding: 2rem 0 2.5rem;
 }
@@ -424,6 +446,11 @@ main { padding-left: max(1.25rem, env(safe-area-inset-left)); padding-right: max
   }
 }
 @media (max-width: 700px) {
+  body.homepage main {
+    padding-top: 1.5rem;
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
   .homepage .hero {
     padding: 1.5rem 0 1.75rem;
   }

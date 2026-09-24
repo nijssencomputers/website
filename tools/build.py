@@ -10,7 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.nijssencomputers.nl'
-VERSION = '20260924-homefeb'
+VERSION = '20260924-homefeb2'
 UPDATED = '2026-09-24'  # Actual content revision; do not replace with today's date on every build.
 TOWN_ORDER = ('Leidschendam', 'Voorburg', 'Voorschoten')
 SERVICE_ORDER = (
@@ -213,6 +213,15 @@ def outputs():
         home = not page['slug']
         body = (ROOT/'src/home.html').read_text(encoding='utf-8').rstrip() if home else render_body(page)
         related = ''
+        if home:
+            related = (
+                '      <p class="seo-footer-links">Computerhulp in '
+                '<a href="/computerhulp-aan-huis-leidschendam">Leidschendam</a>'
+                '<span>·</span>'
+                '<a href="/computerhulp-aan-huis-voorburg">Voorburg</a>'
+                '<span>·</span>'
+                '<a href="/computerhulp-aan-huis-voorschoten">Voorschoten</a></p>\n'
+            )
         if page.get('related'):
             links = ''.join(f'<a href="/{escape(slug, quote=True)}">{escape(label)}</a>' for slug, label in page['related'])
             related = f'      <div class="related"><p>Verder lezen</p><nav class="related-links" aria-label="Gerelateerde informatie">{links}</nav></div>'
