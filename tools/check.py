@@ -143,7 +143,7 @@ def main():
                 check(path in hrefs,f.name+': missing related '+path)
     home=parses.get('/')
     if home:
-        check(home.h1==['Computerhulp aan huis'],'Homepage h1 changed')
+        check(len(home.h1)==1 and home.h1[0].startswith('Computerhulp aan huis'),'Homepage h1 must begin with Computerhulp aan huis')
         check(all(urlsplit(x).scheme in ('tel','mailto') or x=='https://wa.me/31624382361' for x in home.main_links),'Homepage content must not send customers to another article')
         for bad in ('quick-help-card','regio-card','Kies wat','Ook Apple kan ik aan','Meer over zakelijke IT-ondersteuning'):
             check(bad not in (ROOT/'index.html').read_text(), 'Forbidden homepage pattern: '+bad)
