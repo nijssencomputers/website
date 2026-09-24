@@ -59,7 +59,6 @@ main { max-width: 50rem; margin: auto; padding: 1.5rem 2rem 1rem; }
 main:focus { outline: none; }
 .hero { padding: 1.5rem 0 2.5rem; text-align: center; }
 .hero h1 { font-size: clamp(1.5rem, 3.5vw, 2rem); margin: 0 0 1rem; }
-.homepage .hero h1 { font-size: clamp(1.4rem, 6.5vw, 2rem); }
 .tagline { max-width: 39rem; margin: 0 auto 1rem; color: var(--color-text-soft); }
 .hero-area { color: var(--color-text-soft); font-size: 1rem; margin-bottom: 1.25rem; }
 .hero-actions, .contact-options { display: flex; flex-wrap: wrap; gap: .75rem; }
@@ -157,4 +156,349 @@ main { padding-left: max(1.25rem, env(safe-area-inset-left)); padding-right: max
   main { max-width: none; padding: 0; }
   .card, .tarief-box, .review-card, .about-content { box-shadow: none; break-inside: avoid; }
   .cta-button { background: none; color: #000; border: 1px solid; }
+}
+
+/* Homepage sections: February 2026 look, scoped so other pages stay unchanged. */
+body.homepage main {
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+  padding-left: max(2.5rem, env(safe-area-inset-left));
+  padding-right: max(2.5rem, env(safe-area-inset-right));
+}
+.seo-footer-links {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-text-soft);
+}
+.seo-footer-links a {
+  color: var(--color-text-soft);
+  text-decoration: none;
+}
+.seo-footer-links a:hover {
+  text-decoration: underline;
+}
+.seo-footer-links span {
+  margin: 0 0.2rem;
+}
+.homepage .hero {
+  padding: 2rem 0 2.5rem;
+}
+.homepage .hero h1 {
+  font-size: clamp(1.5rem, 3.5vw, 1.875rem);
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+.homepage .hero .tagline {
+  font-size: 1.0625rem;
+  color: var(--color-text-soft);
+  margin: 0 auto 1.75rem;
+  max-width: 36rem;
+}
+.homepage .hero .cta-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 10px rgba(37, 211, 102, 0.35);
+}
+.homepage .hero .cta-whatsapp:hover {
+  background: #20bd5a;
+  text-decoration: none;
+}
+.homepage .icon-whatsapp {
+  display: block;
+  flex: 0 0 auto;
+}
+.homepage .section-block {
+  margin-bottom: 2.75rem;
+}
+.homepage .section-block h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+.homepage .section-block > p {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-soft);
+}
+.homepage .about-content {
+  background: #fff;
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--color-accent);
+}
+.homepage .about-content p {
+  margin: 0 0 1rem;
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+.homepage .about-content p:last-child {
+  margin-bottom: 0;
+}
+.homepage .about-signature {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 1.0625rem;
+}
+.homepage .about-location {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: var(--color-text-soft);
+}
+.homepage .about-img {
+  float: right;
+  width: 200px;
+  max-width: 200px;
+  height: auto;
+  margin: 0 0 0.5rem 2rem;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  object-fit: contain;
+}
+.homepage .two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+.homepage .card {
+  background: #fff;
+  padding: 1.35rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgb(0 0 0 / 4%);
+}
+.homepage .card h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0 0 0.5rem;
+}
+.homepage .card p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-soft);
+  line-height: 1.55;
+}
+.homepage .dienst-groep {
+  margin-bottom: 1.75rem;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.homepage .dienst-groep h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgb(0 0 0 / 8%);
+}
+.homepage .dienst-lijst {
+  margin: 0;
+  padding-left: 1.35rem;
+  color: var(--color-text-soft);
+  font-size: 0.9375rem;
+}
+.homepage .dienst-lijst li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+.homepage .dienst-lijst strong {
+  color: var(--color-text);
+}
+.homepage .reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.homepage .review-card {
+  display: block;
+  margin: 0;
+  padding: 1rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgb(0 0 0 / 4%);
+}
+.homepage .stars {
+  color: #f1c40f;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.homepage .review-text {
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+.homepage .review-author {
+  font-weight: 600;
+  color: var(--color-text-soft);
+  font-size: 0.875rem;
+  text-align: right;
+  margin: 0;
+}
+.homepage .tarief-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+.homepage .tarief-box {
+  background: #fff;
+  padding: 1.35rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgb(0 0 0 / 4%);
+}
+.homepage .tarief-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0 0 0.5rem;
+}
+.homepage .tarief-box .price {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.25rem;
+}
+.homepage .tarief-box .btw-note {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-text-soft);
+}
+.homepage .tarief-box .tarief-detail {
+  font-size: 0.875rem;
+  color: var(--color-text-soft);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+}
+.homepage .tarief-box p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-soft);
+  line-height: 1.5;
+}
+.homepage .contact-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  align-items: center;
+}
+.homepage .contact-options .cta-button {
+  padding: 0.6rem 1rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  min-width: 0;
+  max-width: 100%;
+}
+.homepage .contact-options .cta-whatsapp,
+.homepage .cta-whatsapp {
+  background: #25d366;
+}
+.homepage .contact-options .cta-whatsapp:hover,
+.homepage .cta-whatsapp:hover {
+  background: #20bd5a;
+  text-decoration: none;
+}
+.homepage .cta-phone {
+  background: #9b59b6;
+}
+.homepage .cta-phone:hover {
+  background: #8e44ad;
+  text-decoration: none;
+}
+.homepage .cta-email {
+  background: #3498db;
+}
+.homepage .cta-email:hover {
+  background: #2980b9;
+  text-decoration: none;
+}
+.homepage .contact-email {
+  margin: 0;
+  display: inline-flex;
+}
+.homepage .contact-email a {
+  color: #fff;
+}
+@media (max-width: 800px) {
+  .homepage .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 700px) {
+  body.homepage main {
+    padding-top: 1.5rem;
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
+  .homepage .hero {
+    padding: 1.5rem 0 1.75rem;
+  }
+  .homepage .two-cols,
+  .homepage .tarief-grid {
+    grid-template-columns: 1fr;
+  }
+  .homepage .dienst-groep {
+    padding: 1rem 1.25rem;
+  }
+  .homepage .about-content {
+    padding: 1.25rem 1.35rem;
+  }
+}
+@media (max-width: 600px) {
+  .homepage .about-img {
+    float: none;
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+  }
+}
+@media (max-width: 520px) {
+  .homepage .hero-actions,
+  .homepage .contact-options {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: none;
+  }
+  .homepage .about-content {
+    padding: 1.25rem 1.35rem;
+  }
+  .homepage .about-img {
+    float: none;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .homepage .cta-whatsapp,
+  .homepage .cta-button {
+    transition: none;
+  }
+  .homepage .cta-button:hover,
+  .homepage .cta-whatsapp:hover {
+    transform: none;
+  }
 }
