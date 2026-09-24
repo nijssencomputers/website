@@ -262,8 +262,9 @@ body.homepage main {
   max-width: 200px;
   height: auto;
   margin: 0 0 0.5rem 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
   object-fit: contain;
 }
 .homepage .two-cols {

@@ -10,7 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.nijssencomputers.nl'
-VERSION = '20260924-homefeb2'
+VERSION = '20260924-homefeb3'
 UPDATED = '2026-09-24'  # Actual content revision; do not replace with today's date on every build.
 TOWN_ORDER = ('Leidschendam', 'Voorburg', 'Voorschoten')
 SERVICE_ORDER = (
@@ -251,7 +251,7 @@ def main():
         target = args.deploy.resolve()
         if target.exists():
             parser.error('Deployment directory must not already exist; this prevents accidental overwrites.')
-        assets = ['style.css', 'nav.js', 'analytics-events.js', 'robots.txt', '.htaccess', 'jeroen.png', '_files/ugd/a467e1_485c7f11207647e3a05afcf4b5a87758.pdf']
+        assets = ['style.css', 'nav.js', 'analytics-events.js', 'robots.txt', '.htaccess', 'jeroen.png', 'jeroen-720.png', '_files/ugd/a467e1_485c7f11207647e3a05afcf4b5a87758.pdf']
         missing = [p for p in assets if not (ROOT/p).is_file()]
         if missing:
             parser.error('Unchanged assets must be present in the original checkout: '+', '.join(missing))
