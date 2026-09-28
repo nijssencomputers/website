@@ -8,7 +8,7 @@
     "sections": [
       [
         "Hulp bij problemen met uw apparaten",
-        "<div id=\"computer-traag\"><h3>Computer of laptop traag</h3><p>Ik onderzoek software, updates, opslag en mogelijke hardwareproblemen. U krijgt advies over onderhoud, reparatie of vervanging, zonder meteen nieuwe apparatuur te hoeven kopen.</p></div>\n<div id=\"virus-malware\"><h3>Verdachte meldingen en opstartproblemen</h3><p>Hulp bij ongewenste software, vreemde pop-ups en een computer die vastloopt. Ik leg uit wat er aan de hand is en wat er nodig is.</p></div>\n<div id=\"laptop-reparatie\"><h3>Reparatie en herstel</h3><p>Een laptop die niet goed start of oververhit raakt, hoeft niet altijd vervangen te worden. Ik onderzoek het probleem en bespreek of herstel zinvol is.</p></div>\n<div id=\"printer-hulp\"><h3>Printer en scanner</h3><p>Installeren, draadloos verbinden, foutmeldingen onderzoeken en scannen naar uw computer instellen.</p></div>"
+        "<div id=\"computer-traag\"><h3>Computer of laptop traag</h3><p>Ik onderzoek software, updates, opslag en mogelijke hardwareproblemen. U krijgt advies over onderhoud, reparatie of vervanging, zonder meteen nieuwe apparatuur te hoeven kopen.</p></div>\n<div id=\"virus-malware\"><h3>Beveiliging installeren en verdachte meldingen</h3><p>Ik help beveiligingssoftware installeren of nalopen en onderzoek ongewenste software, vreemde pop-ups en een computer die vastloopt. Ik leg uit wat er aan de hand is en wat er nodig is; volledige beveiliging kan ik niet beloven.</p></div>\n<div id=\"laptop-reparatie\"><h3>Reparatie en herstel</h3><p>Een laptop die niet goed start of oververhit raakt, hoeft niet altijd vervangen te worden. Ik onderzoek het probleem en bespreek of herstel zinvol is.</p></div>\n<div id=\"printer-hulp\"><h3>Printer en scanner</h3><p>Installeren, draadloos verbinden, foutmeldingen onderzoeken en scannen naar uw computer instellen.</p></div>"
       ],
       [
         "Installatie en gegevens",
@@ -93,18 +93,18 @@
   },
   {
     "slug": "computerhulp-aan-huis-voorschoten",
-    "title": "Computerhulp aan huis in Voorschoten | Nijssen Computers",
-    "description": "Computerhulp aan huis in Voorschoten. Jeroen helpt met Mac, Windows, Linux, printer, wifi en bestanden overzetten. Op afspraak, particulier €60 per uur.",
-    "heading": "Computerhulp aan huis in Voorschoten",
-    "intro": "Ik werk vanuit Leidschendam en kom op afspraak bij u thuis in Voorschoten. Voor een computerprobleem, installatie of uitleg bij uw apparaten.",
+    "title": "Computer reparatie en hulp aan huis in Voorschoten | Nijssen",
+    "description": "Computer reparatie en hulp aan huis in Voorschoten. Jeroen onderzoekt trage computers, installatie, printer, wifi en beveiligingsproblemen. Particulier €60 per uur.",
+    "heading": "Computer reparatie en hulp aan huis in Voorschoten",
+    "intro": "Ik werk vanuit Leidschendam en kom op afspraak bij u thuis in Voorschoten. Ik onderzoek eerst wat er misgaat met uw computer en leg daarna uit welke oplossing past.",
     "sections": [
       [
         "Waarmee ik u kan helpen",
-        "<div id=\"computer-traag\"><h3>Computer of laptop</h3><p>Hulp bij traag opstarten, vastlopen, updates en problemen met opslag. Ik werk met Apple Mac, Windows en Linux.</p></div>\n<div id=\"printer-hulp\"><h3>Printer en scanner</h3><p>Een nieuwe printer aansluiten, draadloos printen instellen, scannen of een foutmelding onderzoeken.</p></div>\n<div id=\"wifi-hulp\"><h3>Wifi en netwerk</h3><p>Ik kijk waarom de verbinding wegvalt of apparaten elkaar niet kunnen vinden, en bespreek wat er aan te verbeteren is.</p></div>\n<div id=\"virus-malware\"><h3>Beveiliging en herstel</h3><p>Onderzoek van vreemde meldingen, ongewenste software en een computer die niet meer goed werkt.</p></div>"
+        "<div id=\"computer-traag\"><h3>Computer of laptop traag</h3><p>Hulp bij traag opstarten, vastlopen, updates en problemen met opslag. Ik werk met Apple Mac, Windows en Linux en bespreek eerst of onderhoud, herstel of vervanging aan de orde is.</p></div>\n<div id=\"printer-hulp\"><h3>Printer en scanner</h3><p>Een nieuwe printer aansluiten, draadloos printen instellen, scannen of een foutmelding onderzoeken.</p></div>\n<div id=\"wifi-hulp\"><h3>Wifi en netwerk</h3><p>Ik kijk waarom de verbinding wegvalt of apparaten elkaar niet kunnen vinden, en bespreek wat er aan te verbeteren is.</p></div>\n<div id=\"virus-malware\"><h3>Beveiliging installeren en herstellen</h3><p>Ik help beveiligingssoftware installeren of nalopen en onderzoek verdachte meldingen, ongewenste software en een computer die niet meer goed werkt. Ik beloof geen volledige beveiliging; we nemen door wat op uw apparaat en netwerk zichtbaar is.</p></div>"
       ],
       [
         "Installatie en uitleg",
-        "<p>Ik help een nieuwe computer in te stellen, foto’s en documenten over te zetten en back-ups te maken. Ook voor e-mail, iCloud, Microsoft 365 en vragen over iPhone, iPad of Android kunt u terecht.</p><p>Na afloop nemen we samen door wat er is aangepast.</p>"
+        "<p>Ik help een nieuwe computer in te stellen, foto’s en documenten over te zetten en back-ups te maken. Ook voor e-mail, iCloud, Microsoft 365 en vragen over iPhone, iPad of Android kunt u terecht.</p><p>Na afloop nemen we samen door wat er is aangepast. Bij beveiligingssoftware controleer ik of de installatie en meldingen begrijpelijk zijn, zonder te doen alsof één programma alle risico’s wegneemt.</p>"
       ],
       [
         "Op afspraak aan huis",
@@ -119,12 +119,12 @@
         "Hulp bij een trage laptop"
       ],
       [
-        "printer-hulp-voorschoten",
-        "Printerhulp"
+        "wifi-netwerk-hulp-voorschoten",
+        "Wifi en netwerk in Voorschoten"
       ],
       [
-        "wifi-netwerk-hulp-voorschoten",
-        "Wifi en netwerk"
+        "printer-hulp-voorschoten",
+        "Printerhulp in Voorschoten"
       ]
     ],
     "note": "Particulier: €60 per uur, afgerekend per half uur."
@@ -257,7 +257,7 @@
       ],
       [
         "Router, bereik en apparaten",
-        "<ul class=\"dienst-lijst\"><li>Router en wifi instellen, inclusief netwerknaam en wachtwoord.</li><li>Bereik en plaatsing van draadloze toegangspunten onderzoeken.</li><li>Een printer of netwerkschijf weer bereikbaar maken.</li><li>Gastnetwerk, beveiligingsinstellingen en updates nalopen.</li><li>Verbindingen met computers, telefoons en tablets testen.</li></ul><p>Ook een nieuw modem van uw provider kan opnieuw ingesteld moeten worden. Ik kijk welke apparaten u werkelijk gebruikt en test de verbinding daarna samen met u.</p>"
+        "<ul class=\"dienst-lijst\"><li>Router en wifi instellen, inclusief netwerknaam en wachtwoord.</li><li>Bereik en plaatsing van draadloze toegangspunten onderzoeken.</li><li>Een printer of netwerkschijf weer bereikbaar maken.</li><li>Gastnetwerk, beveiligingsinstellingen en updates nalopen.</li><li>Verbindingen met computers, telefoons en tablets testen.</li></ul><p>Ook een nieuw modem van uw provider kan opnieuw ingesteld moeten worden. Ik kijk welke apparaten u werkelijk gebruikt en test de verbinding daarna samen met u.</p><p>Wilt u beveiliging installeren? Dan kan ik de routerinstellingen en netwerkbeveiliging nalopen, maar ik vervang geen specialistisch security-onderzoek.</p>"
       ],
       [
         "Voor thuis en zakelijk",
@@ -540,7 +540,7 @@
       ],
       [
         "Router, bereik en apparaten",
-        "<ul class=\"dienst-lijst\"><li>Router en wifi instellen, inclusief netwerknaam en wachtwoord.</li><li>Bereik en plaatsing van draadloze toegangspunten onderzoeken.</li><li>Een printer of netwerkschijf weer bereikbaar maken.</li><li>Gastnetwerk, beveiligingsinstellingen en updates nalopen.</li><li>Verbindingen met computers, telefoons en tablets testen.</li></ul><p>Ook een nieuw modem van uw provider kan opnieuw ingesteld moeten worden. Ik kijk welke apparaten u werkelijk gebruikt en test de verbinding daarna samen met u.</p>"
+        "<ul class=\"dienst-lijst\"><li>Router en wifi instellen, inclusief netwerknaam en wachtwoord.</li><li>Bereik en plaatsing van draadloze toegangspunten onderzoeken.</li><li>Een printer of netwerkschijf weer bereikbaar maken.</li><li>Gastnetwerk, beveiligingsinstellingen en updates nalopen.</li><li>Verbindingen met computers, telefoons en tablets testen.</li></ul><p>Ook een nieuw modem van uw provider kan opnieuw ingesteld moeten worden. Ik kijk welke apparaten u werkelijk gebruikt en test de verbinding daarna samen met u.</p><p>Wilt u beveiliging installeren? Dan kan ik de routerinstellingen en netwerkbeveiliging nalopen, maar ik vervang geen specialistisch security-onderzoek.</p>"
       ],
       [
         "Voor thuis en zakelijk",
