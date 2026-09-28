@@ -22,6 +22,11 @@ SERVICE_ORDER = (
 )
 
 
+def public_url(slug):
+    """Return the single public, extensionless URL for a page slug."""
+    return BASE + ('/' if not slug else '/' + slug)
+
+
 def _service_label(slug, page):
     for prefix, label in SERVICE_ORDER:
         if slug == prefix or slug.startswith(prefix + '-'):
@@ -116,7 +121,7 @@ CONTACT = '''    <section class="section-block contact-section" id="contact">
 
 
 def data_for(page):
-    url = BASE + ('/' if not page['slug'] else '/' + page['slug'])
+    url = public_url(page['slug'])
     business = {
         '@type': 'LocalBusiness', '@id': BASE + '/#bedrijf',
         'name': 'Nijssen Computers', 'url': BASE + '/',
@@ -223,13 +228,13 @@ def outputs():
                 '<a href="/computerhulp-aan-huis-voorschoten">Voorschoten</a></p>\n'
             )
         if page.get('related'):
-            links = ''.join(f'<a href="/{escape(slug, quote=True)}">{escape(label)}</a>' for slug, label in page['related'])
+            links = ''.join(f'<a href="{escape(public_url(slug).removeprefix(BASE), quote=True)}">{escape(label)}</a>' for slug, label in page['related'])
             related = f'      <div class="related"><p>Verder lezen</p><nav class="related-links" aria-label="Gerelateerde informatie">{links}</nav></div>'
         name = 'index.html' if home else page['slug']+'.html'
         result[name] = template.substitute(title=escape(page['title'], quote=True), description=escape(page['description'], quote=True),
             canonical=BASE+('/' if home else '/'+page['slug']), version=VERSION, body_class='homepage' if home else 'detailpage',
             structured_data=data_for(page), body=body, related=related, regio_nav=regio_nav)
-    urls = [BASE+('/' if not p['slug'] else '/'+p['slug']) for p in pages]
+    urls = [public_url(p['slug']) for p in pages]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{escape(url)}</loc><lastmod>{UPDATED}</lastmod></url>\n' for url in urls)+'</urlset>\n'
     return result
 
