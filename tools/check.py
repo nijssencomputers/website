@@ -71,6 +71,8 @@ def main():
                 'printer-hulp-leidschendam': (5, 6),
                 'wifi-netwerk-hulp-voorburg': (6, 8),
                 'laptop-traag-leidschendam': (5, 8),
+                'wifi-netwerk-hulp-leidschendam': (6, 8),
+                'wifi-netwerk-hulp-voorschoten': (6, 8),
             }
             related_by_page = {
                 'printer-hulp-leidschendam': (
@@ -93,6 +95,22 @@ def main():
                     '/printer-hulp-leidschendam',
                     '/laptop-traag-voorburg',
                     '/laptop-traag-voorschoten',
+                    '/contact',
+                ),
+                'wifi-netwerk-hulp-leidschendam': (
+                    '/computerhulp-aan-huis-leidschendam',
+                    '/laptop-traag-leidschendam',
+                    '/printer-hulp-leidschendam',
+                    '/wifi-netwerk-hulp-voorburg',
+                    '/wifi-netwerk-hulp-voorschoten',
+                    '/contact',
+                ),
+                'wifi-netwerk-hulp-voorschoten': (
+                    '/computerhulp-aan-huis-voorschoten',
+                    '/laptop-traag-voorschoten',
+                    '/printer-hulp-voorschoten',
+                    '/wifi-netwerk-hulp-leidschendam',
+                    '/wifi-netwerk-hulp-voorburg',
                     '/contact',
                 ),
             }
@@ -146,6 +164,8 @@ def main():
             'computerhulp-aan-huis-leidschendam':'Computer reparatie & hulp aan huis Leidschendam | Nijssen',
             'laptop-traag-leidschendam':'Laptop traag of reparatie Leidschendam | Aan huis | Nijssen',
             'computerhulp-aan-huis-voorburg':'Computerhulp aan huis Voorburg | Snel & lokaal | Nijssen',
+            'wifi-netwerk-hulp-leidschendam':'Wifi- en netwerkhulp in Leidschendam | Nijssen Computers',
+            'wifi-netwerk-hulp-voorschoten':'Wifi- en netwerkhulp in Voorschoten | Nijssen Computers',
         }
         if f.stem in titles:
             check(f'<title>{titles[f.stem].replace("&","&amp;")}</title>' in text,f.name+': unexpected title')
@@ -157,6 +177,20 @@ def main():
                 check(term in lead,f.name+': citeerbare lead mist '+term)
             check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
             check(p.h1==['Laptop traag of reparatie in Leidschendam'],f.name+': H1 intent changed')
+        if f.stem in ('wifi-netwerk-hulp-leidschendam','wifi-netwerk-hulp-voorschoten'):
+            city='Leidschendam' if 'leidschendam' in f.stem else 'Voorschoten'
+            start=text.find('<p class="tagline">')
+            end=text.find('</p>', start) if start!=-1 else -1
+            lead=text[start:end] if start!=-1 and end!=-1 else ''
+            if f.stem=='wifi-netwerk-hulp-leidschendam':
+                check('06\xa02438\xa02361' in lead,f.name+': phone number in lead must use non-breaking spaces')
+            lead_check=lead.replace('\xa0',' ')
+            for term in (city,'thuis','wifi','router','bereik','€60','half uur','06 2438 2361','WhatsApp'):
+                check(term in lead_check,f.name+': citeerbare lead mist '+term)
+            check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
+            check(p.h1==[f'Wifi- en netwerkhulp in {city}'],f.name+': H1 intent changed')
+            check(text.count('<button type="button" class="nav-regio-toggle"')==1,f.name+': Regio menu missing')
+            check('nav-regio-group' in text and 'Leidschendam' in text and 'Voorburg' in text and 'Voorschoten' in text,f.name+': Regio towns missing')
         if f.stem=='computerhulp-aan-huis-leidschendam':
             for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
                 check(path in hrefs,f.name+': missing related '+path)
