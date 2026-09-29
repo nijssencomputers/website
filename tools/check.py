@@ -182,8 +182,11 @@ def main():
             start=text.find('<p class="tagline">')
             end=text.find('</p>', start) if start!=-1 else -1
             lead=text[start:end] if start!=-1 and end!=-1 else ''
+            if f.stem=='wifi-netwerk-hulp-leidschendam':
+                check('06\xa02438\xa02361' in lead,f.name+': phone number in lead must use non-breaking spaces')
+            lead_check=lead.replace('\xa0',' ')
             for term in (city,'thuis','wifi','router','bereik','€60','half uur','06 2438 2361','WhatsApp'):
-                check(term in lead,f.name+': citeerbare lead mist '+term)
+                check(term in lead_check,f.name+': citeerbare lead mist '+term)
             check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
             check(p.h1==[f'Wifi- en netwerkhulp in {city}'],f.name+': H1 intent changed')
             check(text.count('<button type="button" class="nav-regio-toggle"')==1,f.name+': Regio menu missing')
