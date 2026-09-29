@@ -70,6 +70,7 @@ def main():
             faq_limits = {
                 'printer-hulp-leidschendam': (5, 6),
                 'wifi-netwerk-hulp-voorburg': (6, 8),
+                'laptop-traag-leidschendam': (5, 8),
             }
             related_by_page = {
                 'printer-hulp-leidschendam': (
@@ -86,7 +87,16 @@ def main():
                     '/laptop-traag-voorburg',
                     '/contact',
                 ),
+                'laptop-traag-leidschendam': (
+                    '/computerhulp-aan-huis-leidschendam',
+                    '/wifi-netwerk-hulp-leidschendam',
+                    '/printer-hulp-leidschendam',
+                    '/laptop-traag-voorburg',
+                    '/laptop-traag-voorschoten',
+                    '/contact',
+                ),
             }
+            quote_pages = ('printer-hulp-leidschendam', 'wifi-netwerk-hulp-voorburg')
             if f.stem in faq_limits:
                 check('FAQPage' in types,f.name+': expected FAQPage schema')
                 faq=next((x for x in p.json[0].get('@graph',[]) if x.get('@type')=='FAQPage'),None)
@@ -99,8 +109,9 @@ def main():
                     check(item.get('name','') in p.text,f.name+': FAQ question not visible: '+item.get('name',''))
                     snippet=(answer.get('text') or '')[:50]
                     check(snippet and snippet in p.text,f.name+': FAQ answer not visible')
-                for name in ('Metselbedrijf Zwaan','Robin Swenne','Mireille van den Dop'):
-                    check(name in p.text,f.name+': missing existing quote '+name)
+                if f.stem in quote_pages:
+                    for name in ('Metselbedrijf Zwaan','Robin Swenne','Mireille van den Dop'):
+                        check(name in p.text,f.name+': missing existing quote '+name)
                 check('Veelgestelde vragen' in p.text,f.name+': missing FAQ heading')
                 hrefs=[a.get('href') for t,a in p.nodes if t=='a']
                 for path in related_by_page[f.stem]:
@@ -138,6 +149,14 @@ def main():
         }
         if f.stem in titles:
             check(f'<title>{titles[f.stem].replace("&","&amp;")}</title>' in text,f.name+': unexpected title')
+        if f.stem=='laptop-traag-leidschendam':
+            start=text.find('<p class="tagline">')
+            end=text.find('</p>', start) if start!=-1 else -1
+            lead=text[start:end] if start!=-1 and end!=-1 else ''
+            for term in ('Leidschendam','thuis','opschonen','opstarten','updates','schijf','€60','half uur','06 2438 2361','WhatsApp'):
+                check(term in lead,f.name+': citeerbare lead mist '+term)
+            check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
+            check(p.h1==['Laptop traag of reparatie in Leidschendam'],f.name+': H1 intent changed')
         if f.stem=='computerhulp-aan-huis-leidschendam':
             for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
                 check(path in hrefs,f.name+': missing related '+path)
