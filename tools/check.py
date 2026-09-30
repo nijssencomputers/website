@@ -5,6 +5,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import json
 import sys
+import subprocess
 import xml.etree.ElementTree as ET
 from collections import Counter
 from build import outputs, BASE, regio_nav_links
@@ -192,6 +193,25 @@ def main():
     check(set(urls)=={BASE+p for p in parses},'Sitemap and canonical pages differ')
     check(len(urls)==len(set(urls))==16,'Sitemap count/duplicates')
     check(all(not urlsplit(u).path.endswith('.html') for u in urls),'Sitemap still lists .html URLs')
+    sitemap_entries = root.findall('{*}url')
+    homepage_entry = next((e for e in sitemap_entries if e.findtext('{*}loc') == BASE + '/'), None)
+    check(homepage_entry is not None and homepage_entry.find('{*}lastmod') is None,
+          'Homepage must not receive a lastmod from the unchanged homepage output')
+    detail_dates = []
+    for entry in sitemap_entries:
+        loc = entry.findtext('{*}loc')
+        if loc == BASE + '/':
+            continue
+        filename = str(urlsplit(loc).path).strip('/') + '.html'
+        expected_date = subprocess.run(
+            ['git', 'log', '-1', '--format=%cs', '--', filename], cwd=ROOT,
+            check=True, capture_output=True, text=True).stdout.strip()
+        actual = entry.findtext('{*}lastmod')
+        check(actual == expected_date,
+              f'{loc}: lastmod must equal the latest committed change to {filename}')
+        check(actual is not None, f'{loc}: reliable page-specific lastmod is required')
+        detail_dates.append(actual)
+    check(len(set(detail_dates)) > 1, 'Sitemap must not use one universal lastmod date for detail pages')
     for filename in ('index.html','style.css'):
         check('overflow-x: hidden' not in (ROOT/filename).read_text(),'Do not mask overflow: '+filename)
     if failures:

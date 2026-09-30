@@ -6,12 +6,12 @@ from html import escape
 import argparse
 import json
 import shutil
+import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.nijssencomputers.nl'
 VERSION = '20260924-homefeb3'
-UPDATED = '2026-09-24'  # Actual content revision; do not replace with today's date on every build.
 TOWN_ORDER = ('Leidschendam', 'Voorburg', 'Voorschoten')
 SERVICE_ORDER = (
     ('computerhulp-aan-huis', 'Computerhulp aan huis'),
@@ -206,6 +206,15 @@ def render_body(page):
     return '\n\n'.join(parts)
 
 
+def generated_lastmod(filename):
+    """Return a date only when Git records a change to this exact page output."""
+    result = subprocess.run(
+        ['git', 'log', '-1', '--format=%cs', '--', filename],
+        cwd=ROOT, check=True, capture_output=True, text=True,
+    )
+    return result.stdout.strip() or None
+
+
 def outputs():
     template = Template((ROOT/'src/layout.html').read_text(encoding='utf-8'))
     pages = json.loads((ROOT/'src/pages.json').read_text(encoding='utf-8'))
@@ -235,7 +244,13 @@ def outputs():
             canonical=BASE+('/' if home else '/'+page['slug']), version=VERSION, body_class='homepage' if home else 'detailpage',
             structured_data=data_for(page), body=body, related=related, regio_nav=regio_nav)
     urls = [public_url(p['slug']) for p in pages]
-    result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{escape(url)}</loc><lastmod>{UPDATED}</lastmod></url>\n' for url in urls)+'</urlset>\n'
+    sitemap_urls = []
+    for page, url in zip(pages, urls):
+        filename = 'index.html' if not page['slug'] else page['slug'] + '.html'
+        date = None if not page['slug'] else generated_lastmod(filename)
+        lastmod = f'<lastmod>{escape(date)}</lastmod>' if date else ''
+        sitemap_urls.append(f'  <url><loc>{escape(url)}</loc>{lastmod}</url>\n')
+    result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(sitemap_urls) + '</urlset>\n'
     return result
 
 
