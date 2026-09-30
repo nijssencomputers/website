@@ -6,12 +6,12 @@ from html import escape
 import argparse
 import json
 import shutil
+import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.nijssencomputers.nl'
 VERSION = '20260924-homefeb3'
-UPDATED = '2026-09-24'  # Actual content revision; do not replace with today's date on every build.
 TOWN_ORDER = ('Leidschendam', 'Voorburg', 'Voorschoten')
 SERVICE_ORDER = (
     ('computerhulp-aan-huis', 'Computerhulp aan huis'),
@@ -206,6 +206,21 @@ def render_body(page):
     return '\n\n'.join(parts)
 
 
+def source_lastmod(*paths):
+    """Return the latest committed date for the source files used by a page."""
+    dates = []
+    for path in paths:
+        result = subprocess.run(
+            ['git', 'log', '-1', '--format=%cs', '--', path],
+            cwd=ROOT, check=True, capture_output=True, text=True,
+        )
+        date = result.stdout.strip()
+        if not date:
+            raise RuntimeError(f'Geen git-datum gevonden voor {path}')
+        dates.append(date)
+    return max(dates)
+
+
 def outputs():
     template = Template((ROOT/'src/layout.html').read_text(encoding='utf-8'))
     pages = json.loads((ROOT/'src/pages.json').read_text(encoding='utf-8'))
@@ -235,7 +250,11 @@ def outputs():
             canonical=BASE+('/' if home else '/'+page['slug']), version=VERSION, body_class='homepage' if home else 'detailpage',
             structured_data=data_for(page), body=body, related=related, regio_nav=regio_nav)
     urls = [public_url(p['slug']) for p in pages]
-    result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{escape(url)}</loc><lastmod>{UPDATED}</lastmod></url>\n' for url in urls)+'</urlset>\n'
+    source_paths = ['src/layout.html', 'src/pages.json', 'src/home.html']
+    result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
+        f'  <url><loc>{escape(url)}</loc><lastmod>{source_lastmod(*source_paths if not p["slug"] else ("src/layout.html", "src/pages.json"))}</lastmod></url>\n'
+        for p, url in zip(pages, urls)
+    ) + '</urlset>\n'
     return result
 
 
