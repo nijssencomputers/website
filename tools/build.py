@@ -206,19 +206,13 @@ def render_body(page):
     return '\n\n'.join(parts)
 
 
-def source_lastmod(*paths):
-    """Return the latest committed date for the source files used by a page."""
-    dates = []
-    for path in paths:
-        result = subprocess.run(
-            ['git', 'log', '-1', '--format=%cs', '--', path],
-            cwd=ROOT, check=True, capture_output=True, text=True,
-        )
-        date = result.stdout.strip()
-        if not date:
-            raise RuntimeError(f'Geen git-datum gevonden voor {path}')
-        dates.append(date)
-    return max(dates)
+def generated_lastmod(filename):
+    """Return a date only when Git records a change to this exact page output."""
+    result = subprocess.run(
+        ['git', 'log', '-1', '--format=%cs', '--', filename],
+        cwd=ROOT, check=True, capture_output=True, text=True,
+    )
+    return result.stdout.strip() or None
 
 
 def outputs():
@@ -250,11 +244,13 @@ def outputs():
             canonical=BASE+('/' if home else '/'+page['slug']), version=VERSION, body_class='homepage' if home else 'detailpage',
             structured_data=data_for(page), body=body, related=related, regio_nav=regio_nav)
     urls = [public_url(p['slug']) for p in pages]
-    source_paths = ['src/layout.html', 'src/pages.json', 'src/home.html']
-    result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
-        f'  <url><loc>{escape(url)}</loc><lastmod>{source_lastmod(*source_paths if not p["slug"] else ("src/layout.html", "src/pages.json"))}</lastmod></url>\n'
-        for p, url in zip(pages, urls)
-    ) + '</urlset>\n'
+    sitemap_urls = []
+    for page, url in zip(pages, urls):
+        filename = 'index.html' if not page['slug'] else page['slug'] + '.html'
+        date = None if not page['slug'] else generated_lastmod(filename)
+        lastmod = f'<lastmod>{escape(date)}</lastmod>' if date else ''
+        sitemap_urls.append(f'  <url><loc>{escape(url)}</loc>{lastmod}</url>\n')
+    result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(sitemap_urls) + '</urlset>\n'
     return result
 
 
