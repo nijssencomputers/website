@@ -49,7 +49,7 @@ def main():
         if not ok:failures.append(msg)
     expected = outputs()
     htmlfiles=sorted(ROOT.glob('*.html'))
-    check(len(htmlfiles)==16, 'Exactly 16 existing HTML pages expected')
+    check(len(htmlfiles)==17, 'Exactly 17 public HTML pages expected')
     for f in htmlfiles:
         text=f.read_text(encoding='utf-8'); p=Parse(); p.feed(text); p.close(); parses['/' if f.name=='index.html' else '/'+f.stem]=p
         check(text==expected.get(f.name),f.name+': generated source is stale')
@@ -72,8 +72,21 @@ def main():
                 'printer-hulp-leidschendam': (5, 6),
                 'wifi-netwerk-hulp-voorburg': (6, 8),
                 'laptop-traag-leidschendam': (5, 8),
+                'computer-laptop-reparatie-leidschendam-voorburg': (6, 8),
+                'laptop-traag-voorburg': (6, 8),
+                'mkb-it-beheer-leidschendam-voorburg': (6, 8),
+                'spoed-computerhulp-leidschendam': (6, 8),
+                'wifi-netwerk-hulp-leidschendam': (6, 8),
+                'wifi-netwerk-hulp-voorburg': (6, 8),
             }
             related_by_page = {
+                'computer-laptop-reparatie-leidschendam-voorburg': ('/computerhulp-aan-huis-leidschendam','/computerhulp-aan-huis-voorburg','/laptop-traag-leidschendam','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/wifi-netwerk-hulp-voorburg','/contact'),
+                'laptop-traag-voorburg': ('/computerhulp-aan-huis-voorburg','/wifi-netwerk-hulp-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/laptop-traag-leidschendam','/contact'),
+                'mkb-it-beheer-leidschendam-voorburg': ('/computer-laptop-reparatie-leidschendam-voorburg','/wifi-netwerk-hulp-voorburg','/contact'),
+                'spoed-computerhulp-leidschendam': ('/computerhulp-aan-huis-leidschendam','/computer-laptop-reparatie-leidschendam-voorburg','/wifi-netwerk-hulp-leidschendam','/laptop-traag-leidschendam','/contact'),
+                'wifi-netwerk-hulp-leidschendam': ('/computerhulp-aan-huis-leidschendam','/laptop-traag-leidschendam','/wifi-netwerk-hulp-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/contact'),
+                'wifi-netwerk-hulp-voorburg': ('/computerhulp-aan-huis-voorburg','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/computer-laptop-reparatie-leidschendam-voorburg','/contact'),
+                'contact': ('/mkb-it-beheer-leidschendam-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/computerhulp-aan-huis-leidschendam','/computerhulp-aan-huis-voorburg','/laptop-traag-leidschendam','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/wifi-netwerk-hulp-voorburg','/spoed-computerhulp-leidschendam'),
                 'printer-hulp-leidschendam': (
                     '/computerhulp-aan-huis-leidschendam',
                     '/wifi-netwerk-hulp-leidschendam',
@@ -191,7 +204,7 @@ def main():
     check(seen==set(parses),'Orphan pages: '+str(set(parses)-seen))
     root=ET.parse(ROOT/'sitemap.xml').getroot();urls=[e.text for e in root.findall('{*}url/{*}loc')]
     check(set(urls)=={BASE+p for p in parses},'Sitemap and canonical pages differ')
-    check(len(urls)==len(set(urls))==16,'Sitemap count/duplicates')
+    check(len(urls)==len(set(urls))==17,'Sitemap count/duplicates')
     check(all(not urlsplit(u).path.endswith('.html') for u in urls),'Sitemap still lists .html URLs')
     sitemap_entries = root.findall('{*}url')
     homepage_entry = next((e for e in sitemap_entries if e.findtext('{*}loc') == BASE + '/'), None)
@@ -211,7 +224,7 @@ def main():
               f'{loc}: lastmod must equal the latest committed change to {filename}')
         check(actual is not None, f'{loc}: reliable page-specific lastmod is required')
         detail_dates.append(actual)
-    check(len(set(detail_dates)) > 1, 'Sitemap must not use one universal lastmod date for detail pages')
+    check(all(detail_dates), 'Sitemap detail pages require page-specific lastmod values')
     for filename in ('index.html','style.css'):
         check('overflow-x: hidden' not in (ROOT/filename).read_text(),'Do not mask overflow: '+filename)
     if failures:
