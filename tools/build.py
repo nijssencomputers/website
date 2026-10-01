@@ -207,6 +207,19 @@ def render_body(page):
     return '\n\n'.join(parts)
 
 
+def render_404_body():
+    return '''    <nav class="breadcrumb" aria-label="U bent hier"><a href="/">Startpagina</a><span aria-hidden="true">/</span><span>Pagina niet gevonden</span></nav>
+    <section class="hero">
+      <h1>Deze pagina bestaat niet (meer)</h1>
+      <p class="tagline">De pagina die u zoekt is niet beschikbaar. Ga naar de homepage of kies een onderwerp.</p>
+    </section>
+    <section class="section-block article-section" id="contact">
+      <h2>Verder op weg</h2>
+      <p><a href="/">Naar de homepage</a> · <a href="/contact">Contact opnemen</a></p>
+      <p><a href="/computerhulp-aan-huis-leidschendam">Computerhulp aan huis</a> · <a href="/computer-laptop-reparatie-leidschendam-voorburg">Computer- en laptopreparatie</a> · <a href="/wifi-netwerk-hulp-leidschendam">Wifi/netwerk hulp</a> · <a href="/mkb-it-beheer-leidschendam-voorburg">Zakelijke IT-ondersteuning</a></p>
+    </section>'''
+
+
 def generated_lastmod(filename):
     """Return a date only when Git records a change to this exact page output."""
     result = subprocess.run(
@@ -245,8 +258,19 @@ def outputs():
             related = f'      <div class="related"><p>Verder lezen</p><nav class="related-links" aria-label="Gerelateerde informatie">{links}</nav></div>'
         name = 'index.html' if home else page['slug']+'.html'
         result[name] = template.substitute(title=escape(page['title'], quote=True), description=escape(page['description'], quote=True),
-            canonical=BASE+('/' if home else '/'+page['slug']), version=VERSION, body_class='homepage' if home else 'detailpage',
-            structured_data=data_for(page), body=body, related=related, regio_nav=regio_nav)
+            canonical=BASE+('/' if home else '/'+page['slug']),
+            canonical_tag=f'<link rel="canonical" href="{BASE+('/' if home else '/'+page['slug'])}">',
+            og_url_tag=f'<meta property="og:url" content="{BASE+('/' if home else '/'+page['slug'])}">',
+            robots_tag='', version=VERSION, body_class='homepage' if home else 'detailpage',
+            structured_data=data_for(page), structured_data_script=f'<script type="application/ld+json">{data_for(page)}</script>', body=body, related=related, regio_nav=regio_nav)
+    not_found_body = render_404_body()
+    result['404.html'] = template.substitute(
+        title='Pagina niet gevonden | Nijssen Computers',
+        description='Deze pagina bestaat niet (meer). Ga naar de homepage of neem contact op met Nijssen Computers.',
+        canonical='', canonical_tag='', og_url_tag='', robots_tag='<meta name="robots" content="noindex">',
+        version=VERSION, body_class='detailpage', structured_data='', structured_data_script='', body=not_found_body,
+        related='', regio_nav=regio_nav
+    )
     urls = [public_url(p['slug']) for p in pages]
     sitemap_urls = []
     for page, url in zip(pages, urls):
@@ -284,7 +308,7 @@ def main():
             (target/name).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(ROOT/name, target/name)
         print('Public files only: '+str(target))
-    print(f'OK: {len(generated)-1} HTML pages; shared header, metadata and footer; sitemap.')
+    print(f"OK: {len(generated)-2} HTML pages plus 404; shared header, metadata and footer; sitemap.")
     return 0
 
 if __name__ == '__main__': raise SystemExit(main())

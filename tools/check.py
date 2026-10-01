@@ -49,8 +49,9 @@ def main():
         if not ok:failures.append(msg)
     expected = outputs()
     htmlfiles=sorted(ROOT.glob('*.html'))
-    check(len(htmlfiles)==17, 'Exactly 17 public HTML pages expected')
+    check(len(htmlfiles)==18, 'Exactly 17 public HTML pages plus 404 expected')
     for f in htmlfiles:
+        is_404 = f.name == '404.html'
         text=f.read_text(encoding='utf-8'); p=Parse(); p.feed(text); p.close(); parses['/' if f.name=='index.html' else '/'+f.stem]=p
         check(text==expected.get(f.name),f.name+': generated source is stale')
         check(not p.errors and not p.stack, f.name+': HTML nesting: '+str(p.errors or p.stack))
@@ -64,7 +65,7 @@ def main():
         check(all(label!='Werkgebied' for _,label in p.nav),f.name+': Werkgebied must not be a separate nav item')
         check(any(t=='button' and a.get('class')=='nav-regio-toggle' and a.get('aria-expanded')=='false' and a.get('aria-controls')=='regio-menu' for t,a in p.nodes),f.name+': missing Regio toggle')
         check(sum(1 for t,a in p.nodes if t=='div' and a.get('class')=='nav-regio-group')==3,f.name+': Regio menu needs three town groups')
-        check(len(p.json)==1,f.name+': expected one JSON-LD graph')
+        check((len(p.json)==0 if is_404 else len(p.json)==1),f.name+': unexpected JSON-LD count')
         if p.json:
             types=[x.get('@type') for x in p.json[0].get('@graph',[])]
             check('LocalBusiness' in types,f.name+': missing LocalBusiness')
@@ -136,8 +137,11 @@ def main():
             check('openingHours' not in schema and 'sameAs' not in schema and 'AggregateRating' not in schema,f.name+': unverified metadata')
         canon=[a['href'] for t,a in p.nodes if t=='link' and a.get('rel')=='canonical']
         wanted=BASE+('/' if f.name=='index.html' else '/'+f.stem)
-        check(canon==[wanted],f.name+': incorrect canonical')
+        check(canon==([] if is_404 else [wanted]),f.name+': incorrect canonical')
         check(any(t=='meta' and a.get('name')=='description' and len(a.get('content',''))>60 for t,a in p.nodes),f.name+': description missing')
+        if is_404:
+            check(any(t=='meta' and a.get('name')=='robots' and a.get('content')=='noindex' for t,a in p.nodes),'404.html: noindex missing')
+            check('Deze pagina bestaat niet (meer)' in p.text,'404.html: missing not-found text')
         hrefs=[a.get('href','') for t,a in p.nodes if t=='a']
         for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
             check(path in hrefs,f.name+': footer must link '+path)
@@ -201,9 +205,9 @@ def main():
         x=queue.pop()
         if x in seen:continue
         seen.add(x);queue.extend(graph[x]-seen)
-    check(seen==set(parses),'Orphan pages: '+str(set(parses)-seen))
+    check(seen==set(parses)-{'/404'},'Orphan pages: '+str(set(parses)-seen-{'/404'}))
     root=ET.parse(ROOT/'sitemap.xml').getroot();urls=[e.text for e in root.findall('{*}url/{*}loc')]
-    check(set(urls)=={BASE+p for p in parses},'Sitemap and canonical pages differ')
+    check(set(urls)=={BASE+p for p in parses if p != '/404'},'Sitemap and canonical pages differ')
     check(len(urls)==len(set(urls))==17,'Sitemap count/duplicates')
     check(all(not urlsplit(u).path.endswith('.html') for u in urls),'Sitemap still lists .html URLs')
     sitemap_entries = root.findall('{*}url')
