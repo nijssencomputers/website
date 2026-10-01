@@ -15,6 +15,7 @@ VERSION = '20260924-homefeb3'
 TOWN_ORDER = ('Leidschendam', 'Voorburg', 'Voorschoten')
 SERVICE_ORDER = (
     ('computerhulp-aan-huis', 'Computerhulp aan huis'),
+    ('computer-laptop-reparatie', 'Computer- en laptopreparatie'),
     ('laptop-traag', 'Laptop traag'),
     ('wifi-netwerk-hulp', 'Wifi/netwerk hulp'),
     ('printer-hulp', 'Printer hulp'),
@@ -237,7 +238,10 @@ def outputs():
                 '<a href="/computerhulp-aan-huis-voorschoten">Voorschoten</a></p>\n'
             )
         if page.get('related'):
-            links = ''.join(f'<a href="{escape(public_url(slug).removeprefix(BASE), quote=True)}">{escape(label)}</a>' for slug, label in page['related'])
+            related = list(page['related'])
+            if page['slug'] != 'computer-laptop-reparatie-leidschendam-voorburg' and page['slug'] != 'contact':
+                related.append(('computer-laptop-reparatie-leidschendam-voorburg', 'Computer- en laptopreparatie'))
+            links = ''.join(f'<a href="{escape(public_url(slug).removeprefix(BASE), quote=True)}">{escape(label)}</a>' for slug, label in related)
             related = f'      <div class="related"><p>Verder lezen</p><nav class="related-links" aria-label="Gerelateerde informatie">{links}</nav></div>'
         name = 'index.html' if home else page['slug']+'.html'
         result[name] = template.substitute(title=escape(page['title'], quote=True), description=escape(page['description'], quote=True),
