@@ -8,7 +8,7 @@
     "sections": [
       [
         "Hulp bij problemen met uw apparaten",
-        "<div id=\"computer-traag\"><h3>Computer of laptop traag</h3><p>Ik onderzoek software, updates, opslag en mogelijke hardwareproblemen. U krijgt advies over onderhoud, reparatie of vervanging, zonder meteen nieuwe apparatuur te hoeven kopen.</p></div>\n<div id=\"virus-malware\"><h3>Beveiliging installeren en verdachte meldingen</h3><p>Ik help beveiligingssoftware installeren of nalopen en onderzoek ongewenste software, vreemde pop-ups en een computer die vastloopt. Ik leg uit wat er aan de hand is en wat er nodig is; volledige beveiliging kan ik niet beloven.</p></div>\n<div id=\"laptop-reparatie\"><h3>Reparatie en herstel</h3><p>Een laptop die niet goed start of oververhit raakt, hoeft niet altijd vervangen te worden. Ik onderzoek het probleem en bespreek of herstel zinvol is.</p></div>\n<div id=\"printer-hulp\"><h3>Printer en scanner</h3><p>Installeren, draadloos verbinden, foutmeldingen onderzoeken en scannen naar uw computer instellen.</p></div>"
+        "<div id=\"computer-traag\"><h3>Computer of laptop traag</h3><p>Ik onderzoek software, updates, opslag en mogelijke hardwareproblemen. U krijgt advies over onderhoud, reparatie of vervanging, zonder meteen nieuwe apparatuur te hoeven kopen.</p></div>\n<div id=\"virus-malware\"><h3>Beveiliging installeren en verdachte meldingen</h3><p>Ik help beveiligingssoftware installeren of nalopen en onderzoek ongewenste software, vreemde pop-ups en een computer die vastloopt. Ik leg uit wat er aan de hand is en wat er nodig is; volledige beveiliging kan ik niet beloven.</p></div>\n<div id=\"laptop-reparatie\"><h3>Reparatie en herstel</h3><p>Een laptop die niet goed start of oververhit raakt, hoeft niet altijd vervangen te worden. Ik onderzoek het probleem en bespreek of herstel zinvol is. Bekijk ook <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie in Leidschendam</a>.</p></div>\n<div id=\"printer-hulp\"><h3>Printer en scanner</h3><p>Installeren, draadloos verbinden, foutmeldingen onderzoeken en scannen naar uw computer instellen.</p></div>"
       ],
       [
         "Installatie en gegevens",
@@ -66,7 +66,7 @@
       ],
       [
         "Problemen oplossen",
-        "<div id=\"printer-hulp\"><h3>Printer en wifi</h3><p>Een printer die offline blijft, scannen dat niet lukt of een wegvallende verbinding: ik onderzoek de instellingen en verbindingen bij u thuis.</p></div>\n<div id=\"computer-traag\"><h3>Computer traag of vastgelopen</h3><p>Ik controleer software, updates, opslag en beveiliging. Als reparatie of een upgrade zinvol is, bespreek ik dat met u.</p></div><p>Ook voor vragen over iPhone, iPad, Android, accounts en ongewenste software kunt u contact opnemen.</p>"
+        "<div id=\"printer-hulp\"><h3>Printer en wifi</h3><p>Een printer die offline blijft, scannen dat niet lukt of een wegvallende verbinding: ik onderzoek de instellingen en verbindingen bij u thuis.</p></div>\n<div id=\"computer-traag\"><h3>Computer traag of vastgelopen</h3><p>Ik controleer software, updates, opslag en beveiliging. Als reparatie of een upgrade zinvol is, bespreek ik dat met u. Bekijk ook <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie in Voorburg</a>.</p></div><p>Ook voor vragen over iPhone, iPad, Android, accounts en ongewenste software kunt u contact opnemen.</p>"
       ],
       [
         "Persoonlijke ondersteuning",
@@ -76,6 +76,10 @@
     "city": "Voorburg",
     "kind": "Computerhulp aan huis",
     "related": [
+      [
+        "mkb-it-beheer-leidschendam-voorburg",
+        "ICT-beheer voor bedrijven"
+      ],
       [
         "laptop-traag-voorburg",
         "Hulp bij een trage laptop"
@@ -685,10 +689,10 @@
   },
   {
     "slug": "mkb-it-beheer-leidschendam-voorburg",
-    "title": "ICT-beheer voor bedrijven in Voorburg en Leidschendam | Nijssen Computers",
-    "description": "ICT-beheer, ICT-advies en beveiliging voor kleine bedrijven in Voorburg en Leidschendam. Werkplekken, netwerk, back-up, updates en 2FA. Sinds 2008.",
-    "heading": "ICT-beheer en ICT-advies voor bedrijven in Voorburg",
-    "intro": "Praktische ICT-ondersteuning voor kleine bedrijven in Voorburg en Leidschendam: beheer, advies, beveiliging, netwerk en werkplekken. Eén aanspreekpunt voor dagelijks gebruik en verbeteringen.",
+    "title": "ICT-bedrijf Voorburg & Leidschendam | ICT-beheer en advies | Nijssen",
+    "description": "Klein ICT-bedrijf voor ondernemers in Voorburg en Leidschendam. ICT-diensten: beheer, advies, beveiliging, netwerk, back-up, updates en 2FA. Sinds 2008.",
+    "heading": "ICT-diensten voor bedrijven in Voorburg en Leidschendam",
+    "intro": "Nijssen Computers is een klein ICT-bedrijf voor ondernemers in Voorburg en Leidschendam: beheer, advies, beveiliging, netwerk en werkplekken. Eén aanspreekpunt voor dagelijks gebruik en verbeteringen.",
     "sections": [
       [
         "ICT-beheer voor kleine bedrijven",
@@ -730,7 +734,7 @@
     "note": "Zakelijk: €90 per uur ex. btw, afgerekend per uur.",
     "faq": [
       [
-        "Voor welke bedrijven is ICT-beheer bedoeld?",
+        "Welke ICT-diensten biedt u bedrijven in Voorburg en Leidschendam?",
         "Ik help kleine bedrijven in Voorburg, Leidschendam en omgeving met werkplekken, e-mail, Microsoft 365, servers, netwerk en back-ups. We bespreken wat uw organisatie werkelijk gebruikt."
       ],
       [
