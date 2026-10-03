@@ -233,8 +233,8 @@ def outputs():
     template = Template((ROOT/'src/layout.html').read_text(encoding='utf-8'))
     pages = json.loads((ROOT/'src/pages.json').read_text(encoding='utf-8'))
     content_pages = list(pages)
-    pages.insert(0, {'slug': '', 'title': 'Computerhulp aan huis | Nijssen Computers',
-        'description': 'Computerhulp aan huis in Leidschendam, Voorburg en Voorschoten. Jeroen helpt met Apple, Windows, Linux, wifi en printers. Particulier €60 per uur.'})
+    pages.insert(0, {'slug': '', 'title': 'Computerhulp & reparatie aan huis Leidschendam, Voorburg',
+        'description': 'Computerhulp en computer- of laptopreparatie aan huis in Leidschendam, Voorburg en Voorschoten. Sinds 2008. Apple, Windows, Linux en wifi. €60 per uur.'})
     regio_nav = render_regio_nav(content_pages)
     result = {}
     for page in pages:
