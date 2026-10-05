@@ -23,6 +23,8 @@ python3 tools/check.py
 
 Dit vereist Python 3.9 of hoger en geen extra Python-pakketten. De geproduceerde HTML blijft in de repository staan. De webhost heeft geen build-stap nodig.
 
+De `lastmod` per pagina in `sitemap.xml` gaat automatisch mee: een pagina die in deze commit verandert krijgt de datum van vandaag (UTC), een ongewijzigde pagina houdt de datum van de laatste commit die dat bestand raakte. De homepage houdt bewust geen `lastmod`. Zo hoeft er geen tweede commit aan te pas te komen om de sitemap kloppend te maken.
+
 ## Lokaal bekijken en testen
 
 ```sh

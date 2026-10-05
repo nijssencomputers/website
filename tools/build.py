@@ -4,6 +4,7 @@ from pathlib import Path
 from string import Template
 from html import escape
 import argparse
+import datetime
 import json
 import shutil
 import subprocess
@@ -220,8 +221,25 @@ def render_404_body():
     </section>'''
 
 
-def generated_lastmod(filename):
-    """Return a date only when Git records a change to this exact page output."""
+def head_text(filename):
+    """Return the committed content of a file, or None when it is not in HEAD."""
+    result = subprocess.run(
+        ['git', 'show', 'HEAD:' + filename],
+        cwd=ROOT, capture_output=True, text=True,
+    )
+    return result.stdout if result.returncode == 0 else None
+
+
+def generated_lastmod(filename, generated_text=None):
+    """Return the date this page last changed.
+
+    A page whose generated output differs from the committed version changes in the
+    upcoming commit, so its lastmod is today (UTC) and the sitemap is already correct
+    in that same commit. An unchanged page keeps the date of the last commit that
+    touched this exact file. The result is stable when the build runs more than once.
+    """
+    if generated_text is not None and head_text(filename) != generated_text:
+        return datetime.datetime.now(datetime.timezone.utc).date().isoformat()
     result = subprocess.run(
         ['git', 'log', '-1', '--format=%cs', '--', filename],
         cwd=ROOT, check=True, capture_output=True, text=True,
@@ -275,7 +293,7 @@ def outputs():
     sitemap_urls = []
     for page, url in zip(pages, urls):
         filename = 'index.html' if not page['slug'] else page['slug'] + '.html'
-        date = None if not page['slug'] else generated_lastmod(filename)
+        date = None if not page['slug'] else generated_lastmod(filename, result[filename])
         lastmod = f'<lastmod>{escape(date)}</lastmod>' if date else ''
         sitemap_urls.append(f'  <url><loc>{escape(url)}</loc>{lastmod}</url>\n')
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(sitemap_urls) + '</urlset>\n'

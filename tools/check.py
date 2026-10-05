@@ -4,11 +4,12 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import json
+import datetime
 import sys
 import subprocess
 import xml.etree.ElementTree as ET
 from collections import Counter
-from build import outputs, BASE, regio_nav_links
+from build import outputs, BASE, regio_nav_links, head_text
 ROOT = Path(__file__).resolve().parents[1]
 VOID = set('area base br col embed hr img input link meta param source track wbr'.split())
 class Parse(HTMLParser):
@@ -211,21 +212,30 @@ def main():
     check(len(urls)==len(set(urls))==17,'Sitemap count/duplicates')
     check(all(not urlsplit(u).path.endswith('.html') for u in urls),'Sitemap still lists .html URLs')
     sitemap_entries = root.findall('{*}url')
+    check((ROOT/'sitemap.xml').read_text(encoding='utf-8')==expected['sitemap.xml'],
+          'sitemap.xml: generated source is stale')
     homepage_entry = next((e for e in sitemap_entries if e.findtext('{*}loc') == BASE + '/'), None)
     check(homepage_entry is not None and homepage_entry.find('{*}lastmod') is None,
           'Homepage must not receive a lastmod from the unchanged homepage output')
+    today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
     detail_dates = []
     for entry in sitemap_entries:
         loc = entry.findtext('{*}loc')
         if loc == BASE + '/':
             continue
         filename = str(urlsplit(loc).path).strip('/') + '.html'
-        expected_date = subprocess.run(
-            ['git', 'log', '-1', '--format=%cs', '--', filename], cwd=ROOT,
-            check=True, capture_output=True, text=True).stdout.strip()
+        # A page whose generated output differs from the committed version changes in
+        # the upcoming commit, so its lastmod is today; an unchanged page keeps the
+        # date of the last commit that touched it.
+        if head_text(filename) != expected[filename]:
+            expected_date = today
+        else:
+            expected_date = subprocess.run(
+                ['git', 'log', '-1', '--format=%cs', '--', filename], cwd=ROOT,
+                check=True, capture_output=True, text=True).stdout.strip()
         actual = entry.findtext('{*}lastmod')
         check(actual == expected_date,
-              f'{loc}: lastmod must equal the latest committed change to {filename}')
+              f'{loc}: lastmod must be the latest change to {filename} (expected {expected_date}, found {actual})')
         check(actual is not None, f'{loc}: reliable page-specific lastmod is required')
         detail_dates.append(actual)
     check(all(detail_dates), 'Sitemap detail pages require page-specific lastmod values')
