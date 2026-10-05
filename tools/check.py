@@ -81,6 +81,7 @@ def main():
                 'spoed-computerhulp-leidschendam': (6, 8),
                 'wifi-netwerk-hulp-leidschendam': (6, 8),
                 'wifi-netwerk-hulp-voorburg': (6, 8),
+                'wifi-netwerk-hulp-voorschoten': (6, 8),
             }
             related_by_page = {
                 'computer-laptop-reparatie-leidschendam-voorburg': ('/computerhulp-aan-huis-leidschendam','/computerhulp-aan-huis-voorburg','/laptop-traag-leidschendam','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/wifi-netwerk-hulp-voorburg','/contact'),
@@ -89,6 +90,7 @@ def main():
                 'spoed-computerhulp-leidschendam': ('/computerhulp-aan-huis-leidschendam','/computer-laptop-reparatie-leidschendam-voorburg','/wifi-netwerk-hulp-leidschendam','/laptop-traag-leidschendam','/contact'),
                 'wifi-netwerk-hulp-leidschendam': ('/computerhulp-aan-huis-leidschendam','/laptop-traag-leidschendam','/wifi-netwerk-hulp-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/contact'),
                 'wifi-netwerk-hulp-voorburg': ('/computerhulp-aan-huis-voorburg','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/computer-laptop-reparatie-leidschendam-voorburg','/contact'),
+                'wifi-netwerk-hulp-voorschoten': ('/computerhulp-aan-huis-voorschoten','/printer-hulp-voorschoten','/wifi-netwerk-hulp-leidschendam','/wifi-netwerk-hulp-voorburg'),
                 'contact': ('/mkb-it-beheer-leidschendam-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/computerhulp-aan-huis-leidschendam','/computerhulp-aan-huis-voorburg','/laptop-traag-leidschendam','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/wifi-netwerk-hulp-voorburg','/spoed-computerhulp-leidschendam'),
                 'printer-hulp-leidschendam': (
                     '/computerhulp-aan-huis-leidschendam',
@@ -194,6 +196,14 @@ def main():
                 check(term in lead,f.name+': citeerbare lead mist '+term)
             check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
             check(p.h1==['Hulp bij een trage laptop in Voorschoten'],f.name+': H1 intent changed')
+        if f.stem in ('wifi-netwerk-hulp-leidschendam','wifi-netwerk-hulp-voorschoten'):
+            start=text.find('<p class="tagline">')
+            end=text.find('</p>', start) if start!=-1 else -1
+            lead=text[start:end].replace('\u00a0',' ') if start!=-1 and end!=-1 else ''
+            town='Leidschendam' if f.stem.endswith('leidschendam') else 'Voorschoten'
+            for term in (town,'thuis','€60','half uur','06 2438 2361','WhatsApp'):
+                check(term in lead,f.name+': citeerbare lead mist '+term)
+            check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
         if f.stem=='computerhulp-aan-huis-leidschendam':
             for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
                 check(path in hrefs,f.name+': missing related '+path)
