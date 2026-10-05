@@ -49,7 +49,7 @@ def main():
         if not ok:failures.append(msg)
     expected = outputs()
     htmlfiles=sorted(ROOT.glob('*.html'))
-    check(len(htmlfiles)==18, 'Exactly 17 public HTML pages plus 404 expected')
+    check(len(htmlfiles)==19, 'Exactly 18 public HTML pages plus 404 expected')
     for f in htmlfiles:
         is_404 = f.name == '404.html'
         text=f.read_text(encoding='utf-8'); p=Parse(); p.feed(text); p.close(); parses['/' if f.name=='index.html' else '/'+f.stem]=p
@@ -79,10 +79,11 @@ def main():
                 'spoed-computerhulp-leidschendam': (6, 8),
                 'wifi-netwerk-hulp-leidschendam': (6, 8),
                 'wifi-netwerk-hulp-voorburg': (6, 8),
+                'virus-verwijderen-voorburg': (6, 8),
             }
             related_by_page = {
-                'computer-laptop-reparatie-leidschendam-voorburg': ('/computerhulp-aan-huis-leidschendam','/computerhulp-aan-huis-voorburg','/laptop-traag-leidschendam','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/wifi-netwerk-hulp-voorburg','/contact'),
-                'laptop-traag-voorburg': ('/computerhulp-aan-huis-voorburg','/wifi-netwerk-hulp-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/laptop-traag-leidschendam','/contact'),
+                'computer-laptop-reparatie-leidschendam-voorburg': ('/computerhulp-aan-huis-leidschendam','/computerhulp-aan-huis-voorburg','/laptop-traag-leidschendam','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/wifi-netwerk-hulp-voorburg','/contact','/virus-verwijderen-voorburg'),
+                'laptop-traag-voorburg': ('/computerhulp-aan-huis-voorburg','/wifi-netwerk-hulp-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/laptop-traag-leidschendam','/contact','/virus-verwijderen-voorburg'),
                 'mkb-it-beheer-leidschendam-voorburg': ('/computer-laptop-reparatie-leidschendam-voorburg','/wifi-netwerk-hulp-voorburg','/contact'),
                 'spoed-computerhulp-leidschendam': ('/computerhulp-aan-huis-leidschendam','/computer-laptop-reparatie-leidschendam-voorburg','/wifi-netwerk-hulp-leidschendam','/laptop-traag-leidschendam','/contact'),
                 'wifi-netwerk-hulp-leidschendam': ('/computerhulp-aan-huis-leidschendam','/laptop-traag-leidschendam','/wifi-netwerk-hulp-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/contact'),
@@ -100,6 +101,14 @@ def main():
                     '/wifi-netwerk-hulp-voorschoten',
                     '/computerhulp-aan-huis-voorburg',
                     '/laptop-traag-voorburg',
+                    '/contact',
+                    '/virus-verwijderen-voorburg',
+                ),
+                'virus-verwijderen-voorburg': (
+                    '/computerhulp-aan-huis-voorburg',
+                    '/laptop-traag-voorburg',
+                    '/wifi-netwerk-hulp-voorburg',
+                    '/computer-laptop-reparatie-leidschendam-voorburg',
                     '/contact',
                 ),
                 'laptop-traag-leidschendam': (
@@ -143,7 +152,7 @@ def main():
             check(any(t=='meta' and a.get('name')=='robots' and a.get('content')=='noindex' for t,a in p.nodes),'404.html: noindex missing')
             check('Deze pagina bestaat niet (meer)' in p.text,'404.html: missing not-found text')
         hrefs=[a.get('href','') for t,a in p.nodes if t=='a']
-        for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
+        for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten','/virus-verwijderen-voorburg'):
             check(path in hrefs,f.name+': footer must link '+path)
         for tag,a in p.nodes:
             if tag in ('a','link'):
@@ -164,6 +173,7 @@ def main():
             'computerhulp-aan-huis-leidschendam':'Computer reparatie & hulp aan huis Leidschendam | Nijssen',
             'laptop-traag-leidschendam':'Laptop traag of reparatie Leidschendam | Aan huis | Nijssen',
             'computerhulp-aan-huis-voorburg':'Computerhulp aan huis Voorburg | Snel & lokaal | Nijssen',
+            'virus-verwijderen-voorburg':'Virus verwijderen in Voorburg | Aan huis | Nijssen',
         }
         if f.stem in titles:
             check(f'<title>{titles[f.stem].replace("&","&amp;")}</title>' in text,f.name+': unexpected title')
@@ -175,6 +185,15 @@ def main():
                 check(term in lead,f.name+': citeerbare lead mist '+term)
             check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
             check(p.h1==['Laptop traag of reparatie in Leidschendam'],f.name+': H1 intent changed')
+        if f.stem=='virus-verwijderen-voorburg':
+            start=text.find('<p class="tagline">')
+            end=text.find('</p>', start) if start!=-1 else -1
+            lead=text[start:end] if start!=-1 and end!=-1 else ''
+            for term in ('Voorburg','Voorschoten','thuis','virus','malware','2008','€60','half uur','06 2438 2361','WhatsApp'):
+                check(term in lead,f.name+': citeerbare lead mist '+term)
+            check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
+            check(p.h1==['Virus verwijderen aan huis in Voorburg'],f.name+': H1 intent changed')
+            check('Apple Mac' in p.text,f.name+': missing Apple Mac wording')
         if f.stem=='computerhulp-aan-huis-leidschendam':
             for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
                 check(path in hrefs,f.name+': missing related '+path)
@@ -208,7 +227,7 @@ def main():
     check(seen==set(parses)-{'/404'},'Orphan pages: '+str(set(parses)-seen-{'/404'}))
     root=ET.parse(ROOT/'sitemap.xml').getroot();urls=[e.text for e in root.findall('{*}url/{*}loc')]
     check(set(urls)=={BASE+p for p in parses if p != '/404'},'Sitemap and canonical pages differ')
-    check(len(urls)==len(set(urls))==17,'Sitemap count/duplicates')
+    check(len(urls)==len(set(urls))==18,'Sitemap count/duplicates')
     check(all(not urlsplit(u).path.endswith('.html') for u in urls),'Sitemap still lists .html URLs')
     sitemap_entries = root.findall('{*}url')
     homepage_entry = next((e for e in sitemap_entries if e.findtext('{*}loc') == BASE + '/'), None)

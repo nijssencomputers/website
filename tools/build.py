@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the existing 16 public pages. Python 3.9+, no third-party dependencies."""
+"""Render the public pages from the shared source. Python 3.9+, no third-party dependencies."""
 from pathlib import Path
 from string import Template
 from html import escape
@@ -17,6 +17,7 @@ SERVICE_ORDER = (
     ('computerhulp-aan-huis', 'Computerhulp aan huis'),
     ('computer-laptop-reparatie', 'Computer- en laptopreparatie'),
     ('laptop-traag', 'Laptop traag'),
+    ('virus-verwijderen', 'Virus verwijderen'),
     ('wifi-netwerk-hulp', 'Wifi/netwerk hulp'),
     ('printer-hulp', 'Printer hulp'),
     ('spoed-computerhulp', 'Dringende computerhulp'),
