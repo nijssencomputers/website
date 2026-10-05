@@ -74,6 +74,7 @@ def main():
                 'printer-hulp-leidschendam': (5, 6),
                 'wifi-netwerk-hulp-voorburg': (6, 8),
                 'laptop-traag-leidschendam': (5, 8),
+                'laptop-traag-voorschoten': (5, 8),
                 'computer-laptop-reparatie-leidschendam-voorburg': (6, 8),
                 'laptop-traag-voorburg': (6, 8),
                 'mkb-it-beheer-leidschendam-voorburg': (6, 8),
@@ -109,6 +110,14 @@ def main():
                     '/printer-hulp-leidschendam',
                     '/laptop-traag-voorburg',
                     '/laptop-traag-voorschoten',
+                    '/contact',
+                ),
+                'laptop-traag-voorschoten': (
+                    '/computerhulp-aan-huis-voorschoten',
+                    '/wifi-netwerk-hulp-voorschoten',
+                    '/printer-hulp-voorschoten',
+                    '/laptop-traag-leidschendam',
+                    '/laptop-traag-voorburg',
                     '/contact',
                 ),
             }
@@ -164,6 +173,7 @@ def main():
         titles={
             'computerhulp-aan-huis-leidschendam':'Computer reparatie & hulp aan huis Leidschendam | Nijssen',
             'laptop-traag-leidschendam':'Laptop traag of reparatie Leidschendam | Aan huis | Nijssen',
+            'laptop-traag-voorschoten':'Laptop traag in Voorschoten | Nijssen Computers',
             'computerhulp-aan-huis-voorburg':'Computerhulp aan huis Voorburg | Snel & lokaal | Nijssen',
         }
         if f.stem in titles:
@@ -176,6 +186,14 @@ def main():
                 check(term in lead,f.name+': citeerbare lead mist '+term)
             check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
             check(p.h1==['Laptop traag of reparatie in Leidschendam'],f.name+': H1 intent changed')
+        if f.stem=='laptop-traag-voorschoten':
+            start=text.find('<p class="tagline">')
+            end=text.find('</p>', start) if start!=-1 else -1
+            lead=text[start:end] if start!=-1 and end!=-1 else ''
+            for term in ('Voorschoten','thuis','2008','€60','half uur','06 2438 2361'):
+                check(term in lead,f.name+': citeerbare lead mist '+term)
+            check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
+            check(p.h1==['Hulp bij een trage laptop in Voorschoten'],f.name+': H1 intent changed')
         if f.stem=='computerhulp-aan-huis-leidschendam':
             for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
                 check(path in hrefs,f.name+': missing related '+path)

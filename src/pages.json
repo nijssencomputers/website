@@ -558,11 +558,11 @@
     "title": "Laptop traag in Voorschoten | Nijssen Computers",
     "description": "Trage laptop of MacBook in Voorschoten? Jeroen onderzoekt de oorzaak en helpt met onderhoud, updates en herstel aan huis. Particulier €60 per uur.",
     "heading": "Hulp bij een trage laptop in Voorschoten",
-    "intro": "Start uw laptop langzaam op, lopen programma’s vast of wordt hij erg warm? Ik onderzoek het probleem bij u thuis in Voorschoten.",
+    "intro": "Ik kom op afspraak bij u thuis in Voorschoten voor een trage laptop. Sinds 2008 help ik particulieren en bedrijven. Ik help met opschonen, opstarten, updates en de schijf. Particulier €60 per uur, afgerekend per half uur. Bel 06 2438 2361 of stuur een WhatsApp-bericht.",
     "sections": [
       [
         "Eerst de oorzaak onderzoeken",
-        "<p>Een trage laptop kan verschillende oorzaken hebben. Ik controleer onder meer opslagruimte, updates, programma’s die op de achtergrond draaien en mogelijke hardwareproblemen.</p><p>Dat geldt voor een MacBook, een Windows-laptop en een Linux-computer. U hoeft vooraf niet te weten waar het aan ligt.</p>"
+        "<p>Een trage laptop kan verschillende oorzaken hebben. Ik controleer onder meer opslagruimte, updates, programma’s die op de achtergrond draaien en mogelijke hardwareproblemen.</p><p>Dat geldt voor Apple Mac, Windows en Linux. U hoeft vooraf niet te weten waar het aan ligt.</p>"
       ],
       [
         "Onderhoud, herstel of een upgrade",
@@ -574,7 +574,33 @@
       ],
       [
         "Aan huis, op afspraak",
-        "<p>Ik ben Jeroen Nijssen en help sinds 2008 particulieren en bedrijven. In Voorschoten kom ik op afspraak bij u thuis. Voor particulieren geldt €60 per uur, afgerekend per half uur.</p>"
+        "<p>Ik ben Jeroen Nijssen en help sinds 2008 particulieren en bedrijven. In Voorschoten kom ik op afspraak bij u thuis. Voor particulieren geldt €60 per uur, afgerekend per half uur.</p><p>Voor algemene hulp kunt u naar <a href=\"/computerhulp-aan-huis-voorschoten\">computerhulp aan huis in Voorschoten</a>. Hulp bij een wegvallende verbinding vindt u op de pagina over <a href=\"/wifi-netwerk-hulp-voorschoten\">wifi in Voorschoten</a>. Dezelfde vraag over een trage laptop kan ook in <a href=\"/laptop-traag-leidschendam\">Leidschendam</a> of <a href=\"/laptop-traag-voorburg\">Voorburg</a>. Contactgegevens staan op de <a href=\"/contact\">contactpagina</a>.</p>"
+      ]
+    ],
+    "faq": [
+      [
+        "Komt u aan huis voor een trage laptop in Voorschoten?",
+        "Ja. Ik kom op afspraak bij u thuis in Voorschoten en omgeving. Vertel bij het contact kort wat er speelt, dan bespreken we wat nodig is."
+      ],
+      [
+        "Wat kost hulp aan huis?",
+        "Voor particulieren is het tarief €60 per uur, afgerekend per half uur. Voor bedrijven is het €90 per uur ex. btw, afgerekend per uur."
+      ],
+      [
+        "Werkt u met Apple, Windows en Linux?",
+        "Ja. Ik help met Apple Mac, Windows en Linux. U hoeft vooraf niet vast te stellen waar het probleem zit."
+      ],
+      [
+        "Kunt u het probleem direct oplossen?",
+        "Ik onderzoek eerst de oorzaak en leg uit wat ik zie. Daarna bespreken we samen of instellingen, onderhoud, herstel of vervanging passend is."
+      ],
+      [
+        "Wat kan ik vooraf doorgeven?",
+        "Noem de plaats, het apparaat en wat u merkt. Een foutmelding of foto daarvan is handig, maar een technische diagnose vooraf is niet nodig."
+      ],
+      [
+        "Hoe maakt u een afspraak?",
+        "U kunt bellen, WhatsAppen of mailen. Ik spreek rechtstreeks met u af en laat weten wat mogelijk is."
       ]
     ],
     "city": "Voorschoten",
@@ -583,6 +609,26 @@
       [
         "computerhulp-aan-huis-voorschoten",
         "Andere computerhulp in Voorschoten"
+      ],
+      [
+        "wifi-netwerk-hulp-voorschoten",
+        "Wifi-hulp in Voorschoten"
+      ],
+      [
+        "printer-hulp-voorschoten",
+        "Printerhulp in Voorschoten"
+      ],
+      [
+        "laptop-traag-leidschendam",
+        "Trage laptop in Leidschendam"
+      ],
+      [
+        "laptop-traag-voorburg",
+        "Trage laptop in Voorburg"
+      ],
+      [
+        "contact",
+        "Contactgegevens"
       ]
     ],
     "note": "Particulier: €60 per uur, afgerekend per half uur."
