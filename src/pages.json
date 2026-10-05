@@ -295,7 +295,7 @@
     "title": "Wifi- en netwerkhulp in Leidschendam | Nijssen Computers",
     "description": "Wifi valt weg of internet is traag in Leidschendam? Jeroen onderzoekt verbinding, router, bereik en netwerkapparaten aan huis. Particulier €60 per uur.",
     "heading": "Wifi- en netwerkhulp in Leidschendam",
-    "intro": "Slecht bereik, een wegvallende verbinding of apparaten die elkaar niet vinden? Ik onderzoek uw wifi en netwerk bij u thuis of op uw bedrijf in Leidschendam.",
+    "intro": "Ik kom op afspraak bij u thuis in Leidschendam voor wifi- en netwerkproblemen. Ik kijk naar de internetverbinding, de router, het bereik en uw apparaten. Particulier €60 per uur, afgerekend per half uur. Bel 06 2438 2361 of stuur een WhatsApp-bericht.",
     "sections": [
       [
         "Wifi onderzoeken in Leidschendam",
@@ -688,7 +688,7 @@
     "title": "Wifi- en netwerkhulp in Voorschoten | Nijssen Computers",
     "description": "Wifi valt weg of internet is traag in Voorschoten? Jeroen onderzoekt verbinding, router, bereik en netwerkapparaten aan huis. Particulier €60 per uur.",
     "heading": "Wifi- en netwerkhulp in Voorschoten",
-    "intro": "Slecht bereik, een wegvallende verbinding of apparaten die elkaar niet vinden? Ik onderzoek uw wifi en netwerk bij u thuis of op uw bedrijf in Voorschoten.",
+    "intro": "Ik werk vanuit Leidschendam en kom op afspraak bij u thuis in Voorschoten voor wifi- en netwerkproblemen. Ik kijk naar de internetverbinding, de router, het bereik en uw apparaten. Particulier €60 per uur, afgerekend per half uur. Bel 06 2438 2361 of stuur een WhatsApp-bericht.",
     "sections": [
       [
         "Onderzoeken waar het misgaat",
@@ -731,7 +731,41 @@
         "Wifi-hulp in Voorburg"
       ]
     ],
-    "note": "Particulier: €60 per uur, afgerekend per half uur."
+    "note": "Particulier: €60 per uur, afgerekend per half uur.",
+    "faq": [
+      [
+        "Mijn wifi valt steeds weg. Wat doet u?",
+        "Ik kijk eerst of het aan de internetverbinding, de router of een apparaat ligt, en test het bereik waar u last van heeft. U hoort wat ik zie en wat er nodig is."
+      ],
+      [
+        "Ik heb slecht bereik of dode hoeken. Helpt een mesh-systeem of een versterker?",
+        "Dat hangt van uw huis en de huidige apparatuur af. Een versterker of mesh-systeem lost het niet altijd op. Ik kijk eerst naar plaatsing, instellingen en dekking. Als extra apparatuur zinvol is, bespreek ik dat; ik bied geen vaste wifi-pakketten."
+      ],
+      [
+        "Kunt u een router of een nieuw modem van de provider instellen?",
+        "Ja. Ik help een router of een nieuw modem instellen, inclusief netwerknaam en wachtwoord. Na een overstap naar een andere provider moet dat vaak opnieuw. Daarna controleren we of uw apparaten weer verbinden."
+      ],
+      [
+        "Mijn printer of televisie wil niet op de wifi. Kunt u helpen?",
+        "Dat komt vaak voor. Ik kijk of het apparaat het netwerk ziet, of het wachtwoord klopt en of het op hetzelfde netwerk staat. Soms ligt het aan het apparaat zelf, soms aan de wifi. Als printen via wifi niet lukt, kan het ook zijn dat de printer niet op hetzelfde netwerk zit."
+      ],
+      [
+        "Wat kost wifi-hulp aan huis?",
+        "Voor particulieren is het tarief €60 per uur, afgerekend per half uur. Voor bedrijven is het €90 per uur ex. btw, afgerekend per uur. U hoort vooraf wat ik ga doen; na afloop rekenen we af op de bestede tijd."
+      ],
+      [
+        "Komt u ook in mijn buurt in Voorschoten?",
+        "Ja. Ik werk vanuit Leidschendam en kom op afspraak bij u thuis in Voorschoten. Ik kom ook in Voorburg. Zeg bij contact in welke plaats u woont, dan kijken we of een afspraak mogelijk is. Ik beloof geen aparte service per wijk."
+      ],
+      [
+        "Kunt u het wachtwoord of de beveiliging van mijn wifi nalopen?",
+        "Ja. Ik help met netwerknaam, wachtwoord, gastnetwerk en de beveiligingsinstellingen van uw router, voor zover die toegankelijk zijn."
+      ],
+      [
+        "Hoe weet ik of het aan de wifi ligt of aan een storing bij de provider?",
+        "Ik controleer of het internet bij het modem binnenkomt en of het probleem alleen op wifi speelt of ook via een kabel. Als de storing bij de provider ligt, zeg ik dat, zodat u hen kunt bellen."
+      ]
+    ]
   },
   {
     "slug": "mkb-it-beheer-leidschendam-voorburg",
