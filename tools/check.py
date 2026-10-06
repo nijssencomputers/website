@@ -177,6 +177,7 @@ def main():
             'laptop-traag-leidschendam':'Laptop traag of reparatie Leidschendam | Aan huis | Nijssen',
             'laptop-traag-voorschoten':'Laptop traag in Voorschoten | Nijssen Computers',
             'computerhulp-aan-huis-voorburg':'Computerhulp aan huis Voorburg | Snel & lokaal | Nijssen',
+            'wifi-netwerk-hulp-voorburg':'Wifi problemen Voorburg | Hulp aan huis | Nijssen',
         }
         if f.stem in titles:
             check(f'<title>{titles[f.stem].replace("&","&amp;")}</title>' in text,f.name+': unexpected title')
@@ -196,13 +197,18 @@ def main():
                 check(term in lead,f.name+': citeerbare lead mist '+term)
             check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
             check(p.h1==['Hulp bij een trage laptop in Voorschoten'],f.name+': H1 intent changed')
-        if f.stem in ('wifi-netwerk-hulp-leidschendam','wifi-netwerk-hulp-voorschoten'):
+        if f.stem in ('wifi-netwerk-hulp-leidschendam','wifi-netwerk-hulp-voorschoten','wifi-netwerk-hulp-voorburg'):
             start=text.find('<p class="tagline">')
             end=text.find('</p>', start) if start!=-1 else -1
             lead=text[start:end].replace('\u00a0',' ') if start!=-1 and end!=-1 else ''
-            town='Leidschendam' if f.stem.endswith('leidschendam') else 'Voorschoten'
+            town={'wifi-netwerk-hulp-leidschendam':'Leidschendam','wifi-netwerk-hulp-voorschoten':'Voorschoten','wifi-netwerk-hulp-voorburg':'Voorburg'}[f.stem]
             for term in (town,'thuis','€60','half uur','06 2438 2361','WhatsApp'):
                 check(term in lead,f.name+': citeerbare lead mist '+term)
+            if f.stem=='wifi-netwerk-hulp-voorburg':
+                for term in ('2008','wegvallende','traag internet','dode hoeken','router','mesh','versterker','printer'):
+                    check(term in lead,f.name+': citeerbare lead mist '+term)
+                check('Apple Mac' in text,f.name+': Apple must be named Apple Mac')
+                check(p.h1==['Wifi problemen in Voorburg? Hulp aan huis'],f.name+': H1 intent changed')
             check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
         if f.stem=='computerhulp-aan-huis-leidschendam':
             for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
