@@ -21,6 +21,7 @@ SERVICE_ORDER = (
     ('wifi-netwerk-hulp', 'Wifi/netwerk hulp'),
     ('printer-hulp', 'Printer hulp'),
     ('spoed-computerhulp', 'Dringende computerhulp'),
+    ('mkb-it-beheer', 'Zakelijke IT-ondersteuning'),
 )
 
 
@@ -139,7 +140,9 @@ def data_for(page):
         {'@type': 'WebPage', '@id': url+'#webpagina', 'url': url, 'name': page['title'], 'description': page['description'], 'inLanguage': 'nl-NL', 'isPartOf': {'@id': BASE+'/#website'}, 'about': {'@id': BASE+'/#bedrijf'}}]
     if page.get('kind'):
         service = {'@type': 'Service', '@id': url+'#dienst', 'name': page['kind'], 'provider': {'@id': BASE+'/#bedrijf'}, 'url': url}
-        if page.get('city'): service['areaServed'] = page['city']
+        served = page.get('areaServed') or page.get('city')
+        if served:
+            service['areaServed'] = served
         graph.append(service)
     if page.get('faq'):
         graph.append({
@@ -175,14 +178,22 @@ def render_faq(page):
     </section>'''
 
 
-def render_quotes():
+def render_quotes(page=None):
+    selected = CUSTOMER_QUOTES
+    heading = 'Algemene klantreacties'
+    intro = 'Deze reacties komen van de bestaande website. Het zijn algemene klantervaringen, geen aparte printerbeoordelingen.'
+    if isinstance(page, dict) and isinstance(page.get('quotes'), list):
+        wanted = set(page['quotes'])
+        selected = tuple(item for item in CUSTOMER_QUOTES if item[1] in wanted)
+        heading = page.get('quotes_heading') or 'Wat een klant zegt'
+        intro = page.get('quotes_intro') or 'Deze reactie komt van de bestaande website.'
     cards = ''.join(
         f'<blockquote class="review-card"><p>{escape(quote)}</p><footer>{escape(name)}</footer></blockquote>'
-        for quote, name in CUSTOMER_QUOTES
+        for quote, name in selected
     )
     return f'''    <section class="section-block article-section" id="klantreacties">
-      <h2>Algemene klantreacties</h2>
-      <p>Deze reacties komen van de bestaande website. Het zijn algemene klantervaringen, geen aparte printerbeoordelingen.</p>
+      <h2>{escape(heading)}</h2>
+      <p>{escape(intro)}</p>
       <div class="reviews-grid">{cards}</div>
     </section>'''
 
@@ -203,7 +214,7 @@ def render_body(page):
     if page.get('faq'):
         parts.append(render_faq(page))
     if page.get('quotes'):
-        parts.append(render_quotes())
+        parts.append(render_quotes(page))
     parts.append(CONTACT)
     return '\n\n'.join(parts)
 
@@ -270,7 +281,8 @@ def outputs():
             )
         if page.get('related'):
             related = list(page['related'])
-            if page['slug'] != 'computer-laptop-reparatie-leidschendam-voorburg' and page['slug'] != 'contact':
+            already = {slug for slug, _label in related}
+            if page['slug'] not in ('computer-laptop-reparatie-leidschendam-voorburg', 'contact') and 'computer-laptop-reparatie-leidschendam-voorburg' not in already:
                 related.append(('computer-laptop-reparatie-leidschendam-voorburg', 'Computer- en laptopreparatie'))
             links = ''.join(f'<a href="{escape(public_url(slug).removeprefix(BASE), quote=True)}">{escape(label)}</a>' for slug, label in related)
             related = f'      <div class="related"><p>Verder lezen</p><nav class="related-links" aria-label="Gerelateerde informatie">{links}</nav></div>'

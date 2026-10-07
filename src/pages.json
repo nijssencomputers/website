@@ -23,6 +23,10 @@
     "kind": "Computerhulp aan huis",
     "related": [
       [
+        "mkb-it-beheer-leidschendam-voorburg",
+        "IT-ondersteuning voor kleine bedrijven"
+      ],
+      [
         "laptop-traag-leidschendam",
         "Hulp bij een trage laptop"
       ],
@@ -118,6 +122,10 @@
     "city": "Voorschoten",
     "kind": "Computerhulp aan huis",
     "related": [
+      [
+        "mkb-it-beheer-leidschendam-voorburg",
+        "IT-ondersteuning voor kleine bedrijven"
+      ],
       [
         "laptop-traag-voorschoten",
         "Hulp bij een trage laptop"
@@ -332,6 +340,10 @@
       [
         "computer-laptop-reparatie-leidschendam-voorburg",
         "Computer- en laptopreparatie"
+      ],
+      [
+        "mkb-it-beheer-leidschendam-voorburg",
+        "IT-ondersteuning voor kleine bedrijven"
       ],
       [
         "contact",
@@ -769,73 +781,89 @@
   },
   {
     "slug": "mkb-it-beheer-leidschendam-voorburg",
-    "title": "ICT-bedrijf Voorburg & Leidschendam | ICT-beheer en advies | Nijssen",
-    "description": "Klein ICT-bedrijf voor ondernemers in Voorburg en Leidschendam. ICT-diensten: beheer, advies, beveiliging, netwerk, back-up, updates en 2FA. Sinds 2008.",
-    "heading": "ICT-diensten voor bedrijven in Voorburg en Leidschendam",
-    "intro": "Nijssen Computers is een klein ICT-bedrijf voor ondernemers in Voorburg en Leidschendam: beheer, advies, beveiliging, netwerk en werkplekken. Eén aanspreekpunt voor dagelijks gebruik en verbeteringen.",
+    "title": "IT-ondersteuning klein bedrijf Leidschendam | Nijssen Computers",
+    "description": "IT-ondersteuning op locatie voor kleine bedrijven in Leidschendam. Sinds 2008. Computers, netwerk, printers, e-mail, back-ups. Zakelijk €90 per uur excl. btw. Bel 06 2438 2361.",
+    "heading": "IT-ondersteuning voor kleine bedrijven in Leidschendam",
+    "intro": "Ik kom op locatie voor IT-ondersteuning bij kleine bedrijven in Leidschendam, en in Voorburg en Voorschoten. Sinds 2008 help ik ondernemers met computers en laptops, netwerk en wifi, printers, e-mail en accounts, back-ups en nieuwe werkplekken inrichten. Apple Mac, Windows en Linux. Zakelijk €90 per uur excl. btw, afgerekend per uur. Bel 06\u00a02438\u00a02361 of stuur een WhatsApp-bericht. U spreekt rechtstreeks met mij, Jeroen.",
     "sections": [
       [
-        "ICT-beheer voor kleine bedrijven",
-        "<p>Een kleine onderneming in Voorburg of Leidschendam heeft vaak geen aparte ICT-afdeling. Toch moeten computers, e-mail, bestanden, printers en internet gewoon werken. Ik help met het dagelijkse ICT-beheer en onderzoek storingen op de werkplek, in het netwerk of bij accounts. Dat kan incidentele hulp zijn, onderhoud of een concreet project.</p><p>Ik werk met Apple, Windows en Linux en ondersteun Microsoft 365, e-mail, gedeelde bestanden, printers, servers en back-ups. We beginnen bij uw situatie: welke apparaten gebruikt u, wat moet beschikbaar zijn en waar loopt u nu tegenaan? Daarna leg ik in gewone taal uit wat aandacht nodig heeft. U krijgt geen algemeen pakket dat niet bij uw bedrijf past.</p><p>ICT-beheer betekent ook overzicht houden. Updates, toegang tot accounts, back-ups en netwerkapparatuur verdienen aandacht voordat een storing uw werk onderbreekt. Ik kan die onderdelen nalopen en samen bepalen welke eerst moeten gebeuren.</p>"
+        "IT-ondersteuning op locatie",
+        "<p>Een klein bedrijf in Leidschendam heeft vaak geen aparte ICT-afdeling. Toch moeten computers, e-mail, printers en internet gewoon werken. Ik kom op afspraak op uw locatie en onderzoek storingen op de werkplek, in het netwerk of bij accounts. Dat kan een losse vraag zijn, onderhoud of het inrichten van een nieuwe werkplek.</p><p>Ik werk met Apple Mac, Windows en Linux. We beginnen bij uw situatie: welke apparaten gebruikt u, wat moet beschikbaar zijn en waar loopt u nu tegenaan? Daarna leg ik in gewone taal uit wat aandacht nodig heeft. U krijgt geen algemeen pakket dat niet bij uw bedrijf past.</p><p>Hetzelfde werk doe ik in Voorburg en Voorschoten. Zeg bij contact in welke plaats uw bedrijf zit, dan kijken we of een afspraak mogelijk is.</p>"
       ],
       [
-        "ICT-advies zonder onnodige aanschaf",
-        "<p>Bij ICT-advies gaat het om een praktische keuze: een nieuwe werkplek instellen, bestanden beter delen, een server of netwerk aanpassen, of bepalen hoe back-ups worden ingericht. Ik kijk eerst naar de bestaande werkwijze. Een nieuwe computer, router of abonnement is niet automatisch de beste oplossing.</p><p>Voor een kleine organisatie is het belangrijk dat medewerkers weten waar bestanden staan en hoe ze veilig met accounts omgaan. Ik bespreek wat op dit moment haalbaar is en welke stap later kan. Bij een verhuizing, uitbreiding of nieuwe medewerker kan ik helpen met werkplekken, e-mail, printers en toegang. Ik beloof geen specifieke uitkomst zonder de situatie te hebben bekeken.</p><p>U kunt mij inschakelen voor een losse vraag of voor ondersteuning bij terugkerend beheer. Sinds 2008 help ik particulieren en bedrijven in Leidschendam, Voorburg, Voorschoten en omgeving.</p>"
+        "Computers, netwerk, printers en werkplekken",
+        "<p>Ik help met computers en laptops die traag zijn, niet starten of opnieuw ingesteld moeten worden. Bij wifi of een netwerkprobleem kijk ik naar de bestaande router, dekking en apparaten voordat er iets nieuws wordt geadviseerd. Een printer die offline blijft of niet scant, onderzoek ik op de werkplek.</p><p>Bij een nieuwe medewerker, extra computer of verhuizing kan ik een werkplek inrichten: e-mail, printer, toegang tot bestanden en de instellingen die u dagelijks nodig heeft. Ik beloof geen specifieke uitkomst zonder de situatie te hebben bekeken. Een nieuwe computer of router is niet automatisch de beste oplossing.</p><p>Voor een storing aan één apparaat kunt u ook de pagina over <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie</a> of <a href=\"/wifi-netwerk-hulp-leidschendam\">wifi in Leidschendam</a> bekijken.</p>"
       ],
       [
-        "Beveiliging: back-up, updates en accounts",
-        "<p>Beveiliging begint met gewone, controleerbare basismaatregelen. Ik help beoordelen of belangrijke bestanden worden geback-upt en of een herstel mogelijk is. Een back-up is pas nuttig als duidelijk is wat erin zit en hoe u erbij komt. We bespreken daarom welke gegevens belangrijk zijn en wat u bij een probleem nodig heeft.</p><p>Updates voor computers, servers, router en gebruikte software helpen bekende problemen te beperken. Ik kan nagaan welke updates aandacht vragen en wat eerst getest moet worden. Daarnaast is een wachtwoordbeleid belangrijk: geen hergebruik van wachtwoorden, duidelijke afspraken over accounts en toegang die past bij de taak.</p><p>Waar de gebruikte dienst het ondersteunt, kan ik helpen met tweestapsverificatie (2FA). Dat voegt een extra controle toe naast het wachtwoord. Ik leg uit hoe medewerkers de methode gebruiken en wat er moet gebeuren als een tweede factor niet beschikbaar is. 2FA, updates en een back-up maken een bedrijf niet onkwetsbaar; ze zijn onderdelen van een bredere aanpak.</p>"
+        "E-mail, accounts en back-ups",
+        "<p>E-mail en accounts horen bij het dagelijkse werk. Ik help met Microsoft 365, het instellen of herstellen van e-mail en met toegang die past bij de taak. We nemen door wie welke accounts gebruikt en wat er moet gebeuren als iemand uit dienst gaat of een extra werkplek krijgt.</p><p>Een back-up is pas nuttig als duidelijk is wat erin zit en hoe u erbij komt. Ik help beoordelen of belangrijke bestanden worden geback-upt en of een herstel mogelijk is. Updates voor computers, router en gebruikte software help ik nalopen; ik beloof geen volledige beveiliging.</p><p>Waar de gebruikte dienst het ondersteunt, kan ik tweestapsverificatie (2FA) uitleggen en instellen. 2FA, updates en een back-up maken een bedrijf niet onkwetsbaar; ze zijn onderdelen van een gewone, controleerbare aanpak.</p>"
       ],
       [
-        "Netwerk en werkplekken",
-        "<p>Een werkplek hangt samen met het netwerk. Een printer die offline staat, een gedeelde map die niet bereikbaar is of wifi die wegvalt kan een instelling, kabel, router of apparaat betreffen. Ik onderzoek het probleem op de plek waar het optreedt. Ook voor een nieuw modem, een extra werkplek of een aangepaste netwerkindeling kunt u contact opnemen.</p><p>Ik help met Apple-, Windows- en Linux-werkplekken, e-mail, Microsoft 365, printers, netwerkapparaten en servers. We bespreken wie welke toegang nodig heeft en hoe bestanden worden gebruikt. Bij wifi kijk ik naar de bestaande apparatuur en de dekking voordat er iets nieuws wordt geadviseerd. Bij een server- of back-upvraag maken we eerst duidelijk wat er nu draait.</p>"
-      ],
-      [
-        "Duidelijke afspraak en CTA",
-        "<p>Bel 06 2438 2361, stuur een WhatsApp-bericht of mail naar info@nijssencomputers.nl. Vertel dat u in Voorburg of Leidschendam werkt en wat u wilt verbeteren: ICT-beheer, ICT-advies, beveiliging, netwerk of werkplekken. U spreekt rechtstreeks met Jeroen Nijssen.</p><p>Het zakelijke tarief is <strong>€90 per uur ex. btw, afgerekend per uur</strong>. Voor structureel onderhoud of grotere projecten is offerte op aanvraag. Ook voor een concrete storing kunt u contact opnemen; ik bespreek eerst wat nodig is. Bekijk eventueel de pagina over <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie</a> of de <a href=\"/contact\">contactpagina</a>.</p>"
+        "Tarief en contact",
+        "<p>Bel 06\u00a02438\u00a02361, stuur een WhatsApp-bericht of mail naar info@nijssencomputers.nl. Vertel dat u in Leidschendam, Voorburg of Voorschoten werkt en wat er speelt. U spreekt rechtstreeks met mij, Jeroen Nijssen.</p><p>Het zakelijke tarief is <strong>€90 per uur excl. btw, afgerekend per uur</strong>. Voor structureel onderhoud of grotere projecten is offerte op aanvraag. Ook voor een concrete storing kunt u contact opnemen; ik bespreek eerst wat nodig is. Contactgegevens staan ook op de <a href=\"/contact\">contactpagina</a>.</p>"
       ]
     ],
-    "city": null,
+    "city": "Leidschendam",
+    "areaServed": ["Leidschendam", "Voorburg", "Voorschoten"],
     "kind": "Zakelijke IT-ondersteuning",
     "related": [
       [
-        "computer-laptop-reparatie-leidschendam-voorburg",
-        "Computer- en laptopreparatie"
+        "computerhulp-aan-huis-leidschendam",
+        "Computerhulp in Leidschendam"
       ],
       [
-        "wifi-netwerk-hulp-voorburg",
-        "Wifi-hulp in Voorburg"
+        "computerhulp-aan-huis-voorburg",
+        "Computerhulp in Voorburg"
+      ],
+      [
+        "computerhulp-aan-huis-voorschoten",
+        "Computerhulp in Voorschoten"
+      ],
+      [
+        "wifi-netwerk-hulp-leidschendam",
+        "Wifi-hulp in Leidschendam"
       ],
       [
         "contact",
         "Contactgegevens"
       ]
     ],
-    "note": "Zakelijk: €90 per uur ex. btw, afgerekend per uur.",
+    "note": "Zakelijk: €90 per uur excl. btw, afgerekend per uur.",
+    "quotes": ["Metselbedrijf Zwaan"],
+    "quotes_heading": "Wat een zakelijke klant zegt",
+    "quotes_intro": "Deze reactie komt van de bestaande website.",
     "faq": [
       [
-        "Welke ICT-diensten biedt u bedrijven in Voorburg en Leidschendam?",
-        "Ik help kleine bedrijven in Voorburg, Leidschendam en omgeving met werkplekken, e-mail, Microsoft 365, servers, netwerk en back-ups. We bespreken wat uw organisatie werkelijk gebruikt."
+        "Komt u op locatie voor IT-ondersteuning bij een klein bedrijf in Leidschendam?",
+        "Ja. Ik kom op afspraak op locatie in Leidschendam, en ook in Voorburg en Voorschoten. Vertel bij het contact kort wat er speelt, dan bespreken we wat nodig is."
       ],
       [
-        "Helpt u met ICT-advies in Voorburg?",
-        "Ja. Ik denk mee over werkplekken, bestanden, netwerk, servers, back-ups en praktische verbeteringen. Ik kijk eerst naar de bestaande situatie."
+        "Wat kost zakelijke IT-ondersteuning?",
+        "Het zakelijke tarief is €90 per uur excl. btw, afgerekend per uur. Voor structureel onderhoud of grotere projecten is offerte op aanvraag."
       ],
       [
-        "Kunt u helpen met back-ups, updates en 2FA?",
-        "Ja. Ik kan back-ups en herstel, updates, wachtwoordbeleid en tweestapsverificatie (2FA) nalopen en uitleggen welke onderdelen aandacht vragen."
+        "Waarmee helpt u een klein bedrijf?",
+        "Met computers en laptops, netwerk en wifi, printers, e-mail en accounts, back-ups en het inrichten van nieuwe werkplekken. Apple Mac, Windows en Linux horen daarbij. We beginnen bij wat uw bedrijf werkelijk gebruikt."
       ],
       [
-        "Wat kost zakelijke ICT-ondersteuning?",
-        "Het zakelijke tarief is €90 per uur ex. btw, afgerekend per uur. Voor structureel onderhoud of grotere projecten is offerte op aanvraag."
+        "Werkt u met Apple Mac, Windows en Linux?",
+        "Ja. Ik ondersteun Apple Mac, Windows en Linux, naast e-mail, printers, netwerk en back-ups. U hoeft vooraf niet vast te stellen waar het probleem zit."
       ],
       [
-        "Werkt u met Apple, Windows en Linux?",
-        "Ja. Ik ondersteun Apple, Windows en Linux, naast Microsoft 365, e-mail, printers, servers en netwerkapparatuur."
+        "Helpt u ook in Voorburg en Voorschoten?",
+        "Ja. Ik werk op locatie in Leidschendam, Voorburg, Voorschoten en omgeving. Zeg bij contact in welke plaats uw bedrijf zit."
       ],
       [
-        "Komt u in Voorburg en Leidschendam op locatie?",
-        "Ja. Ik werk op locatie in Leidschendam, Voorburg, Voorschoten en omgeving. Neem contact op om de concrete vraag en afspraak te bespreken."
+        "Kunt u een nieuwe werkplek inrichten of e-mail en accounts instellen?",
+        "Ja. Bij een nieuwe medewerker, een extra computer of een verhuizing kan ik de werkplek, e-mail, printers en toegang inrichten. We kijken eerst naar de bestaande situatie."
+      ],
+      [
+        "Helpt u met back-ups, printers en wifi op kantoor?",
+        "Ja. Ik kan back-ups nalopen, printers aansluiten of storingen onderzoeken, en wifi- of netwerkproblemen op de werkplek bekijken. Ik beloof geen volledige beveiliging; we nemen door wat op uw apparaten en netwerk zichtbaar is."
+      ],
+      [
+        "Spreek ik rechtstreeks met u?",
+        "Ja. U heeft rechtstreeks contact met mij, Jeroen Nijssen. Bel 06 2438 2361 of stuur een WhatsApp-bericht."
       ]
     ]
   },

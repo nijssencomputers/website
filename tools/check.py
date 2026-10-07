@@ -86,9 +86,9 @@ def main():
             related_by_page = {
                 'computer-laptop-reparatie-leidschendam-voorburg': ('/computerhulp-aan-huis-leidschendam','/computerhulp-aan-huis-voorburg','/laptop-traag-leidschendam','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/wifi-netwerk-hulp-voorburg','/contact'),
                 'laptop-traag-voorburg': ('/computerhulp-aan-huis-voorburg','/wifi-netwerk-hulp-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/laptop-traag-leidschendam','/contact'),
-                'mkb-it-beheer-leidschendam-voorburg': ('/computer-laptop-reparatie-leidschendam-voorburg','/wifi-netwerk-hulp-voorburg','/contact'),
+                'mkb-it-beheer-leidschendam-voorburg': ('/computerhulp-aan-huis-leidschendam','/computerhulp-aan-huis-voorburg','/computerhulp-aan-huis-voorschoten','/wifi-netwerk-hulp-leidschendam','/computer-laptop-reparatie-leidschendam-voorburg','/contact'),
                 'spoed-computerhulp-leidschendam': ('/computerhulp-aan-huis-leidschendam','/computer-laptop-reparatie-leidschendam-voorburg','/wifi-netwerk-hulp-leidschendam','/laptop-traag-leidschendam','/contact'),
-                'wifi-netwerk-hulp-leidschendam': ('/computerhulp-aan-huis-leidschendam','/laptop-traag-leidschendam','/wifi-netwerk-hulp-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/contact'),
+                'wifi-netwerk-hulp-leidschendam': ('/computerhulp-aan-huis-leidschendam','/laptop-traag-leidschendam','/wifi-netwerk-hulp-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/mkb-it-beheer-leidschendam-voorburg','/contact'),
                 'wifi-netwerk-hulp-voorburg': ('/computerhulp-aan-huis-voorburg','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/computer-laptop-reparatie-leidschendam-voorburg','/contact'),
                 'wifi-netwerk-hulp-voorschoten': ('/computerhulp-aan-huis-voorschoten','/printer-hulp-voorschoten','/wifi-netwerk-hulp-leidschendam','/wifi-netwerk-hulp-voorburg'),
                 'contact': ('/mkb-it-beheer-leidschendam-voorburg','/computer-laptop-reparatie-leidschendam-voorburg','/computerhulp-aan-huis-leidschendam','/computerhulp-aan-huis-voorburg','/laptop-traag-leidschendam','/laptop-traag-voorburg','/wifi-netwerk-hulp-leidschendam','/wifi-netwerk-hulp-voorburg','/spoed-computerhulp-leidschendam'),
@@ -204,9 +204,25 @@ def main():
             for term in (town,'thuis','€60','half uur','06 2438 2361','WhatsApp'):
                 check(term in lead,f.name+': citeerbare lead mist '+term)
             check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
+        if f.stem=='mkb-it-beheer-leidschendam-voorburg':
+            start=text.find('<p class="tagline">')
+            end=text.find('</p>', start) if start!=-1 else -1
+            lead_raw=text[start:end] if start!=-1 and end!=-1 else ''
+            lead=lead_raw.replace('\u00a0',' ')
+            for term in ('Leidschendam','kleine bedrijven','locatie','2008','computers','laptops','netwerk','wifi','printers','e-mail','accounts','back-ups','werkplekken','Apple Mac','Windows','Linux','€90','excl. btw','06 2438 2361','WhatsApp','Jeroen'):
+                check(term in lead,f.name+': citeerbare lead mist '+term)
+            check('06\u00a02438\u00a02361' in lead_raw,f.name+': telefoon in de lead moet niet-afbreekbare spaties hebben')
+            check('Ook Apple kan ik aan' not in text,f.name+': forbidden Apple claim')
+            check('binnen 24 uur' not in text,f.name+': geen response-time belofte')
+            check(p.h1==['IT-ondersteuning voor kleine bedrijven in Leidschendam'],f.name+': H1 intent changed')
+            check('Metselbedrijf Zwaan' in p.text and 'Al meer dan 15 jaar leunen wij op zijn expertise' in p.text,f.name+': bestaande zakelijke klantcitaat ontbreekt')
+            service=next((x for x in p.json[0].get('@graph',[]) if x.get('@type')=='Service'),None)
+            check(service and service.get('areaServed')==['Leidschendam','Voorburg','Voorschoten'],f.name+': Service mist areaServed Leidschendam/Voorburg/Voorschoten')
         if f.stem=='computerhulp-aan-huis-leidschendam':
             for path in ('/printer-hulp-leidschendam','/computerhulp-aan-huis-voorschoten','/laptop-traag-voorschoten','/wifi-netwerk-hulp-voorschoten'):
                 check(path in hrefs,f.name+': missing related '+path)
+    check(any(href=='/mkb-it-beheer-leidschendam-voorburg' for href,_label in regio_nav_links()),
+          'Regio menu must link the zakelijke IT-ondersteuning page')
     home=parses.get('/')
     if home:
         check(len(home.h1)==1 and home.h1[0].startswith('Computerhulp aan huis'),'Homepage h1 must begin with Computerhulp aan huis')
