@@ -18,6 +18,7 @@ SERVICE_ORDER = (
     ('computerhulp-aan-huis', 'Computerhulp aan huis'),
     ('computer-laptop-reparatie', 'Computer- en laptopreparatie'),
     ('laptop-traag', 'Laptop traag'),
+    ('virus-verwijderen', 'Virus verwijderen'),
     ('wifi-netwerk-hulp', 'Wifi/netwerk hulp'),
     ('printer-hulp', 'Printer hulp'),
     ('spoed-computerhulp', 'Dringende computerhulp'),
