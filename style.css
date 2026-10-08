@@ -89,6 +89,7 @@ main:focus { outline: none; }
 .about-content p:last-child { margin-bottom: 0; }
 .about-img { float: right; width: 300px; height: auto; object-fit: contain; margin: 0 0 1rem 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); }
 .reviews-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; min-width: 0; }
+.reviews-grid:has(> :only-child) { grid-template-columns: minmax(0, 1fr); max-width: 28rem; }
 .review-card { display: flex; flex-direction: column; min-width: 0; margin: 0; padding: 1.15rem; background: #fff; border: 1px solid #e1e6e2; border-radius: var(--radius); box-shadow: var(--shadow); font-size: 1rem; overflow-wrap: anywhere; }
 .review-stars { color: #f4b400; font-size: 1.1rem; line-height: 1; letter-spacing: .12em; margin-bottom: .8rem; }
 .review-card p { flex: 1; margin: 0 0 .9rem; font-style: italic; line-height: 1.55; }

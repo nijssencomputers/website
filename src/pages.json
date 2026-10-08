@@ -49,6 +49,10 @@
       [
         "wifi-netwerk-hulp-voorschoten",
         "Wifi in Voorschoten"
+      ],
+      [
+        "mkb-it-beheer-leidschendam-voorburg",
+        "IT-ondersteuning voor bedrijven"
       ]
     ],
     "note": "Particulier: €60 per uur, afgerekend per half uur."
@@ -66,7 +70,7 @@
       ],
       [
         "Problemen oplossen",
-        "<div id=\"printer-hulp\"><h3>Printer en wifi</h3><p>Een printer die offline blijft, scannen dat niet lukt of een wegvallende verbinding: ik onderzoek de instellingen en verbindingen bij u thuis.</p></div>\n<div id=\"computer-traag\"><h3>Computer traag of vastgelopen</h3><p>Ik controleer software, updates, opslag en beveiliging. Als reparatie of een upgrade zinvol is, bespreek ik dat met u. Bekijk ook <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie in Voorburg</a>.</p></div><p>Ook voor vragen over iPhone, iPad, Android, accounts en ongewenste software kunt u contact opnemen.</p>"
+        "<div id=\"printer-hulp\"><h3>Printer en wifi</h3><p>Een printer die offline blijft, scannen dat niet lukt of een wegvallende verbinding: ik onderzoek de instellingen en verbindingen bij u thuis.</p></div>\n<div id=\"computer-traag\"><h3>Computer traag of vastgelopen</h3><p>Ik controleer software, updates, opslag en beveiliging. Als reparatie of een upgrade zinvol is, bespreek ik dat met u. Bekijk ook <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie in Voorburg</a>.</p></div><p>Ook voor vragen over iPhone, iPad, Android en accounts kunt u contact opnemen. Bij verdachte meldingen of ongewenste software is er een aparte pagina over <a href=\"/virus-verwijderen-voorburg\">virus verwijderen in Voorburg</a>.</p>"
       ],
       [
         "Persoonlijke ondersteuning",
@@ -91,6 +95,10 @@
       [
         "wifi-netwerk-hulp-voorburg",
         "Wifi en netwerk"
+      ],
+      [
+        "virus-verwijderen-voorburg",
+        "Virus verwijderen in Voorburg"
       ]
     ],
     "note": "Particulier: €60 per uur, afgerekend per half uur."
@@ -336,6 +344,10 @@
       [
         "contact",
         "Contactgegevens"
+      ],
+      [
+        "mkb-it-beheer-leidschendam-voorburg",
+        "IT-ondersteuning voor bedrijven"
       ]
     ],
     "note": "Particulier: €60 per uur, afgerekend per half uur.",
@@ -379,7 +391,7 @@
       ],
       [
         "Hulp bij onderhoud en herstel",
-        "<p>Na het onderzoek bespreek ik wat praktisch is. Dat kan opschonen, een instelling, een update of het vrijmaken van opslagruimte zijn. Ik voer niet zomaar een ingreep uit zonder uit te leggen wat het doel is. Bij programma’s die u niet herkent, kijk ik eerst wat ze doen voordat ze worden verwijderd.</p><p>Een laptop kan ook trager worden door een onderdeel dat achteruitgaat. Extra geheugen of snellere opslag is soms een mogelijkheid, maar niet iedere laptop kan worden uitgebreid. Als een herinstallatie wordt overwogen, maken we eerst duidelijk welke bestanden en instellingen behouden moeten blijven en welke back-up beschikbaar is. Zo blijft de keuze begrijpelijk.</p><p>Wanneer een probleem samenhangt met wifi of een router, kunt u ook de <a href=\"/wifi-netwerk-hulp-voorburg\">wifi-hulp in Voorburg</a> bekijken. Als de laptop niet meer goed start of fysieke problemen vertoont, past de pagina over <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie</a> beter.</p>"
+        "<p>Na het onderzoek bespreek ik wat praktisch is. Dat kan opschonen, een instelling, een update of het vrijmaken van opslagruimte zijn. Ik voer niet zomaar een ingreep uit zonder uit te leggen wat het doel is. Bij programma’s die u niet herkent, kijk ik eerst wat ze doen voordat ze worden verwijderd.</p><p>Een laptop kan ook trager worden door een onderdeel dat achteruitgaat. Extra geheugen of snellere opslag is soms een mogelijkheid, maar niet iedere laptop kan worden uitgebreid. Als een herinstallatie wordt overwogen, maken we eerst duidelijk welke bestanden en instellingen behouden moeten blijven en welke back-up beschikbaar is. Zo blijft de keuze begrijpelijk.</p><p>Wanneer een probleem samenhangt met wifi of een router, kunt u ook de <a href=\"/wifi-netwerk-hulp-voorburg\">wifi-hulp in Voorburg</a> bekijken. Als de laptop niet meer goed start of fysieke problemen vertoont, past de pagina over <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie</a> beter. Als er vooral verdachte meldingen of ongewenste software speelt, is <a href=\"/virus-verwijderen-voorburg\">virus verwijderen in Voorburg</a> relevanter.</p>"
       ],
       [
         "Aan huis in Voorburg",
@@ -412,6 +424,10 @@
       [
         "contact",
         "Contactgegevens"
+      ],
+      [
+        "virus-verwijderen-voorburg",
+        "Virus verwijderen in Voorburg"
       ]
     ],
     "note": "Particulier: €60 per uur, afgerekend per half uur.",
@@ -479,51 +495,63 @@
   {
     "slug": "wifi-netwerk-hulp-voorburg",
     "title": "Wifi problemen Voorburg | Hulp aan huis | Nijssen",
-    "description": "Wifi valt weg, is traag of heeft dode hoeken in Voorburg? Jeroen helpt aan huis met router, bereik en apparaten. Particulier €60 per uur, per half uur.",
-    "heading": "Wifi problemen in Voorburg? Hulp aan huis",
-    "intro": "Valt uw wifi weg, is het internet traag of heeft u dode hoeken in huis? Ik kom op afspraak bij u thuis of op uw bedrijf in Voorburg om te kijken waar het misgaat.",
+    "description": "Wifi valt weg of is traag in Voorburg? Hulp aan huis sinds 2008. Router, bereik en dode hoeken. Particulier €60 per uur, per half uur. 06 2438 2361.",
+    "heading": "Wifi-hulp aan huis in Voorburg",
+    "intro": "Ik kom op afspraak bij u thuis in Voorburg voor wifi-problemen. Sinds 2008 help ik particulieren en bedrijven. Ik kijk naar wegvallende wifi, traag internet, dode hoeken, de router en apparaten die niet verbinden. Particulier €60 per uur, afgerekend per half uur. Bel 06 2438 2361 of stuur een WhatsApp-bericht.",
     "sections": [
       [
         "Wifi-problemen in Voorburg uitzoeken",
-        "<p>In Voorburg kan wifi op de ene verdieping goed werken en verderop wegvallen. Misschien heeft u vooral last van een printer die offline blijft, een telefoon die opnieuw moet verbinden of een laptop die traag lijkt. Ik kom op afspraak bij u thuis en onderzoek de verbinding op de plekken waar u het merkt.</p><p>Ik maak onderscheid tussen een storing van de provider, een probleem in de router, onvoldoende bereik en een apparaatinstelling. Dat voorkomt dat er direct een versterker wordt geplaatst terwijl het echte probleem elders zit. Vertel wat u ziet; een technische diagnose vooraf is niet nodig.</p><p>Ook na een nieuw modem, een overstap van provider of een gewijzigd wifi-wachtwoord kunnen apparaten opnieuw ingesteld moeten worden. Ik help met Apple, Windows en Linux en kan de verbinding ook met iPhone, iPad of Android nalopen.</p>"
+        "<p>In Voorburg kan wifi op de ene verdieping goed werken en verderop wegvallen. Misschien heeft u last van een printer die offline blijft, een telefoon die steeds opnieuw moet verbinden, of een laptop die traag lijkt zolang die op wifi staat. Ik kom op afspraak bij u thuis en onderzoek de verbinding op de plekken waar u het merkt. U hoeft geen technische diagnose te geven.</p><p>Ik maak onderscheid tussen een storing van de provider, een probleem in de router, onvoldoende bereik en een instelling op één apparaat. Dat voorkomt dat er direct een versterker wordt geplaatst terwijl het echte probleem elders zit. We kijken of internet bij het modem binnenkomt, of het alleen op wifi speelt of ook via een kabel, en welke apparaten het wel of niet doen.</p><p>Ook na een nieuw modem, een overstap van provider of een gewijzigd wifi-wachtwoord kunnen apparaten opnieuw ingesteld moeten worden. Ik help met Apple Mac, Windows en Linux en kan de verbinding ook met iPhone, iPad of Android nalopen. Als de laptop zelf traag is, ook zonder wifi, past <a href=\"/laptop-traag-voorburg\">hulp bij een trage laptop in Voorburg</a> beter.</p>"
       ],
       [
-        "Bereik, router en apparaten",
-        "<p>We bespreken de plaats van de router en testen waar de dekking minder wordt. Ik kijk naar netwerknaam, wachtwoord, gastnetwerk en toegankelijke beveiligingsinstellingen. Een printer of televisie moet soms opnieuw op hetzelfde netwerk worden gezet. Ik controleer dan of het apparaat het netwerk ziet en of het wachtwoord klopt.</p><p>Een mesh-systeem of versterker kan passend zijn, maar niet altijd. Ik kijk eerst naar de bestaande apparatuur en de manier waarop die wordt gebruikt. Als een providerstoring de oorzaak is, zeg ik dat duidelijk. Ik vervang geen specialistisch security-onderzoek, maar kan wel gewone routerinstellingen en updates nalopen.</p>"
+        "Router, bereik en dode hoeken",
+        "<p>We bespreken de plaats van de router en testen waar de dekking minder wordt. Ik kijk naar netwerknaam, wachtwoord, gastnetwerk en de beveiligingsinstellingen die toegankelijk zijn. Een dode hoek ontstaat vaak door afstand, muren of een router die in een kast of op zolder staat. Eerst moet duidelijk zijn wat er nu gebeurt; een extra apparaat is niet automatisch de oplossing.</p><p>Een mesh-systeem of versterker kan passend zijn, maar niet altijd. Soms is verplaatsen of de bestaande instellingen nalopen al voldoende. Ik kijk naar de apparatuur die u al heeft en de manier waarop die wordt gebruikt. Als een providerstoring de oorzaak is, zeg ik dat duidelijk, zodat u hen kunt bellen. Ik vervang geen specialistisch security-onderzoek, maar kan wel gewone routerinstellingen en updates nalopen.</p><p>Wilt u het wachtwoord of de naam van het netwerk wijzigen, dan help ik dat op de apparaten die u gebruikt weer kloppend te maken. We testen daarna samen of telefoon, computer en andere apparaten weer verbinden.</p>"
+      ],
+      [
+        "Printer, televisie en andere apparaten",
+        "<p>Een printer, televisie of netwerkschijf kan onbereikbaar zijn terwijl internet op een telefoon wel werkt. Vaak zit het apparaat niet op hetzelfde netwerk, is het wachtwoord gewijzigd of ziet het de wifi niet. Ik controleer dat bij u thuis en zet het apparaat waar mogelijk opnieuw op het netwerk.</p><p>Draadloos printen vanaf een Mac, Windows-computer, iPhone, iPad of Android hangt af van wat de printer ondersteunt. Als printen het probleem is en de wifi zelf stabiel is, kan <a href=\"/printer-hulp-voorburg\">printerhulp in Voorburg</a> de betere ingang zijn. Bij verdachte meldingen of ongewenste software is <a href=\"/virus-verwijderen-voorburg\">virus verwijderen in Voorburg</a> relevanter. Een apparaat dat niet meer goed start hoort bij <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie</a>.</p>"
       ],
       [
         "Afspraak in Voorburg",
-        "<p>Stuur een WhatsApp-bericht, bel of mail wat er speelt en vermeld Voorburg. Tijdens de afspraak testen we gericht de verbinding en de apparaten die u gebruikt. Ik leg uit welke verbetering mogelijk is en wat u zelf kunt beheren. Sinds 2008 help ik particulieren en bedrijven in de regio.</p><p>Heeft u naast wifi ook een trage laptop, bekijk dan de pagina <a href=\"/laptop-traag-voorburg\">laptop traag in Voorburg</a>. Voor een apparaat dat niet meer goed werkt is <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie</a> relevant.</p>"
+        "<p>Stuur een WhatsApp-bericht, bel of mail wat er speelt en vermeld Voorburg. Tijdens de afspraak testen we gericht de verbinding en de apparaten die u gebruikt. Ik leg uit welke verbetering mogelijk is en wat u zelf kunt beheren. Sinds 2008 help ik particulieren en bedrijven. Ik woon in Leidschendam-Voorburg en kom op afspraak ook in Leidschendam en Voorschoten; zeg bij contact in welke plaats u woont. Ik beloof geen aparte service per wijk.</p><p>Hulp bij wifi in de buurt vindt u ook op de pagina’s over <a href=\"/wifi-netwerk-hulp-leidschendam\">wifi in Leidschendam</a> en <a href=\"/wifi-netwerk-hulp-voorschoten\">wifi in Voorschoten</a>. Voor algemene computerhulp in dezelfde plaats is er <a href=\"/computerhulp-aan-huis-voorburg\">computerhulp aan huis in Voorburg</a>. Contactgegevens staan op de <a href=\"/contact\">contactpagina</a>.</p>"
       ],
       [
         "Tarief en contact",
-        "<p>Voor particulieren is het tarief €60 per uur, afgerekend per half uur. Voor algemene hulp kunt u naar <a href=\"/computerhulp-aan-huis-voorburg\">computerhulp aan huis</a> of de <a href=\"/contact\">contactpagina</a>. Ik kom op afspraak bij u thuis in Voorburg.</p>"
+        "<p>Voor particulieren is het tarief €60 per uur, afgerekend per half uur. Voor bedrijven is het €90 per uur ex. btw, afgerekend per uur. Ik kom op afspraak bij u thuis in Voorburg.</p>"
       ]
     ],
     "faq": [
       [
-        "Komt u aan huis voor wifi- of netwerkproblemen in Voorburg?",
-        "Ja. Ik kom op afspraak bij u thuis in Voorburg en omgeving. Vertel bij het contact kort wat er speelt, dan bespreken we wat nodig is."
+        "Komt u aan huis voor wifi-problemen in Voorburg?",
+        "Ja. Ik kom op afspraak bij u thuis in Voorburg. Ik kom ook in Leidschendam en Voorschoten. Vertel bij het contact kort wat er speelt, dan bespreken we wat nodig is."
       ],
       [
-        "Wat kost hulp aan huis?",
-        "Voor particulieren is het tarief €60 per uur, afgerekend per half uur. Voor bedrijven is het €90 per uur ex. btw, afgerekend per uur."
+        "Wat kost wifi-hulp aan huis in Voorburg?",
+        "Voor particulieren is het tarief €60 per uur, afgerekend per half uur. Voor bedrijven is het €90 per uur ex. btw, afgerekend per uur. U hoort vooraf wat ik ga doen; na afloop rekenen we af op de bestede tijd."
       ],
       [
-        "Werkt u met Apple, Windows en Linux?",
-        "Ja. Ik help met Apple Mac, Windows en Linux. U hoeft vooraf niet vast te stellen waar het probleem zit."
+        "Mijn wifi valt steeds weg. Wat doet u?",
+        "Ik kijk eerst of het aan de internetverbinding, de router of een apparaat ligt, en test het bereik waar u last van heeft. U hoort wat ik zie en wat er nodig is."
       ],
       [
-        "Kunt u het probleem direct oplossen?",
-        "Ik onderzoek eerst de oorzaak en leg uit wat ik zie. Daarna bespreken we samen of instellingen, onderhoud, herstel of vervanging passend is."
+        "Ik heb dode hoeken. Helpt een mesh-systeem of een versterker?",
+        "Dat hangt van uw huis en de huidige apparatuur af. Een versterker of mesh-systeem lost het niet altijd op. Ik kijk eerst naar plaatsing, instellingen en dekking. Als extra apparatuur zinvol is, bespreek ik dat; ik bied geen vaste wifi-pakketten."
       ],
       [
-        "Wat kan ik vooraf doorgeven?",
-        "Noem de plaats, het apparaat en wat u merkt. Een foutmelding of foto daarvan is handig, maar een technische diagnose vooraf is niet nodig."
+        "Mijn printer of televisie wil niet op de wifi. Kunt u helpen?",
+        "Dat komt vaak voor. Ik kijk of het apparaat het netwerk ziet, of het wachtwoord klopt en of het op hetzelfde netwerk staat. Soms ligt het aan het apparaat zelf, soms aan de wifi."
       ],
       [
-        "Hoe maakt u een afspraak?",
-        "U kunt bellen, WhatsAppen of mailen. Ik spreek rechtstreeks met u af en laat weten wat mogelijk is."
+        "Hoe weet ik of het aan de wifi ligt of aan een storing bij de provider?",
+        "Ik controleer of het internet bij het modem binnenkomt en of het probleem alleen op wifi speelt of ook via een kabel. Als de storing bij de provider ligt, zeg ik dat, zodat u hen kunt bellen."
+      ],
+      [
+        "Kunt u een router of een nieuw modem van de provider instellen?",
+        "Ja. Ik help een router of een nieuw modem instellen, inclusief netwerknaam en wachtwoord. Na een overstap naar een andere provider moet dat vaak opnieuw. Daarna controleren we of uw apparaten weer verbinden."
+      ],
+      [
+        "Komt u ook in Leidschendam of Voorschoten voor wifi-hulp?",
+        "Ja. Ik woon in Leidschendam-Voorburg en kom op afspraak ook in Leidschendam en Voorschoten. Zeg bij contact in welke plaats u woont. Ik beloof geen aparte service per wijk."
       ]
     ],
     "quotes": true,
@@ -539,19 +567,107 @@
         "Trage laptop in Voorburg"
       ],
       [
+        "virus-verwijderen-voorburg",
+        "Virus verwijderen in Voorburg"
+      ],
+      [
         "wifi-netwerk-hulp-leidschendam",
         "Wifi-hulp in Leidschendam"
       ],
       [
-        "computer-laptop-reparatie-leidschendam-voorburg",
-        "Computer- en laptopreparatie"
+        "wifi-netwerk-hulp-voorschoten",
+        "Wifi-hulp in Voorschoten"
       ],
       [
         "contact",
         "Contactgegevens"
       ]
     ],
-    "note": "Particulier: €60 per uur, afgerekend per half uur."
+    "note": "U spreekt rechtstreeks met Jeroen Nijssen."
+  },
+  {
+    "slug": "virus-verwijderen-voorburg",
+    "title": "Virus verwijderen Voorburg | Aan huis | Nijssen",
+    "description": "Virus of malware op de computer in Voorburg? Jeroen helpt aan huis. Sinds 2008. Particulier €60 per uur, per half uur. Bel 06 2438 2361.",
+    "heading": "Virus verwijderen aan huis in Voorburg",
+    "intro": "Ik kom op afspraak bij u thuis in Voorburg voor virus- of malwarehulp. Sinds 2008 onderzoek ik verdachte meldingen aan huis. Particulier €60 per uur, afgerekend per half uur. Bel 06 2438 2361 of stuur een WhatsApp-bericht.",
+    "sections": [
+      [
+        "Wat u merkt bij verdachte meldingen",
+        "<p>Een computer in Voorburg kan ineens anders aanvoelen: vensters die u niet heeft geopend, een startpagina die is veranderd, extra werkbalken, een zoekmachine die u niet herkent, of een melding dat het apparaat is geïnfecteerd en dat u moet bellen of betalen. Soms start er software die u niet heeft geïnstalleerd, of vraagt een scherm om een wachtwoord dat niet bij uw eigen accounts hoort. Ik kom op afspraak bij u thuis en kijk naar wat er werkelijk op het scherm gebeurt. U hoeft vooraf geen diagnose te stellen.</p><p>Niet iedere pop-up is een virus. Een advertentie, een browserwaarschuwing, een programma dat om een update vraagt of een volle schijf kan er hetzelfde uitzien. Ook een trage laptop zonder ongewenste software geeft soms dezelfde klachten. Daarom begin ik met onderzoek: welke melding verschijnt, wanneer het begon, en of er kort daarvoor een bijlage, een download of een onbekend telefoonnummer in het spel was. Een foto van de melding helpt, maar is niet verplicht.</p><p>Ik help met Apple Mac, Windows en Linux. Vertel in uw eigen woorden wat u ziet. Dat kan een laptop zijn, een vaste computer of een apparaat dat u samen met anderen in huis gebruikt. Als de klacht vooral langzaam opstarten of een volle schijf is, past de pagina over <a href=\"/laptop-traag-voorburg\">een trage laptop in Voorburg</a> beter. Als het apparaat niet meer start, is <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie</a> relevanter.</p>"
+      ],
+      [
+        "Onderzoek en verwijderen aan huis",
+        "<p>Bij u thuis in Voorburg neem ik de computer stap voor stap door. Ik kijk naar geïnstalleerde programma’s, de browser, taken die bij het opstarten meedraaien en de beveiligingssoftware die al aanwezig is. Ongewenste software verwijder ik waar dat veilig kan. Ik installeer geen willekeurige schoonmaakprogramma’s en beloof geen volledige beveiliging. Eén scan of één programma maakt een apparaat niet onkwetsbaar.</p><p>Soms is de melding zelf het probleem: een nepscherm dat vraagt om te betalen of een nummer te bellen. Dan is het belangrijk dat u daar niet op ingaat. Ik zet het scherm stil, kijk wat er is gewijzigd en herstel de browser of de startprogramma’s waar dat kan. Als opnieuw installeren nodig lijkt, bespreken we eerst welke foto’s, documenten en e-mail behouden moeten blijven en of er een back-up is. Zonder die afspraak ga ik niet zomaar alles wissen.</p><p>Na afloop leg ik uit wat er is aangepast en welke meldingen u later zelf kunt herkennen. We nemen door wat u beter niet aanklikt en of de bestaande beveiligingssoftware zinvol blijft. Dat is uitleg, geen garantie. Voor algemene computerhulp in dezelfde plaats kunt u naar <a href=\"/computerhulp-aan-huis-voorburg\">computerhulp aan huis in Voorburg</a>.</p>"
+      ],
+      [
+        "Wat u tot de afspraak kunt doen",
+        "<p>Laat de computer aan staan met de oplader erbij, zodat ik dezelfde melding kan zien. Klik niet verder op waarschuwingen die om betaling, Bitcoin of een wachtwoord vragen als u die niet vertrouwt. Bel niet het nummer dat in zo’n scherm staat. Verwijder geen mappen willekeurig en installeer geen extra schoonmaaksoftware voordat duidelijk is wat er speelt.</p><p>Noteer wanneer de meldingen begonnen en of u kort daarvoor een bijlage, een download of een pop-up heeft geopend. Als u nog bij uw bestanden kunt, is het verstandig om niets overhaast te kopiëren of weg te gooien; eerst kijken wat er aan de hand is, voorkomt extra schade. Een foto van het scherm mag u alvast via WhatsApp of e-mail sturen.</p><p>Ik ben Jeroen Nijssen en woon in Leidschendam-Voorburg. Sinds 2008 help ik particulieren en bedrijven. U spreekt rechtstreeks met mij. Tijdens het onderzoek kunt u vragen stellen. Als herstel niet verstandig lijkt, hoort u dat ook, zonder een ongefundeerde belofte.</p>"
+      ],
+      [
+        "Werkgebied en andere hulp",
+        "<p>Deze pagina gaat over virus- of malwarehulp aan huis in Voorburg. Ik kom op afspraak ook in Leidschendam en Voorschoten; zeg bij contact in welke plaats u woont. Ik beloof geen aparte service per wijk. De algemene pagina <a href=\"/computerhulp-aan-huis-voorburg\">computerhulp aan huis in Voorburg</a> blijft de plek voor installatie, printer, wifi en een nieuwe computer. Wifi die wegvalt zonder verdachte meldingen hoort bij <a href=\"/wifi-netwerk-hulp-voorburg\">wifi-hulp in Voorburg</a>.</p><p>Zo blijft elke pagina bij één vraag. U hoeft die keuze niet zelf te maken: beschrijf wat u ziet, dan kijken we welke stap past. Contactgegevens staan ook op de <a href=\"/contact\">contactpagina</a>.</p>"
+      ],
+      [
+        "Tarief en afspraak",
+        "<p>Voor particulieren geldt €60 per uur, afgerekend per half uur. Voor bedrijven is het €90 per uur ex. btw, afgerekend per uur. Bel, stuur een WhatsApp-bericht of mail naar info@nijssencomputers.nl. Vermeld dat u in Voorburg hulp zoekt en wat u op het scherm ziet. Ik kom op afspraak bij u thuis.</p>"
+      ]
+    ],
+    "faq": [
+      [
+        "Komt u aan huis om een virus te verwijderen in Voorburg?",
+        "Ja. Ik kom op afspraak bij u thuis in Voorburg. Ik kom ook in Leidschendam en Voorschoten. Vertel bij het contact kort wat u ziet, dan bespreken we wat nodig is."
+      ],
+      [
+        "Wat kost virus verwijderen aan huis?",
+        "Voor particulieren is het tarief €60 per uur, afgerekend per half uur. Voor bedrijven is het €90 per uur ex. btw, afgerekend per uur."
+      ],
+      [
+        "Hoe weet ik of er een virus of malware op mijn computer staat?",
+        "Dat is vooraf vaak niet zeker. Pop-ups, een veranderde startpagina, onbekende programma’s of een scherm dat om betaling vraagt kunnen malware zijn, maar ook een advertentie of een trage laptop. Ik kijk bij u thuis naar wat er zichtbaar is."
+      ],
+      [
+        "Er staat een melding dat ik moet betalen of bellen. Wat moet ik doen?",
+        "Klik niet op betalen, bel niet het nummer in het scherm en geef geen wachtwoord. Laat de computer aan staan en neem contact op. Zulke schermen zijn vaak bedoeld om u te laten schrikken; ik kijk ter plekke wat er speelt."
+      ],
+      [
+        "Kunt u elk virus of alle malware verwijderen?",
+        "Ik onderzoek eerst wat zichtbaar is en verwijder ongewenste software waar dat kan. Volledige beveiliging of een gegarandeerde uitkomst kan ik niet beloven. Soms is opnieuw installeren verstandiger; dan bespreken we eerst uw bestanden en back-up."
+      ],
+      [
+        "Werkt u ook op een Apple Mac, Windows en Linux?",
+        "Ja. Ik help met Apple Mac, Windows en Linux. U hoeft vooraf niet vast te stellen welk systeem het is of waar de melding vandaan komt."
+      ],
+      [
+        "Blijven mijn foto’s en documenten bewaard?",
+        "Ik wis niet zomaar alles. Als opnieuw installeren ter sprake komt, bespreken we eerst welke foto’s, documenten en e-mail behouden moeten blijven en of er een back-up is. Zonder die afspraak ga ik niet over tot wissen."
+      ],
+      [
+        "Wat kan ik doen tot u langskomt?",
+        "Laat de computer aan met de oplader erbij. Klik niet op betalings- of wachtwoordschermen die u niet vertrouwt. Verwijder geen mappen willekeurig. Een foto van de melding mag u alvast sturen."
+      ]
+    ],
+    "city": "Voorburg",
+    "kind": "Virus- en malwarehulp aan huis",
+    "related": [
+      [
+        "computerhulp-aan-huis-voorburg",
+        "Computerhulp in Voorburg"
+      ],
+      [
+        "laptop-traag-voorburg",
+        "Trage laptop in Voorburg"
+      ],
+      [
+        "wifi-netwerk-hulp-voorburg",
+        "Wifi-hulp in Voorburg"
+      ],
+      [
+        "contact",
+        "Contactgegevens"
+      ]
+    ],
+    "note": "U spreekt rechtstreeks met Jeroen Nijssen."
   },
   {
     "slug": "laptop-traag-voorschoten",
@@ -769,75 +885,97 @@
   },
   {
     "slug": "mkb-it-beheer-leidschendam-voorburg",
-    "title": "ICT-bedrijf Voorburg & Leidschendam | ICT-beheer en advies | Nijssen",
-    "description": "Klein ICT-bedrijf voor ondernemers in Voorburg en Leidschendam. ICT-diensten: beheer, advies, beveiliging, netwerk, back-up, updates en 2FA. Sinds 2008.",
-    "heading": "ICT-diensten voor bedrijven in Voorburg en Leidschendam",
-    "intro": "Nijssen Computers is een klein ICT-bedrijf voor ondernemers in Voorburg en Leidschendam: beheer, advies, beveiliging, netwerk en werkplekken. Eén aanspreekpunt voor dagelijks gebruik en verbeteringen.",
+    "title": "IT-ondersteuning klein bedrijf Leidschendam | Nijssen",
+    "description": "IT-ondersteuning voor kleine bedrijven in Leidschendam, op locatie. Sinds 2008. Microsoft 365, netwerk, back-up. €90 per uur ex. btw. 06 2438 2361.",
+    "heading": "IT-ondersteuning voor kleine bedrijven in Leidschendam",
+    "intro": "Ik kom op locatie voor IT-ondersteuning bij kleine bedrijven in Leidschendam. Sinds 2008 help ik ondernemers met Microsoft 365, netwerk, back-ups, printers en werkplekken. Apple Mac, Windows en Linux. Zakelijk €90 per uur ex. btw, afgerekend per uur. Bel 06 2438 2361 of stuur een WhatsApp-bericht.",
     "sections": [
       [
-        "ICT-beheer voor kleine bedrijven",
-        "<p>Een kleine onderneming in Voorburg of Leidschendam heeft vaak geen aparte ICT-afdeling. Toch moeten computers, e-mail, bestanden, printers en internet gewoon werken. Ik help met het dagelijkse ICT-beheer en onderzoek storingen op de werkplek, in het netwerk of bij accounts. Dat kan incidentele hulp zijn, onderhoud of een concreet project.</p><p>Ik werk met Apple, Windows en Linux en ondersteun Microsoft 365, e-mail, gedeelde bestanden, printers, servers en back-ups. We beginnen bij uw situatie: welke apparaten gebruikt u, wat moet beschikbaar zijn en waar loopt u nu tegenaan? Daarna leg ik in gewone taal uit wat aandacht nodig heeft. U krijgt geen algemeen pakket dat niet bij uw bedrijf past.</p><p>ICT-beheer betekent ook overzicht houden. Updates, toegang tot accounts, back-ups en netwerkapparatuur verdienen aandacht voordat een storing uw werk onderbreekt. Ik kan die onderdelen nalopen en samen bepalen welke eerst moeten gebeuren.</p>"
+        "Op locatie bij een klein bedrijf",
+        "<p>Een klein bedrijf in Leidschendam heeft vaak geen aparte ICT-afdeling. Toch moeten computers, e-mail, printers en internet gewoon werken. Ik kom op afspraak op uw locatie en onderzoek storingen op de werkplek, in het netwerk of bij accounts. Dat kan een losse vraag zijn, onderhoud of het inrichten van een nieuwe werkplek. U krijgt geen algemeen pakket dat niet bij uw bedrijf past.</p><p>Ik woon in Leidschendam-Voorburg. Hetzelfde werk doe ik in Voorburg en Voorschoten. Zeg bij contact in welke plaats uw bedrijf zit, dan kijken we of een afspraak mogelijk is. U spreekt rechtstreeks met mij, Jeroen Nijssen; er zit geen callcenter tussen.</p><p>We beginnen bij uw situatie: welke apparaten gebruikt u, wat moet beschikbaar zijn en waar loopt u nu tegenaan? Daarna leg ik in gewone taal uit wat aandacht nodig heeft. ICT-beheer betekent ook overzicht houden. Updates, toegang tot accounts, back-ups en netwerkapparatuur verdienen aandacht voordat een storing uw werk onderbreekt. Ik kan die onderdelen nalopen en samen bepalen welke eerst moeten gebeuren.</p>"
       ],
       [
-        "ICT-advies zonder onnodige aanschaf",
-        "<p>Bij ICT-advies gaat het om een praktische keuze: een nieuwe werkplek instellen, bestanden beter delen, een server of netwerk aanpassen, of bepalen hoe back-ups worden ingericht. Ik kijk eerst naar de bestaande werkwijze. Een nieuwe computer, router of abonnement is niet automatisch de beste oplossing.</p><p>Voor een kleine organisatie is het belangrijk dat medewerkers weten waar bestanden staan en hoe ze veilig met accounts omgaan. Ik bespreek wat op dit moment haalbaar is en welke stap later kan. Bij een verhuizing, uitbreiding of nieuwe medewerker kan ik helpen met werkplekken, e-mail, printers en toegang. Ik beloof geen specifieke uitkomst zonder de situatie te hebben bekeken.</p><p>U kunt mij inschakelen voor een losse vraag of voor ondersteuning bij terugkerend beheer. Sinds 2008 help ik particulieren en bedrijven in Leidschendam, Voorburg, Voorschoten en omgeving.</p>"
+        "Werkplekken, netwerk en printers",
+        "<p>Ik help met computers en laptops die traag zijn, niet starten of opnieuw ingesteld moeten worden. Bij wifi of een netwerkprobleem kijk ik naar de bestaande router, dekking en apparaten voordat er iets nieuws wordt geadviseerd. Een printer die offline blijft of niet scant, onderzoek ik op de werkplek. Een gedeelde map die niet bereikbaar is kan een instelling, kabel, router of account betreffen.</p><p>Bij een nieuwe medewerker, extra computer of verhuizing kan ik een werkplek inrichten: e-mail, printer, toegang tot bestanden en de instellingen die u dagelijks nodig heeft. Een nieuwe computer of router is niet automatisch de beste oplossing. Ik beloof geen specifieke uitkomst zonder de situatie te hebben bekeken.</p><p>Voor een storing aan één apparaat bij u thuis kunt u ook de pagina over <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie</a> of <a href=\"/wifi-netwerk-hulp-leidschendam\">wifi in Leidschendam</a> bekijken. Particuliere computerhulp in dezelfde gemeente staat op <a href=\"/computerhulp-aan-huis-leidschendam\">computerhulp aan huis in Leidschendam</a>.</p>"
       ],
       [
-        "Beveiliging: back-up, updates en accounts",
-        "<p>Beveiliging begint met gewone, controleerbare basismaatregelen. Ik help beoordelen of belangrijke bestanden worden geback-upt en of een herstel mogelijk is. Een back-up is pas nuttig als duidelijk is wat erin zit en hoe u erbij komt. We bespreken daarom welke gegevens belangrijk zijn en wat u bij een probleem nodig heeft.</p><p>Updates voor computers, servers, router en gebruikte software helpen bekende problemen te beperken. Ik kan nagaan welke updates aandacht vragen en wat eerst getest moet worden. Daarnaast is een wachtwoordbeleid belangrijk: geen hergebruik van wachtwoorden, duidelijke afspraken over accounts en toegang die past bij de taak.</p><p>Waar de gebruikte dienst het ondersteunt, kan ik helpen met tweestapsverificatie (2FA). Dat voegt een extra controle toe naast het wachtwoord. Ik leg uit hoe medewerkers de methode gebruiken en wat er moet gebeuren als een tweede factor niet beschikbaar is. 2FA, updates en een back-up maken een bedrijf niet onkwetsbaar; ze zijn onderdelen van een bredere aanpak.</p>"
+        "Microsoft 365, e-mail, accounts en back-ups",
+        "<p>E-mail en accounts horen bij het dagelijkse werk. Ik help met Microsoft 365, het instellen of herstellen van e-mail en met toegang die past bij de taak. We nemen door wie welke accounts gebruikt en wat er moet gebeuren als iemand uit dienst gaat of een extra werkplek krijgt. Geen hergebruik van wachtwoorden en geen accounts die niemand meer nodig heeft.</p><p>Een back-up is pas nuttig als duidelijk is wat erin zit en hoe u erbij komt. Ik help beoordelen of belangrijke bestanden worden geback-upt en of een herstel mogelijk is. Updates voor computers, router en gebruikte software help ik nalopen. Waar de gebruikte dienst het ondersteunt, kan ik tweestapsverificatie (2FA) uitleggen en instellen. 2FA, updates en een back-up maken een bedrijf niet onkwetsbaar; ze zijn onderdelen van een gewone, controleerbare aanpak. Ik beloof geen volledige beveiliging.</p>"
       ],
       [
-        "Netwerk en werkplekken",
-        "<p>Een werkplek hangt samen met het netwerk. Een printer die offline staat, een gedeelde map die niet bereikbaar is of wifi die wegvalt kan een instelling, kabel, router of apparaat betreffen. Ik onderzoek het probleem op de plek waar het optreedt. Ook voor een nieuw modem, een extra werkplek of een aangepaste netwerkindeling kunt u contact opnemen.</p><p>Ik help met Apple-, Windows- en Linux-werkplekken, e-mail, Microsoft 365, printers, netwerkapparaten en servers. We bespreken wie welke toegang nodig heeft en hoe bestanden worden gebruikt. Bij wifi kijk ik naar de bestaande apparatuur en de dekking voordat er iets nieuws wordt geadviseerd. Bij een server- of back-upvraag maken we eerst duidelijk wat er nu draait.</p>"
+        "Advies zonder onnodige aanschaf",
+        "<p>Bij advies gaat het om een praktische keuze: een nieuwe werkplek instellen, bestanden beter delen, een server of netwerk aanpassen, of bepalen hoe back-ups worden ingericht. Ik kijk eerst naar de bestaande werkwijze. Een nieuw abonnement of nieuwe apparatuur is niet automatisch nodig.</p><p>U kunt mij inschakelen voor een losse vraag of voor ondersteuning bij terugkerend beheer. Voor structureel onderhoud of grotere projecten is offerte op aanvraag. Ik bied geen 24-uursdienst en beloof geen vaste aanrijdtijd. Beschikbaarheid bespreek ik rechtstreeks met u.</p>"
       ],
       [
-        "Duidelijke afspraak en CTA",
-        "<p>Bel 06 2438 2361, stuur een WhatsApp-bericht of mail naar info@nijssencomputers.nl. Vertel dat u in Voorburg of Leidschendam werkt en wat u wilt verbeteren: ICT-beheer, ICT-advies, beveiliging, netwerk of werkplekken. U spreekt rechtstreeks met Jeroen Nijssen.</p><p>Het zakelijke tarief is <strong>€90 per uur ex. btw, afgerekend per uur</strong>. Voor structureel onderhoud of grotere projecten is offerte op aanvraag. Ook voor een concrete storing kunt u contact opnemen; ik bespreek eerst wat nodig is. Bekijk eventueel de pagina over <a href=\"/computer-laptop-reparatie-leidschendam-voorburg\">computer- en laptopreparatie</a> of de <a href=\"/contact\">contactpagina</a>.</p>"
+        "Tarief en contact",
+        "<p>Bel 06 2438 2361, stuur een WhatsApp-bericht of mail naar info@nijssencomputers.nl. Vertel dat u in Leidschendam, Voorburg of Voorschoten werkt en wat er speelt. U spreekt rechtstreeks met mij, Jeroen Nijssen.</p><p>Het zakelijke tarief is <strong>€90 per uur ex. btw, afgerekend per uur</strong>. Voor structureel onderhoud of grotere projecten is offerte op aanvraag. Ook voor een concrete storing kunt u contact opnemen; ik bespreek eerst wat nodig is. Contactgegevens staan ook op de <a href=\"/contact\">contactpagina</a>.</p>"
       ]
     ],
-    "city": null,
+    "city": "Leidschendam",
     "kind": "Zakelijke IT-ondersteuning",
     "related": [
       [
-        "computer-laptop-reparatie-leidschendam-voorburg",
-        "Computer- en laptopreparatie"
+        "computerhulp-aan-huis-leidschendam",
+        "Computerhulp in Leidschendam"
       ],
       [
-        "wifi-netwerk-hulp-voorburg",
-        "Wifi-hulp in Voorburg"
+        "wifi-netwerk-hulp-leidschendam",
+        "Wifi-hulp in Leidschendam"
+      ],
+      [
+        "computer-laptop-reparatie-leidschendam-voorburg",
+        "Computer- en laptopreparatie"
       ],
       [
         "contact",
         "Contactgegevens"
       ]
     ],
-    "note": "Zakelijk: €90 per uur ex. btw, afgerekend per uur.",
+    "note": "Op locatie in Leidschendam, Voorburg en Voorschoten.",
     "faq": [
       [
-        "Welke ICT-diensten biedt u bedrijven in Voorburg en Leidschendam?",
-        "Ik help kleine bedrijven in Voorburg, Leidschendam en omgeving met werkplekken, e-mail, Microsoft 365, servers, netwerk en back-ups. We bespreken wat uw organisatie werkelijk gebruikt."
+        "Komt u op locatie voor IT-ondersteuning bij een klein bedrijf in Leidschendam?",
+        "Ja. Ik kom op afspraak op locatie in Leidschendam. Ik kom ook in Voorburg en Voorschoten. Vertel bij het contact kort wat er speelt, dan bespreken we wat nodig is."
       ],
       [
-        "Helpt u met ICT-advies in Voorburg?",
-        "Ja. Ik denk mee over werkplekken, bestanden, netwerk, servers, back-ups en praktische verbeteringen. Ik kijk eerst naar de bestaande situatie."
-      ],
-      [
-        "Kunt u helpen met back-ups, updates en 2FA?",
-        "Ja. Ik kan back-ups en herstel, updates, wachtwoordbeleid en tweestapsverificatie (2FA) nalopen en uitleggen welke onderdelen aandacht vragen."
-      ],
-      [
-        "Wat kost zakelijke ICT-ondersteuning?",
+        "Wat kost IT-ondersteuning voor een klein bedrijf?",
         "Het zakelijke tarief is €90 per uur ex. btw, afgerekend per uur. Voor structureel onderhoud of grotere projecten is offerte op aanvraag."
       ],
       [
-        "Werkt u met Apple, Windows en Linux?",
-        "Ja. Ik ondersteun Apple, Windows en Linux, naast Microsoft 365, e-mail, printers, servers en netwerkapparatuur."
+        "Waarmee helpt u een klein bedrijf?",
+        "Met werkplekken, Microsoft 365, e-mail en accounts, netwerk en wifi, printers en back-ups. Apple Mac, Windows en Linux horen daarbij. We beginnen bij wat uw bedrijf werkelijk gebruikt."
       ],
       [
-        "Komt u in Voorburg en Leidschendam op locatie?",
-        "Ja. Ik werk op locatie in Leidschendam, Voorburg, Voorschoten en omgeving. Neem contact op om de concrete vraag en afspraak te bespreken."
+        "Helpt u ook in Voorburg en Voorschoten?",
+        "Ja. Ik werk op locatie in Leidschendam, Voorburg, Voorschoten en omgeving. Zeg bij contact in welke plaats uw bedrijf zit."
+      ],
+      [
+        "Werkt u met Apple Mac, Windows en Linux?",
+        "Ja. Ik ondersteun Apple Mac, Windows en Linux, naast Microsoft 365, e-mail, printers, netwerk en back-ups. U hoeft vooraf niet vast te stellen waar het probleem zit."
+      ],
+      [
+        "Kunt u Microsoft 365, e-mail en een nieuwe werkplek instellen?",
+        "Ja. Bij een nieuwe medewerker, een extra computer of een verhuizing kan ik de werkplek, e-mail, printers en toegang inrichten. We kijken eerst naar de bestaande situatie."
+      ],
+      [
+        "Helpt u met back-ups, netwerk en wifi op kantoor?",
+        "Ja. Ik kan back-ups nalopen, printers aansluiten of storingen onderzoeken, en wifi- of netwerkproblemen op de werkplek bekijken. Ik beloof geen volledige beveiliging; we nemen door wat op uw apparaten en netwerk zichtbaar is."
+      ],
+      [
+        "Heeft u een abonnement of een vaste aanrijdtijd?",
+        "Nee. U betaalt €90 per uur ex. btw, afgerekend per uur. Voor structureel onderhoud of grotere projecten is offerte op aanvraag. Ik beloof geen responstijd of 24-uursdienst; beschikbaarheid bespreek ik met u."
       ]
-    ]
+    ],
+    "areaServed": [
+      "Leidschendam",
+      "Voorburg",
+      "Voorschoten"
+    ],
+    "quotes": [
+      "Metselbedrijf Zwaan"
+    ],
+    "quotes_heading": "Klantreactie",
+    "quotes_intro": "Deze reactie komt van de bestaande website."
   },
   {
     "slug": "spoed-computerhulp-leidschendam",
@@ -973,6 +1111,10 @@
       [
         "spoed-computerhulp-leidschendam",
         "Dringende computerhulp"
+      ],
+      [
+        "virus-verwijderen-voorburg",
+        "Virus verwijderen in Voorburg"
       ]
     ],
     "note": "U heeft rechtstreeks contact met Jeroen Nijssen."
@@ -994,7 +1136,7 @@
       ],
       [
         "Ook hulp bij software en verbinding",
-        "<p>Problemen met e-mail, een printer, wifi of een programma kunnen op een apparaatprobleem lijken. Ik kijk waar de storing zit en verwijs waar nodig naar de passende hulp. Voor netwerkproblemen kunt u ook de pagina over <a href=\"/wifi-netwerk-hulp-leidschendam\">wifi in Leidschendam</a> of <a href=\"/wifi-netwerk-hulp-voorburg\">wifi in Voorburg</a> bekijken.</p><p>Ik help met updates en instellingen, maar installeer geen willekeurige software. Bij verdachte meldingen onderzoek ik wat zichtbaar is en leg ik uit welke stappen verstandig zijn. Volledige beveiliging kan ik niet beloven.</p>"
+        "<p>Problemen met e-mail, een printer, wifi of een programma kunnen op een apparaatprobleem lijken. Ik kijk waar de storing zit en verwijs waar nodig naar de passende hulp. Voor netwerkproblemen kunt u ook de pagina over <a href=\"/wifi-netwerk-hulp-leidschendam\">wifi in Leidschendam</a> of <a href=\"/wifi-netwerk-hulp-voorburg\">wifi in Voorburg</a> bekijken.</p><p>Ik help met updates en instellingen, maar installeer geen willekeurige software. Bij verdachte meldingen onderzoek ik wat zichtbaar is en leg ik uit welke stappen verstandig zijn. Volledige beveiliging kan ik niet beloven. Voor hulp in Voorburg kunt u ook de pagina over <a href=\"/virus-verwijderen-voorburg\">virus verwijderen aan huis</a> bekijken.</p>"
       ],
       [
         "Afspraak en tarief",
@@ -1057,6 +1199,10 @@
       [
         "contact",
         "Contactgegevens"
+      ],
+      [
+        "virus-verwijderen-voorburg",
+        "Virus verwijderen in Voorburg"
       ]
     ],
     "note": "Particulier: €60 per uur, afgerekend per half uur."
