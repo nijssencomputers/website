@@ -1,0 +1,682 @@
+[
+  {
+    "label": "before-local",
+    "page": "home",
+    "mode": "mobile",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/",
+    "cls": 0.972725662660358,
+    "lcp_ms": 4502.7717,
+    "score": 0.6,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "extra"
+              },
+              "label": "Element"
+            },
+            {
+              "key": "score",
+              "valueType": "numeric",
+              "subItemsHeading": {
+                "key": "cause",
+                "valueType": "text"
+              },
+              "granularity": 0.001,
+              "label": "Layout shift score"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "text",
+                "value": "Total"
+              },
+              "score": 0.972725662660358
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-1-MAIN",
+                "path": "1,HTML,1,BODY,2,MAIN",
+                "selector": "body.homepage > main#main-content",
+                "boundingRect": {
+                  "top": 80,
+                  "bottom": 6496,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 6416
+                },
+                "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+                "nodeLabel": "Computerhulp aan huis\nvoor particulieren \u00e9n bedrijven\n\nOf het nu thuis is bij h\u2026"
+              },
+              "score": 0.9027946537059538
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-2-P",
+                "path": "1,HTML,1,BODY,2,MAIN,1,SECTION,1,DIV,1,P",
+                "selector": "main#main-content > section#over-mij > div.about-content > p",
+                "boundingRect": {
+                  "top": 1010,
+                  "bottom": 1270,
+                  "left": 50,
+                  "right": 366,
+                  "width": 317,
+                  "height": 260
+                },
+                "snippet": "<p>",
+                "nodeLabel": "Mijn naam is Jeroen Nijssen en ik help particulieren en bedrijven al sinds 2008\u2026"
+              },
+              "score": 0.06993100895440424,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "extra": {
+                      "type": "node",
+                      "lhId": "page-0-IMG",
+                      "path": "1,HTML,1,BODY,2,MAIN,1,SECTION,1,DIV,0,IMG",
+                      "selector": "main#main-content > section#over-mij > div.about-content > img.about-img",
+                      "boundingRect": {
+                        "top": 627,
+                        "bottom": 986,
+                        "left": 50,
+                        "right": 366,
+                        "width": 317,
+                        "height": 359
+                      },
+                      "snippet": "<img src=\"/jeroen-720.png\" alt=\"Jeroen Nijssen\" class=\"about-img\" width=\"200\" height=\"227\" loading=\"lazy\" decoding=\"async\">",
+                      "nodeLabel": "Jeroen Nijssen"
+                    },
+                    "cause": "Unsized image element"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-1-MAIN",
+            "path": "1,HTML,1,BODY,2,MAIN",
+            "selector": "body.homepage > main#main-content",
+            "boundingRect": {
+              "top": 80,
+              "bottom": 6496,
+              "left": 0,
+              "right": 412,
+              "width": 412,
+              "height": 6416
+            },
+            "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+            "nodeLabel": "Computerhulp aan huis\nvoor particulieren \u00e9n bedrijven\n\nOf het nu thuis is bij h\u2026"
+          },
+          "score": 0.9027946537059538
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-2-P",
+            "path": "1,HTML,1,BODY,2,MAIN,1,SECTION,1,DIV,1,P",
+            "selector": "main#main-content > section#over-mij > div.about-content > p",
+            "boundingRect": {
+              "top": 1010,
+              "bottom": 1270,
+              "left": 50,
+              "right": 366,
+              "width": 317,
+              "height": 260
+            },
+            "snippet": "<p>",
+            "nodeLabel": "Mijn naam is Jeroen Nijssen en ik help particulieren en bedrijven al sinds 2008\u2026"
+          },
+          "score": 0.06993100895440424,
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "extra": {
+                  "type": "node",
+                  "lhId": "page-0-IMG",
+                  "path": "1,HTML,1,BODY,2,MAIN,1,SECTION,1,DIV,0,IMG",
+                  "selector": "main#main-content > section#over-mij > div.about-content > img.about-img",
+                  "boundingRect": {
+                    "top": 627,
+                    "bottom": 986,
+                    "left": 50,
+                    "right": 366,
+                    "width": 317,
+                    "height": 359
+                  },
+                  "snippet": "<img src=\"/jeroen-720.png\" alt=\"Jeroen Nijssen\" class=\"about-img\" width=\"200\" height=\"227\" loading=\"lazy\" decoding=\"async\">",
+                  "nodeLabel": "Jeroen Nijssen"
+                },
+                "cause": "Media element lacking an explicit size"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "label": "before-local",
+    "page": "home",
+    "mode": "desktop",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/",
+    "cls": 0,
+    "lcp_ms": 882.0102999999999,
+    "score": 0.99,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "before-local",
+    "page": "printer",
+    "mode": "mobile",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/printer-hulp-leidschendam",
+    "cls": 0.9027946537059538,
+    "lcp_ms": 1752.4137500000002,
+    "score": 0.76,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "extra"
+              },
+              "label": "Element"
+            },
+            {
+              "key": "score",
+              "valueType": "numeric",
+              "subItemsHeading": {
+                "key": "cause",
+                "valueType": "text"
+              },
+              "granularity": 0.001,
+              "label": "Layout shift score"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "text",
+                "value": "Total"
+              },
+              "score": 0.9027946537059538
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-1-MAIN",
+                "path": "1,HTML,1,BODY,2,MAIN",
+                "selector": "body.detailpage > main#main-content",
+                "boundingRect": {
+                  "top": 80,
+                  "bottom": 4464,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 4384
+                },
+                "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+                "nodeLabel": "Startpagina\n/\nPrinterhulp in Leidschendam\nPrinterhulp in Leidschendam\n\nUw print\u2026"
+              },
+              "score": 0.9027946537059538
+            }
+          ]
+        }
+      ]
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-1-MAIN",
+            "path": "1,HTML,1,BODY,2,MAIN",
+            "selector": "body.detailpage > main#main-content",
+            "boundingRect": {
+              "top": 80,
+              "bottom": 4464,
+              "left": 0,
+              "right": 412,
+              "width": 412,
+              "height": 4384
+            },
+            "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+            "nodeLabel": "Startpagina\n/\nPrinterhulp in Leidschendam\nPrinterhulp in Leidschendam\n\nUw print\u2026"
+          },
+          "score": 0.9027946537059538
+        }
+      ]
+    }
+  },
+  {
+    "label": "before-local",
+    "page": "printer",
+    "mode": "desktop",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/printer-hulp-leidschendam",
+    "cls": 0.43441190753221154,
+    "lcp_ms": 486.6507999999999,
+    "score": 0.8,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "extra"
+              },
+              "label": "Element"
+            },
+            {
+              "key": "score",
+              "valueType": "numeric",
+              "subItemsHeading": {
+                "key": "cause",
+                "valueType": "text"
+              },
+              "granularity": 0.001,
+              "label": "Layout shift score"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "text",
+                "value": "Total"
+              },
+              "score": 0.43441190753221154
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-1-MAIN",
+                "path": "1,HTML,1,BODY,2,MAIN",
+                "selector": "body.detailpage > main#main-content",
+                "boundingRect": {
+                  "top": 89,
+                  "bottom": 3004,
+                  "left": 268,
+                  "right": 1068,
+                  "width": 800,
+                  "height": 2915
+                },
+                "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+                "nodeLabel": "Startpagina\n/\nPrinterhulp in Leidschendam\nPrinterhulp in Leidschendam\n\nUw print\u2026"
+              },
+              "score": 0.43441190753221154
+            }
+          ]
+        }
+      ]
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-1-MAIN",
+            "path": "1,HTML,1,BODY,2,MAIN",
+            "selector": "body.detailpage > main#main-content",
+            "boundingRect": {
+              "top": 89,
+              "bottom": 3004,
+              "left": 268,
+              "right": 1068,
+              "width": 800,
+              "height": 2915
+            },
+            "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+            "nodeLabel": "Startpagina\n/\nPrinterhulp in Leidschendam\nPrinterhulp in Leidschendam\n\nUw print\u2026"
+          },
+          "score": 0.43441190753221154
+        }
+      ]
+    }
+  },
+  {
+    "label": "before-local",
+    "page": "laptop",
+    "mode": "mobile",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/laptop-traag-leidschendam",
+    "cls": 0.9027946537059538,
+    "lcp_ms": 1619.82485,
+    "score": 0.76,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "extra"
+              },
+              "label": "Element"
+            },
+            {
+              "key": "score",
+              "valueType": "numeric",
+              "subItemsHeading": {
+                "key": "cause",
+                "valueType": "text"
+              },
+              "granularity": 0.001,
+              "label": "Layout shift score"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "text",
+                "value": "Total"
+              },
+              "score": 0.9027946537059538
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-1-MAIN",
+                "path": "1,HTML,1,BODY,2,MAIN",
+                "selector": "body.detailpage > main#main-content",
+                "boundingRect": {
+                  "top": 80,
+                  "bottom": 4493,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 4413
+                },
+                "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+                "nodeLabel": "Startpagina\n/\nLaptop traag of reparatie in Leidschendam\nLaptop traag of reparat\u2026"
+              },
+              "score": 0.9027946537059538
+            }
+          ]
+        }
+      ]
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-1-MAIN",
+            "path": "1,HTML,1,BODY,2,MAIN",
+            "selector": "body.detailpage > main#main-content",
+            "boundingRect": {
+              "top": 80,
+              "bottom": 4493,
+              "left": 0,
+              "right": 412,
+              "width": 412,
+              "height": 4413
+            },
+            "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+            "nodeLabel": "Startpagina\n/\nLaptop traag of reparatie in Leidschendam\nLaptop traag of reparat\u2026"
+          },
+          "score": 0.9027946537059538
+        }
+      ]
+    }
+  },
+  {
+    "label": "before-local",
+    "page": "laptop",
+    "mode": "desktop",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/laptop-traag-leidschendam",
+    "cls": 0.43441190753221154,
+    "lcp_ms": 470.4768,
+    "score": 0.8,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "extra"
+              },
+              "label": "Element"
+            },
+            {
+              "key": "score",
+              "valueType": "numeric",
+              "subItemsHeading": {
+                "key": "cause",
+                "valueType": "text"
+              },
+              "granularity": 0.001,
+              "label": "Layout shift score"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "text",
+                "value": "Total"
+              },
+              "score": 0.43441190753221154
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-1-MAIN",
+                "path": "1,HTML,1,BODY,2,MAIN",
+                "selector": "body.detailpage > main#main-content",
+                "boundingRect": {
+                  "top": 89,
+                  "bottom": 3065,
+                  "left": 268,
+                  "right": 1068,
+                  "width": 800,
+                  "height": 2976
+                },
+                "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+                "nodeLabel": "Startpagina\n/\nLaptop traag of reparatie in Leidschendam\nLaptop traag of reparat\u2026"
+              },
+              "score": 0.43441190753221154
+            }
+          ]
+        }
+      ]
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-1-MAIN",
+            "path": "1,HTML,1,BODY,2,MAIN",
+            "selector": "body.detailpage > main#main-content",
+            "boundingRect": {
+              "top": 89,
+              "bottom": 3065,
+              "left": 268,
+              "right": 1068,
+              "width": 800,
+              "height": 2976
+            },
+            "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+            "nodeLabel": "Startpagina\n/\nLaptop traag of reparatie in Leidschendam\nLaptop traag of reparat\u2026"
+          },
+          "score": 0.43441190753221154
+        }
+      ]
+    }
+  }
+]

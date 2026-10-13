@@ -34,6 +34,8 @@ section[id], main[id] { scroll-margin-top: 1rem; }
 .nav { display: flex; flex-wrap: wrap; align-items: center; column-gap: 1.1rem; }
 .nav a, .nav-regio-toggle { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-text-soft); font-size: 1rem; text-decoration: none; }
 .nav a[hidden], .nav-regio-toggle[hidden], .nav-town-toggle[hidden] { display: none; }
+.nav-ready .nav-regio-fallback { display: none; }
+.nav-ready .nav-regio-toggle[hidden] { display: inline-flex; }
 .nav a:hover, .nav-regio-toggle:hover, .nav-regio-toggle[aria-expanded="true"] { color: var(--color-accent); text-decoration: underline; }
 .nav-toggle { display: none; min-width: 82px; min-height: 44px; padding: .45rem .6rem; border: 1px solid #aab8ae; border-radius: var(--radius); background: #fff; color: var(--color-accent); cursor: pointer; align-items: center; justify-content: center; gap: .45rem; }
 .nav-regio { position: static; flex: 1 1 100%; min-width: 0; margin-block-start: .35rem; }
@@ -262,6 +264,7 @@ body.homepage main {
   width: 200px;
   max-width: 200px;
   height: auto;
+  aspect-ratio: 15 / 17;
   margin: 0 0 0.5rem 2rem;
   border-radius: 0;
   box-shadow: none;
@@ -471,7 +474,7 @@ body.homepage main {
   .homepage .about-img {
     float: none;
     display: block;
-    width: auto;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto 1.5rem;
   }
@@ -488,7 +491,7 @@ body.homepage main {
   }
   .homepage .about-img {
     float: none;
-    width: auto;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto 1.5rem;
   }

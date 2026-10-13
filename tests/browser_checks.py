@@ -180,7 +180,10 @@ def main():
         for slug in slugs:
             load_page(q,slug)
             check(q.locator('#site-nav').is_visible(),slug+': no-JS menu hidden')
-            check(q.locator('h1').is_visible() and q.locator('a[href="tel:+31624382361"]').first.is_visible(),slug+': no-JS content/contact absent')
+            if slug == '/404':
+                check(q.locator('h1').is_visible() and q.locator('main a[href="/contact"]').is_visible(),slug+': no-JS recovery link absent')
+            else:
+                check(q.locator('h1').is_visible() and q.locator('a[href="tel:+31624382361"]').first.is_visible(),slug+': no-JS content/contact absent')
         result['no_js_pages']=len(slugs)
         nojs.close();browser.close()
     result['passed']=not result['failures']
