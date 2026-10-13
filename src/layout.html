@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Set the enhanced header layout before first paint; no-JS keeps the expanded links. -->
+  <script>document.documentElement.classList.add('nav-ready');</script>
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#2d5a3d">
   <title>$title</title>
@@ -29,7 +31,7 @@
       allow_ad_personalization_signals: false
     });
   </script>
-  <script src="/nav.js?v=$version" defer></script>
+  <script src="/nav.js?v=$version" defer onerror="document.documentElement.classList.remove('nav-ready')"></script>
   <script src="/analytics-events.js?v=$version" defer></script>
 </head>
 <body class="$body_class">
