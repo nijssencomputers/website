@@ -1,0 +1,544 @@
+[
+  {
+    "label": "after-final",
+    "page": "home",
+    "mode": "mobile",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/",
+    "cls": 0,
+    "lcp_ms": 4354.7807,
+    "score": 0.85,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "home",
+    "mode": "desktop",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/",
+    "cls": 0.00040617408970319494,
+    "lcp_ms": 963.6136000000001,
+    "score": 0.99,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": [
+        {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "extra"
+              },
+              "label": "Element"
+            },
+            {
+              "key": "score",
+              "valueType": "numeric",
+              "subItemsHeading": {
+                "key": "cause",
+                "valueType": "text"
+              },
+              "granularity": 0.001,
+              "label": "Layout shift score"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "text",
+                "value": "Total"
+              },
+              "score": 0.00040617408970319494
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "page-3-DIV",
+                "path": "1,HTML,1,BODY,1,HEADER,0,DIV",
+                "selector": "body.homepage > header.site-header > div.site-header-inner",
+                "boundingRect": {
+                  "top": 0,
+                  "bottom": 88,
+                  "left": 156,
+                  "right": 1180,
+                  "width": 1024,
+                  "height": 88
+                },
+                "snippet": "<div class=\"site-header-inner\">",
+                "nodeLabel": "Hulp\nTarieven\nOver mij\nContact\nRegio"
+              },
+              "score": 0.00040617408970319494
+            }
+          ]
+        }
+      ]
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-3-DIV",
+            "path": "1,HTML,1,BODY,1,HEADER,0,DIV",
+            "selector": "body.homepage > header.site-header > div.site-header-inner",
+            "boundingRect": {
+              "top": 0,
+              "bottom": 88,
+              "left": 156,
+              "right": 1180,
+              "width": 1024,
+              "height": 88
+            },
+            "snippet": "<div class=\"site-header-inner\">",
+            "nodeLabel": "Hulp\nTarieven\nOver mij\nContact\nRegio"
+          },
+          "score": 0.00040617408970319494
+        }
+      ]
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "printer",
+    "mode": "mobile",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/printer-hulp-leidschendam",
+    "cls": 0,
+    "lcp_ms": 1830.38375,
+    "score": 1,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "printer",
+    "mode": "desktop",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/printer-hulp-leidschendam",
+    "cls": 0,
+    "lcp_ms": 666.886,
+    "score": 0.98,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "laptop",
+    "mode": "mobile",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/laptop-traag-leidschendam",
+    "cls": 0,
+    "lcp_ms": 1696.2768999999998,
+    "score": 1,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "laptop",
+    "mode": "desktop",
+    "repeat": 1,
+    "url": "http://127.0.0.1:8875/laptop-traag-leidschendam",
+    "cls": 0,
+    "lcp_ms": 511.4374,
+    "score": 1,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "home",
+    "mode": "mobile",
+    "repeat": 2,
+    "url": "http://127.0.0.1:8875/",
+    "cls": 0,
+    "lcp_ms": 4511.4308,
+    "score": 0.75,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "home",
+    "mode": "desktop",
+    "repeat": 2,
+    "url": "http://127.0.0.1:8875/",
+    "cls": 0,
+    "lcp_ms": 924.6902,
+    "score": 0.99,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "printer",
+    "mode": "mobile",
+    "repeat": 2,
+    "url": "http://127.0.0.1:8875/printer-hulp-leidschendam",
+    "cls": 0,
+    "lcp_ms": 1682.2417500000004,
+    "score": 0.98,
+    "warnings": [
+      "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+    ],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "printer",
+    "mode": "desktop",
+    "repeat": 2,
+    "url": "http://127.0.0.1:8875/printer-hulp-leidschendam",
+    "cls": 0,
+    "lcp_ms": 460.33779999999996,
+    "score": 1,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "laptop",
+    "mode": "mobile",
+    "repeat": 2,
+    "url": "http://127.0.0.1:8875/laptop-traag-leidschendam",
+    "cls": 0,
+    "lcp_ms": 1586.2087999999999,
+    "score": 1,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  },
+  {
+    "label": "after-final",
+    "page": "laptop",
+    "mode": "desktop",
+    "repeat": 2,
+    "url": "http://127.0.0.1:8875/laptop-traag-leidschendam",
+    "cls": 0,
+    "lcp_ms": 543.9559999999999,
+    "score": 1,
+    "warnings": [],
+    "culprits": {
+      "type": "list",
+      "items": []
+    },
+    "layout_shift_elements": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": []
+    }
+  }
+]

@@ -1,0 +1,269 @@
+[
+  {
+    "label": "before-live",
+    "variant": "delay-nav",
+    "mode": "mobile",
+    "shifts": [
+      {
+        "time": 2623.6000000089407,
+        "value": 0.9027946537059538,
+        "input": false,
+        "sources": [
+          {
+            "node": "MAIN#main-content.",
+            "previous": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "current": {
+              "x": 0,
+              "y": 80.140625,
+              "width": 412,
+              "height": 742.859375,
+              "top": 80.140625,
+              "right": 412,
+              "bottom": 823,
+              "left": 0
+            }
+          }
+        ],
+        "geometry": {
+          "time": 2626.7999999970198,
+          "ready": "nav-ready",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 80.140625,
+            "top": 0,
+            "right": 412,
+            "bottom": 80.140625,
+            "left": 0
+          },
+          "main": {
+            "x": 0,
+            "y": 80.140625,
+            "width": 412,
+            "height": 6415.609375,
+            "top": 80.140625,
+            "right": 412,
+            "bottom": 6495.75,
+            "left": 0
+          },
+          "portrait": {
+            "x": 49.59375,
+            "y": 626.875,
+            "width": 316.796875,
+            "height": 359.046875,
+            "top": 626.875,
+            "right": 366.390625,
+            "bottom": 985.921875,
+            "left": 49.59375
+          }
+        }
+      }
+    ],
+    "events": [],
+    "resources": [
+      {
+        "name": "https://www.nijssencomputers.nl/style.css?v=20260924-homefeb3",
+        "start": 230.29999999701977,
+        "end": 437.79999999701977
+      },
+      {
+        "name": "https://www.googletagmanager.com/gtag/js?id=G-Y1JB4KX9HH",
+        "start": 230.5,
+        "end": 244
+      },
+      {
+        "name": "https://www.nijssencomputers.nl/analytics-events.js?v=20260924-homefeb3",
+        "start": 230.70000000298023,
+        "end": 596.4000000059605
+      },
+      {
+        "name": "https://www.nijssencomputers.nl/nav.js?v=20260924-homefeb3",
+        "start": 230.70000000298023,
+        "end": 2619.7999999970198
+      },
+      {
+        "name": "https://static.wixstatic.com/media/a467e1_8818646c4491496d8be9af674369fc5e~mv2.png/v1/fill/w_280,h_66,al_c,q_85,usm_0.66_1.00_0.01/NijssenComputers.png",
+        "start": 230.79999999701977,
+        "end": 473.5
+      },
+      {
+        "name": "https://www.nijssencomputers.nl/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+        "start": 239.29999999701977,
+        "end": 417.6000000089407
+      },
+      {
+        "name": "https://www.nijssencomputers.nl/jeroen-720.png",
+        "start": 465.20000000298023,
+        "end": 3370.7000000029802
+      },
+      {
+        "name": "https://www.nijssencomputers.nl/favicon.ico",
+        "start": 3377.2000000029802,
+        "end": 3386
+      }
+    ],
+    "portrait": {
+      "width": 317,
+      "height": 359,
+      "naturalWidth": 720,
+      "naturalHeight": 816,
+      "complete": true,
+      "aspect": "auto 200 / 227"
+    }
+  },
+  {
+    "label": "before-live",
+    "variant": "delay-nav",
+    "mode": "desktop",
+    "shifts": [
+      {
+        "time": 2629.7999999970198,
+        "value": 0.42481194068674666,
+        "input": false,
+        "sources": [
+          {
+            "node": "MAIN#main-content.",
+            "previous": {
+              "x": 275,
+              "y": 566.4375,
+              "width": 800,
+              "height": 373.5625,
+              "top": 566.4375,
+              "right": 1075,
+              "bottom": 940,
+              "left": 275
+            },
+            "current": {
+              "x": 275,
+              "y": 88.84375,
+              "width": 800,
+              "height": 851.15625,
+              "top": 88.84375,
+              "right": 1075,
+              "bottom": 940,
+              "left": 275
+            }
+          },
+          {
+            "node": "NAV#site-nav.nav",
+            "previous": {
+              "x": 183,
+              "y": 83.84375,
+              "width": 984,
+              "height": 461.59375,
+              "top": 83.84375,
+              "right": 1167,
+              "bottom": 545.4375,
+              "left": 183
+            },
+            "current": {
+              "x": 792.0625,
+              "y": 19.921875,
+              "width": 374.9375,
+              "height": 44,
+              "top": 19.921875,
+              "right": 1167,
+              "bottom": 63.921875,
+              "left": 792.0625
+            }
+          }
+        ],
+        "geometry": {
+          "time": 2633.7999999970198,
+          "ready": "nav-ready",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1350,
+            "height": 88.84375,
+            "top": 0,
+            "right": 1350,
+            "bottom": 88.84375,
+            "left": 0
+          },
+          "main": {
+            "x": 275,
+            "y": 88.84375,
+            "width": 800,
+            "height": 3913.46875,
+            "top": 88.84375,
+            "right": 1075,
+            "bottom": 4002.3125,
+            "left": 275
+          },
+          "portrait": {
+            "x": 807,
+            "y": 577.84375,
+            "width": 200,
+            "height": 226.65625,
+            "top": 577.84375,
+            "right": 1007,
+            "bottom": 804.5,
+            "left": 807
+          }
+        }
+      }
+    ],
+    "events": [],
+    "resources": [
+      {
+        "name": "https://www.nijssencomputers.nl/style.css?v=20260924-homefeb3",
+        "start": 203.19999998807907,
+        "end": 433.5
+      },
+      {
+        "name": "https://www.googletagmanager.com/gtag/js?id=G-Y1JB4KX9HH",
+        "start": 203.3999999910593,
+        "end": 241.19999998807907
+      },
+      {
+        "name": "https://www.nijssencomputers.nl/nav.js?v=20260924-homefeb3",
+        "start": 203.3999999910593,
+        "end": 2622.5999999940395
+      },
+      {
+        "name": "https://static.wixstatic.com/media/a467e1_8818646c4491496d8be9af674369fc5e~mv2.png/v1/fill/w_280,h_66,al_c,q_85,usm_0.66_1.00_0.01/NijssenComputers.png",
+        "start": 203.5,
+        "end": 468.5
+      },
+      {
+        "name": "https://www.nijssencomputers.nl/analytics-events.js?v=20260924-homefeb3",
+        "start": 203.5,
+        "end": 591.6999999880791
+      },
+      {
+        "name": "https://www.nijssencomputers.nl/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+        "start": 210.5,
+        "end": 404.59999999403954
+      },
+      {
+        "name": "https://www.nijssencomputers.nl/jeroen-720.png",
+        "start": 472.3999999910593,
+        "end": 3379.8999999910593
+      },
+      {
+        "name": "https://www.nijssencomputers.nl/favicon.ico",
+        "start": 3385.5999999940395,
+        "end": 3392.2999999970198
+      }
+    ],
+    "portrait": {
+      "width": 200,
+      "height": 227,
+      "naturalWidth": 720,
+      "naturalHeight": 816,
+      "complete": true,
+      "aspect": "auto 200 / 227"
+    }
+  }
+]

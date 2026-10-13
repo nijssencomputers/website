@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "width": 412,
+      "page": "/",
+      "cls_upper_bound": 0,
+      "shifts": [],
+      "passed": true
+    },
+    {
+      "width": 412,
+      "portrait": {
+        "w": 317,
+        "h": 359,
+        "nw": 720,
+        "nh": 816
+      },
+      "passed": true
+    },
+    {
+      "width": 412,
+      "page": "/printer-hulp-leidschendam",
+      "cls_upper_bound": 0,
+      "shifts": [],
+      "passed": true
+    },
+    {
+      "width": 412,
+      "page": "/laptop-traag-leidschendam",
+      "cls_upper_bound": 0,
+      "shifts": [],
+      "passed": true
+    },
+    {
+      "width": 412,
+      "case": "nav download failed",
+      "passed": true
+    },
+    {
+      "width": 1350,
+      "page": "/",
+      "cls_upper_bound": 0,
+      "shifts": [],
+      "passed": true
+    },
+    {
+      "width": 1350,
+      "portrait": {
+        "w": 200,
+        "h": 227,
+        "nw": 720,
+        "nh": 816
+      },
+      "passed": true
+    },
+    {
+      "width": 1350,
+      "page": "/printer-hulp-leidschendam",
+      "cls_upper_bound": 0,
+      "shifts": [],
+      "passed": true
+    },
+    {
+      "width": 1350,
+      "page": "/laptop-traag-leidschendam",
+      "cls_upper_bound": 0,
+      "shifts": [],
+      "passed": true
+    },
+    {
+      "width": 1350,
+      "case": "nav download failed",
+      "passed": true
+    }
+  ]
+}

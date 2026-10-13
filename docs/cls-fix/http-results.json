@@ -1,0 +1,600 @@
+{
+  "server": "Local Apache with the delivered .htaccess",
+  "cases": 74,
+  "passed": true,
+  "results": [
+    {
+      "path": "/404",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/404.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/404",
+      "location": "http://127.0.0.1:8876/404",
+      "passed": true
+    },
+    {
+      "path": "/404.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/404?utm_source=test",
+      "location": "http://127.0.0.1:8876/404?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/computer-laptop-reparatie-leidschendam-voorburg",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/computer-laptop-reparatie-leidschendam-voorburg.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/computer-laptop-reparatie-leidschendam-voorburg",
+      "location": "http://127.0.0.1:8876/computer-laptop-reparatie-leidschendam-voorburg",
+      "passed": true
+    },
+    {
+      "path": "/computer-laptop-reparatie-leidschendam-voorburg.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/computer-laptop-reparatie-leidschendam-voorburg?utm_source=test",
+      "location": "http://127.0.0.1:8876/computer-laptop-reparatie-leidschendam-voorburg?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/computerhulp-aan-huis-leidschendam",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/computerhulp-aan-huis-leidschendam.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/computerhulp-aan-huis-leidschendam",
+      "location": "http://127.0.0.1:8876/computerhulp-aan-huis-leidschendam",
+      "passed": true
+    },
+    {
+      "path": "/computerhulp-aan-huis-leidschendam.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/computerhulp-aan-huis-leidschendam?utm_source=test",
+      "location": "http://127.0.0.1:8876/computerhulp-aan-huis-leidschendam?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/computerhulp-aan-huis-voorburg",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/computerhulp-aan-huis-voorburg.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/computerhulp-aan-huis-voorburg",
+      "location": "http://127.0.0.1:8876/computerhulp-aan-huis-voorburg",
+      "passed": true
+    },
+    {
+      "path": "/computerhulp-aan-huis-voorburg.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/computerhulp-aan-huis-voorburg?utm_source=test",
+      "location": "http://127.0.0.1:8876/computerhulp-aan-huis-voorburg?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/computerhulp-aan-huis-voorschoten",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/computerhulp-aan-huis-voorschoten.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/computerhulp-aan-huis-voorschoten",
+      "location": "http://127.0.0.1:8876/computerhulp-aan-huis-voorschoten",
+      "passed": true
+    },
+    {
+      "path": "/computerhulp-aan-huis-voorschoten.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/computerhulp-aan-huis-voorschoten?utm_source=test",
+      "location": "http://127.0.0.1:8876/computerhulp-aan-huis-voorschoten?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/contact.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/contact",
+      "location": "http://127.0.0.1:8876/contact",
+      "passed": true
+    },
+    {
+      "path": "/contact.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/contact?utm_source=test",
+      "location": "http://127.0.0.1:8876/contact?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/index.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/",
+      "location": "http://127.0.0.1:8876/",
+      "passed": true
+    },
+    {
+      "path": "/index.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/?utm_source=test",
+      "location": "http://127.0.0.1:8876/?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/laptop-traag-leidschendam",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/laptop-traag-leidschendam.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/laptop-traag-leidschendam",
+      "location": "http://127.0.0.1:8876/laptop-traag-leidschendam",
+      "passed": true
+    },
+    {
+      "path": "/laptop-traag-leidschendam.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/laptop-traag-leidschendam?utm_source=test",
+      "location": "http://127.0.0.1:8876/laptop-traag-leidschendam?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/laptop-traag-voorburg",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/laptop-traag-voorburg.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/laptop-traag-voorburg",
+      "location": "http://127.0.0.1:8876/laptop-traag-voorburg",
+      "passed": true
+    },
+    {
+      "path": "/laptop-traag-voorburg.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/laptop-traag-voorburg?utm_source=test",
+      "location": "http://127.0.0.1:8876/laptop-traag-voorburg?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/laptop-traag-voorschoten",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/laptop-traag-voorschoten.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/laptop-traag-voorschoten",
+      "location": "http://127.0.0.1:8876/laptop-traag-voorschoten",
+      "passed": true
+    },
+    {
+      "path": "/laptop-traag-voorschoten.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/laptop-traag-voorschoten?utm_source=test",
+      "location": "http://127.0.0.1:8876/laptop-traag-voorschoten?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/mkb-it-beheer-leidschendam-voorburg",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/mkb-it-beheer-leidschendam-voorburg.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/mkb-it-beheer-leidschendam-voorburg",
+      "location": "http://127.0.0.1:8876/mkb-it-beheer-leidschendam-voorburg",
+      "passed": true
+    },
+    {
+      "path": "/mkb-it-beheer-leidschendam-voorburg.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/mkb-it-beheer-leidschendam-voorburg?utm_source=test",
+      "location": "http://127.0.0.1:8876/mkb-it-beheer-leidschendam-voorburg?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/printer-hulp-leidschendam",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/printer-hulp-leidschendam.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/printer-hulp-leidschendam",
+      "location": "http://127.0.0.1:8876/printer-hulp-leidschendam",
+      "passed": true
+    },
+    {
+      "path": "/printer-hulp-leidschendam.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/printer-hulp-leidschendam?utm_source=test",
+      "location": "http://127.0.0.1:8876/printer-hulp-leidschendam?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/printer-hulp-voorburg",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/printer-hulp-voorburg.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/printer-hulp-voorburg",
+      "location": "http://127.0.0.1:8876/printer-hulp-voorburg",
+      "passed": true
+    },
+    {
+      "path": "/printer-hulp-voorburg.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/printer-hulp-voorburg?utm_source=test",
+      "location": "http://127.0.0.1:8876/printer-hulp-voorburg?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/printer-hulp-voorschoten",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/printer-hulp-voorschoten.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/printer-hulp-voorschoten",
+      "location": "http://127.0.0.1:8876/printer-hulp-voorschoten",
+      "passed": true
+    },
+    {
+      "path": "/printer-hulp-voorschoten.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/printer-hulp-voorschoten?utm_source=test",
+      "location": "http://127.0.0.1:8876/printer-hulp-voorschoten?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/spoed-computerhulp-leidschendam",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/spoed-computerhulp-leidschendam.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/spoed-computerhulp-leidschendam",
+      "location": "http://127.0.0.1:8876/spoed-computerhulp-leidschendam",
+      "passed": true
+    },
+    {
+      "path": "/spoed-computerhulp-leidschendam.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/spoed-computerhulp-leidschendam?utm_source=test",
+      "location": "http://127.0.0.1:8876/spoed-computerhulp-leidschendam?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/virus-verwijderen-voorburg",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/virus-verwijderen-voorburg.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/virus-verwijderen-voorburg",
+      "location": "http://127.0.0.1:8876/virus-verwijderen-voorburg",
+      "passed": true
+    },
+    {
+      "path": "/virus-verwijderen-voorburg.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/virus-verwijderen-voorburg?utm_source=test",
+      "location": "http://127.0.0.1:8876/virus-verwijderen-voorburg?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/wifi-netwerk-hulp-leidschendam",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/wifi-netwerk-hulp-leidschendam.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/wifi-netwerk-hulp-leidschendam",
+      "location": "http://127.0.0.1:8876/wifi-netwerk-hulp-leidschendam",
+      "passed": true
+    },
+    {
+      "path": "/wifi-netwerk-hulp-leidschendam.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/wifi-netwerk-hulp-leidschendam?utm_source=test",
+      "location": "http://127.0.0.1:8876/wifi-netwerk-hulp-leidschendam?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/wifi-netwerk-hulp-voorburg",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/wifi-netwerk-hulp-voorburg.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/wifi-netwerk-hulp-voorburg",
+      "location": "http://127.0.0.1:8876/wifi-netwerk-hulp-voorburg",
+      "passed": true
+    },
+    {
+      "path": "/wifi-netwerk-hulp-voorburg.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/wifi-netwerk-hulp-voorburg?utm_source=test",
+      "location": "http://127.0.0.1:8876/wifi-netwerk-hulp-voorburg?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/wifi-netwerk-hulp-voorschoten",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/wifi-netwerk-hulp-voorschoten.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/wifi-netwerk-hulp-voorschoten",
+      "location": "http://127.0.0.1:8876/wifi-netwerk-hulp-voorschoten",
+      "passed": true
+    },
+    {
+      "path": "/wifi-netwerk-hulp-voorschoten.html?utm_source=test",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/wifi-netwerk-hulp-voorschoten?utm_source=test",
+      "location": "http://127.0.0.1:8876/wifi-netwerk-hulp-voorschoten?utm_source=test",
+      "passed": true
+    },
+    {
+      "path": "/index",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/",
+      "location": "http://127.0.0.1:8876/",
+      "passed": true
+    },
+    {
+      "path": "/copy-of-contact",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/contact",
+      "location": "http://127.0.0.1:8876/contact",
+      "passed": true
+    },
+    {
+      "path": "/copy-of-diensten",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/#diensten",
+      "location": "http://127.0.0.1:8876/#diensten",
+      "passed": true
+    },
+    {
+      "path": "/copy-of-tarieven",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/#tarief",
+      "location": "http://127.0.0.1:8876/#tarief",
+      "passed": true
+    },
+    {
+      "path": "/copy-of-zakelijk",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/mkb-it-beheer-leidschendam-voorburg",
+      "location": "http://127.0.0.1:8876/mkb-it-beheer-leidschendam-voorburg",
+      "passed": true
+    },
+    {
+      "path": "/kopie-van-home",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/",
+      "location": "http://127.0.0.1:8876/",
+      "passed": true
+    },
+    {
+      "path": "/niet-bestaande-pagina.html",
+      "expected_status": 301,
+      "status": 301,
+      "expected_location": "/niet-bestaande-pagina",
+      "location": "http://127.0.0.1:8876/niet-bestaande-pagina",
+      "passed": true
+    },
+    {
+      "path": "/style.css?v=20260924-regio4",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/nav.js?v=20260924-regio4",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/analytics-events.js?v=20260924-regio4",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/robots.txt",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "expected_status": 200,
+      "status": 200,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/src/pages.json",
+      "expected_status": 403,
+      "status": 403,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/tools/build.py",
+      "expected_status": 403,
+      "status": 403,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/tests/browser_checks.py",
+      "expected_status": 403,
+      "status": 403,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/.git/config",
+      "expected_status": 403,
+      "status": 403,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    },
+    {
+      "path": "/niet-bestaande-pagina",
+      "expected_status": 404,
+      "status": 404,
+      "expected_location": null,
+      "location": "",
+      "passed": true
+    }
+  ],
+  "not_tested": "Live hosting/Cloudflare/TLS, remote logo, unchanged original photo and terms PDF."
+}
