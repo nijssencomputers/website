@@ -84,4 +84,6 @@ De samenvattingen en causale meetrecords staan naast dit document. Volledige Lig
 
 Reproductie: `cls-audit.py` en `cls-diagnose.py` staan bij het bewijs. Voer de lokale tests uit met het Chromium-pad en de preview-URL zoals in de testargumenten.
 
-Na een eventuele merge: `git revert <mergecommit>` (squash) of `git revert -m 1 <mergecommit>` (echte merge), gevolgd door dezelfde controles en gebruikelijke publicatieroute. Het exacte revert-commando voor de fixcommit wordt toegevoegd zodra de commit bestaat. Geen `reset --hard` of force-push op main.
+Fixcommit: `c78f9c911af0bcef59d042a4c1ae51e4fb3fd9c3`. Bewijscommit: `e65178c`.
+Exact terugdraaien van de technische fix op deze branch: `git revert c78f9c911af0bcef59d042a4c1ae51e4fb3fd9c3`, gevolgd door `python3 tools/build.py`, alle controles en commit van eventuele opnieuw gegenereerde sitemapdatum.
+Na een eventuele merge: `git revert <mergecommit>` (squash) of `git revert -m 1 <mergecommit>` (echte merge), gevolgd door dezelfde controles en gebruikelijke publicatieroute. Geen `reset --hard` of force-push op main.
