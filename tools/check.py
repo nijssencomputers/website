@@ -182,8 +182,8 @@ def main():
         if p.json: no_html_urls(p.json[0])
         titles={
             'computerhulp-aan-huis-leidschendam':'Computer reparatie & hulp aan huis Leidschendam | Nijssen',
-            'laptop-traag-leidschendam':'Laptop traag of reparatie Leidschendam | Aan huis | Nijssen',
-            'laptop-traag-voorschoten':'Laptop traag in Voorschoten | Nijssen Computers',
+            'laptop-traag-leidschendam':'Laptop reparatie Leidschendam | Aan huis | Nijssen Computers',
+            'laptop-traag-voorschoten':'Laptop reparatie Voorschoten | Aan huis | Nijssen Computers',
             'computerhulp-aan-huis-voorburg':'Computerhulp aan huis Voorburg | Snel & lokaal | Nijssen',
             'virus-verwijderen-voorburg':'Virus verwijderen Voorburg | Aan huis | Nijssen',
             'wifi-netwerk-hulp-voorburg':'Wifi problemen Voorburg | Hulp aan huis | Nijssen',
