@@ -36,6 +36,15 @@ def main():
         result.append({'a':a,'b':b,'smaller_set_overlap_pct':round(percent,2),'jaccard_pct':round(100*len(sets[a]&sets[b])/len(sets[a]|sets[b]),2)})
     for name in ['index.html','src/home.html','src/layout.html','style.css','nav.js','analytics-events.js','jeroen.png','jeroen-720.png','.htaccess','_redirects','robots.txt']:
         before=subprocess.check_output(['git','show','7a04315:'+name],cwd=ROOT)
+        if name in ('index.html', 'src/layout.html'):
+            # Only the approved privacy footer and analytics removal may differ.
+            text=before.decode()
+            start=text.index('  <!-- Bestaande GA4-property.')
+            end=text.index('  <script src="/nav.js',start)
+            text=text[:start]+'  <!-- Optionele analytics uit: geen aantoonbare grond voor meten zonder toestemming. Bestaande property G-Y1JB4KX9HH behouden. -->\n'+text[end:]
+            text=re.sub(r'  <script src="/analytics-events\.js\?v=[^"\n]+" defer></script>\n','',text)
+            text=text.replace('Algemene voorwaarden (pdf)</a></p>','Algemene voorwaarden (pdf)</a> · <a href="/privacy">Privacyverklaring</a></p>')
+            before=text.encode()
         assert (ROOT/name).read_bytes()==before,('onbedoelde gedeelde wijziging',name)
     print(json.dumps({'passed':True,'pairs':result,'homepage_and_shared_assets_unchanged':True},indent=2))
 if __name__=='__main__':main()
