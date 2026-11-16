@@ -165,9 +165,9 @@ def main():
         for selector,method in [('.hero .cta-whatsapp','whatsapp'),('.contact-options .cta-phone','phone'),('.contact-email a','email')]:
             page.locator(selector).click()
             events=page.evaluate("Array.from(window.dataLayer).filter(x=>x[0]==='event').map(x=>({name:x[1],method:x[2].method}))")
-            check(events==[{'name':'contact_click','method':method}],f'Contact event duplicate or wrong type: {method} {events}')
+            check(events==[],f'Optional contact analytics must remain disabled: {method} {events}')
             page.evaluate('window.dataLayer=[]')
-        result['checks'].append('One contact_click per WhatsApp, telephone and email click; no automatic generate_lead')
+        result['checks'].append('No optional contact tracking on WhatsApp, telephone and email clicks; no automatic generate_lead')
         # Reduced motion removes smooth scrolling.
         page.emulate_media(reduced_motion='reduce')
         check(page.evaluate("getComputedStyle(document.documentElement).scrollBehavior")=='auto','Reduced motion ignored')
