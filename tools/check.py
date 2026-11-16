@@ -50,7 +50,7 @@ def main():
         if not ok:failures.append(msg)
     expected = outputs()
     htmlfiles=sorted(ROOT.glob('*.html'))
-    check(len(htmlfiles)==19, 'Exactly 18 public HTML pages plus 404 expected')
+    check(len(htmlfiles)==20, 'Exactly 19 public HTML pages plus 404 expected')
     for f in htmlfiles:
         is_404 = f.name == '404.html'
         text=f.read_text(encoding='utf-8'); p=Parse(); p.feed(text); p.close(); parses['/' if f.name=='index.html' else '/'+f.stem]=p
@@ -307,7 +307,7 @@ def main():
     check(seen==set(parses)-{'/404'},'Orphan pages: '+str(set(parses)-seen-{'/404'}))
     root=ET.parse(ROOT/'sitemap.xml').getroot();urls=[e.text for e in root.findall('{*}url/{*}loc')]
     check(set(urls)=={BASE+p for p in parses if p != '/404'},'Sitemap and canonical pages differ')
-    check(len(urls)==len(set(urls))==18,'Sitemap count/duplicates')
+    check(len(urls)==len(set(urls))==19,'Sitemap count/duplicates')
     check(all(not urlsplit(u).path.endswith('.html') for u in urls),'Sitemap still lists .html URLs')
     sitemap_entries = root.findall('{*}url')
     check((ROOT/'sitemap.xml').read_text(encoding='utf-8')==expected['sitemap.xml'],
