@@ -284,7 +284,20 @@ def main():
         for bad in ('quick-help-card','regio-card','Kies wat','Ook Apple kan ik aan','Meer over zakelijke IT-ondersteuning'):
             check(bad not in (ROOT/'index.html').read_text(), 'Forbidden homepage pattern: '+bad)
         for term in ('Apple','Windows','Linux','iPhone','iPad','Android'):check(term in home.text,'Platform missing: '+term)
-    known_assets={'/jeroen.png','/jeroen-720.png','/_files/ugd/a467e1_485c7f11207647e3a05afcf4b5a87758.pdf'}
+    known_assets={'/jeroen.png','/jeroen-720.png','/_files/ugd/a467e1_485c7f11207647e3a05afcf4b5a87758.pdf',
+                  '/jeroen-210.webp','/jeroen-300.webp','/jeroen-420.webp','/jeroen-510.webp','/jeroen-630.webp','/jeroen-720.webp'}
+    # srcset/sizes: elke bron in een srcset moet als bestand bestaan, met een geldige breedte- of pixeldichtheidsdescriptor.
+    for url,p in parses.items():
+        for tag,a in p.nodes:
+            srcset=a.get('srcset')
+            if not srcset:continue
+            for candidate in srcset.split(','):
+                parts=candidate.split()
+                if len(parts)!=2:check(False,url+': srcset-item zonder descriptor '+candidate.strip());continue
+                path,descriptor=parts
+                check(descriptor.endswith('w') or descriptor.endswith('x'),url+': ongeldige srcset-descriptor '+descriptor)
+                check(path in known_assets or (ROOT/path.lstrip('/')).is_file(),url+': srcset-bestand ontbreekt '+path)
+            check(tag in ('source','img'),url+': srcset hoort bij source of img, niet bij '+tag)
     graph={k:set() for k in parses}
     for url,p in parses.items():
         for tag,a in p.nodes:

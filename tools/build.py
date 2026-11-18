@@ -330,7 +330,9 @@ def main():
         target = args.deploy.resolve()
         if target.exists():
             parser.error('Deployment directory must not already exist; this prevents accidental overwrites.')
-        assets = ['style.css', 'nav.js', 'analytics-events.js', 'robots.txt', '.htaccess', 'jeroen.png', 'jeroen-720.png', '_files/ugd/a467e1_485c7f11207647e3a05afcf4b5a87758.pdf']
+        assets = ['style.css', 'nav.js', 'analytics-events.js', 'robots.txt', '.htaccess', 'jeroen.png', 'jeroen-720.png',
+                  'jeroen-210.webp', 'jeroen-300.webp', 'jeroen-420.webp', 'jeroen-510.webp', 'jeroen-630.webp', 'jeroen-720.webp',
+                  '_files/ugd/a467e1_485c7f11207647e3a05afcf4b5a87758.pdf']
         missing = [p for p in assets if not (ROOT/p).is_file()]
         if missing:
             parser.error('Unchanged assets must be present in the original checkout: '+', '.join(missing))
