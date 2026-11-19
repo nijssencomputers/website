@@ -42,9 +42,22 @@ def main():
                 cases.append({'width': width, 'page': slug, 'cls_upper_bound': cls,
                               'shifts': entries, 'passed': cls < 0.1})
                 if slug == '/':
-                    portrait = page.locator('.about-img').evaluate('(e)=>({w:e.width,h:e.height,nw:e.naturalWidth,nh:e.naturalHeight})')
-                    cases.append({'width': width, 'portrait': portrait,
-                                  'passed': portrait['nw'] == 720 and portrait['nh'] == 816 and portrait['w'] > 0})
+                    portrait = page.locator('.about-img').evaluate('''(e)=>{
+                        const src=e.currentSrc;
+                        let descriptor=null;
+                        const source=e.parentElement && e.parentElement.querySelector('source[srcset]');
+                        const sets=[source?source.getAttribute('srcset'):'', e.getAttribute('srcset')||''];
+                        for(const s of sets){for(const c of s.split(',')){const p=c.trim().split(/\\s+/);
+                            if(p[0] && src.endsWith(p[0])) descriptor=p[1]||null;}}
+                        return {w:e.width,h:e.height,nw:e.naturalWidth,nh:e.naturalHeight,src,descriptor,dpr:devicePixelRatio};
+                    }''')
+                    # De foto komt uit srcset: de gekozen variant moet scherp genoeg zijn voor de weergave
+                    # (breedte-descriptor >= weergavebreedte x pixeldichtheid) en de uitsnede 15:17 houden.
+                    ratio_ok = abs(portrait['nw'] / portrait['nh'] - 720 / 816) < 0.01 if portrait['nh'] else False
+                    chosen = int(portrait['descriptor'][:-1]) if portrait['descriptor'] and portrait['descriptor'].endswith('w') else portrait['nw']
+                    sharp = chosen + 1 >= portrait['w'] * portrait['dpr']
+                    cases.append({'width': width, 'portrait': portrait, 'chosen_pixels': chosen,
+                                  'passed': ratio_ok and sharp and portrait['w'] > 0})
                 context.close()
             context = browser.new_context(viewport={'width': width, 'height': height})
             page = context.new_page()
